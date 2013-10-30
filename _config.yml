@@ -1,0 +1,39 @@
+# http://jekyllrb.com/docs/configuration/
+
+# Overwritten by github:
+# safe: true
+# lsi: false
+# pygments: true
+# source: your top-level directory
+
+# Site name
+name: Adam Altmejd
+
+# Markdown engine
+markdown: redcarpet
+
+# Syntax highlighting
+pygments: true
+
+# Disable custom plugins
+safe: true
+# Regeneration files when changed
+auto: true
+
+# Publish posts with a future date
+future: false
+
+# Site source
+source: .
+
+# Where to put the compiled site
+destination: ./_site
+
+# Exclude these files from compilation
+exclude: [Gemfile, Gemfile.lock, CNAME, README.md, vendor, bin]
+
+# Produce an index for related posts
+lsi: false
+
+# Permalink style
+permalink: /:year/:month/:title

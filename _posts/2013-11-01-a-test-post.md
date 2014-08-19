@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Test post"
+date:   2013-11-01 11:47:00
+categories: test
+---
+
+This is a nice little test post.
+
+## Code highlighting in R
+
+```r
+set.seed(12345)  # set RNG seed for reproducability
+runExperiment <- function(obs) {
+	experiment <- rbinom(obs,1,0.5)
+	average = cumsum(experiment) / seq_along(experiment)
+	df <- data.frame(x = 1:obs, y = average)
+	print(
+		ggplot(df, aes(x,y)) +
+		geom_point() +
+		ylim(0,1) + xlim(0,obs) + labs(x='', y='', title=paste('Obs:', obs, ' Average:', average[obs]))
+	)
+}
+```

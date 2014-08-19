@@ -1,0 +1,57 @@
+---
+---
+@import "variables.scss";
+@import "bootswatch/variables.scss";
+$web-font: "//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic";
+@import "bootstrap/bootstrap.scss";
+@import "bootswatch/bootswatch.scss";
+@import "fa/font-awesome.scss";
+
+// Adam Altmejd customization
+// @import url("//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
+// @import url("//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic");
+
+body {
+  padding-top: 50px;
+}
+
+// Navs =======================================================================
+
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: transparent;
+  }
+}
+
+.pagination {
+  a,
+  a:hover {
+    color: #fff;
+  }
+  .disabled {
+    &>a,
+    &>a:hover,
+    &>a:focus,
+    &>span {
+      background-color: $brand-success;
+    }
+  }
+}
+
+.pager {
+  a,
+  a:hover {
+    color: #fff;
+  }
+
+  .disabled {
+    &>a,
+    &>a:hover,
+    &>a:focus,
+    &>span {
+      background-color: $brand-success;
+    }
+  }
+}

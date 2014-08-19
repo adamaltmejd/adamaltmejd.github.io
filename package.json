@@ -1,0 +1,28 @@
+{
+    "name": "adamaltmejd",
+    "description": "Adam Altmejd's personal website",
+    "author": "Adam Altmejd",
+    "homepage": "http://adamaltmejd.se",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/adamaltmejd/adamaltmejd.github.io.git"
+    },
+    "licenses": [ {
+        "type": "MIT",
+        "url": "http://opensource.org/licenses/MIT"
+    } ],
+    "engines": {
+        "node": ">=0.10.21"
+    },
+    "dependencies": {
+        "bower": ">=1.3.8",
+        "grunt": ">=0.4.5",
+        "grunt-contrib-watch": ">=0.6.1",
+        "grunt-contrib-connect": ">=0.8.0",
+        "grunt-contrib-clean": ">=0.6.0",
+        "grunt-contrib-copy": ">=0.5.0",
+        "grunt-open": ">=0.2.3",
+        "grunt-jekyll": ">=0.4.2"
+    }
+}

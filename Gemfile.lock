@@ -112,6 +112,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages (>= 21)
-  jekyll (~> 2.2.0)
-  liquid (~> 2.6.1)
+  github-pages (>= 22)
+  sass (~> 3.4.0)

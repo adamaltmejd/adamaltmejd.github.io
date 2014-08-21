@@ -13,28 +13,35 @@ module.exports = function(grunt) {
                 ' */\n\n',
         // Clean task to remove output folder
         clean: {
-            development: ['_site', 'assets/css/style.css'],
-            production: ['assets/css/style.css']
+            development: ['_site'],
+            production: ['_site'],
+            update: ['']
         },
 
         // We want a builting sass compiler for development as this is faster.
         // However in production we let Jekyll do it.
-        sass: {
-            development: {
-
-            }
-        },
-
-
-        // less: {
+        // sass: {
         //     development: {
-        //         files: { 'assets/css/style.css': 'assets/less/style.less' }
-        //     },
-        //     production: {
-        //         options: { cleancss: true },
-        //         files: { 'assets/css/style.css': 'assets/less/style.less' }
+        //         options: {
+        //             style: 'expanded',
+        //             loadPath: '_sass/',
+        //             bundleExec: true
+        //         },
+        //         files: { '_site/assets/css/style.css': '_sass/main.scss' }
         //     }
         // },
+        // Using grunt-sass instead
+        sass: {
+            development: {
+                options: {
+                    outputStyle: 'expanded',
+                    includePaths: ['_sass/'],
+                    sourceMap: true,
+                    bundleExec: true
+                },
+                files: { '_site/assets/css/style.css': '_sass/main.scss' }
+            }
+        },
 
         jekyll: {
             options: {
@@ -43,19 +50,21 @@ module.exports = function(grunt) {
             development: {
                 options: {
                     drafts: true,
-                    future: true,
-                    raw: 'sass: \n' +
-                         '  style: :nested\n'
+                    future: true
+                    // raw: 'sass: \n' +
+                    //      '  style: :expanded\n'
                 }
+            },
+            production: {
+                options: {
+                    serve: true,
+                    watch: true
+                }
+
             }
         },
 
         copy: {
-            // css: {
-            //     files: {
-            //         '_site/assets/css/style.css': 'assets/css/style.css'
-            //     }
-            // },
             fonts: {
                 expand: true,
                 src: ['bower_components/bootstrap-sass-official/assets/fonts/**', 'bower_components/font-awesome/fonts/*'],
@@ -79,10 +88,11 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            less: {
+            options: {forever: false},
+            sass: {
                 // We watch and compile sass files but don't live reload
-                files: ['assets/less/*.less'],
-                tasks: "less:development"
+                files: ['assets/css/main.scss', '_sass/**/*.{scss,sass}'],
+                tasks: "sass:development"
             },
             jekyll: {
                 // Instead, whenever any changes to the site are made
@@ -90,26 +100,19 @@ module.exports = function(grunt) {
                 //   we run the jekyll-task and rebuild the site.
                 files: ['_config.yml',
                         '*.html',
+                        '*.md',
                         '_drafts/**/*',
                         '_includes/**/*',
                         '_layouts/**/*',
                         '_posts/**/*',
-                        'about/index.html',
-                        'archives/index.html',
-                        'assets/fonts/**/*',
-                        'notes/index.html'
+                        'assets/fonts/**/*'
                        ],
-                tasks: "jekyll"
-            },
-            css: {
-                // For faster livereload we do not use Jekyll to load css-change
-                files: ['assets/css/**/*'],
-                tasks: "copy:css"
+                tasks: "jekyll:development"
             },
             livereload: {
                 // We then watch the output server for livereload.
-                options: { livereload: true, interrupt: true },
-                files: ['_site/**/*']
+                options: { livereload: true },
+                files: ['_site/**/*.{html,css,js}']
             }
         },
 
@@ -132,7 +135,7 @@ module.exports = function(grunt) {
     });
     // Load tasks
     grunt.loadNpmTasks("grunt-contrib-clean");
-    grunt.loadNpmTasks("grunt-contrib-less");
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-contrib-connect");
     grunt.loadNpmTasks("grunt-open");
@@ -150,22 +153,30 @@ module.exports = function(grunt) {
     // Development task
     grunt.registerTask('dev', [
         'clean:development',
-        'less:development',
         'jekyll:development',
+        'sass:development',
         'connect',
         'open:server',
         'watch'
+    ]);
+    // Test task
+    grunt.registerTask('test', [
+        'sass:development'
     ]);
 
     // Production task - we do not need to use jekyll task here since github will do this
     //   instead, we only need to make sure the directory is ready to be pushed.
     grunt.registerTask('prod', [
-        'clean:production'
+        'clean:production',
+        'jekyll:production',
     ]);
 
     // Update task, run to update dependencies
     grunt.registerTask('update', [
         'clean',
         'copy:fonts',
+        'copy:bootstrap',
+        'copy:fontawesome',
+        'copy:bootswatch'
     ]);
 };

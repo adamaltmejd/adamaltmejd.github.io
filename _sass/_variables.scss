@@ -13,7 +13,7 @@ $gray-dark:             hsla(196, 12.9%, 45.5%, 1);
 $gray:                  hsla(186, 8.3%, 55.1%, 1);
 $gray-light:            hsla(180, 6.9%, 60.4%, 1);
 $gray-lighter:          hsla(46, 42.4%, 88.4%, 1);
-$white:                 hsla(44, 86.7%, 94.1%, 1);
+$white:                 #fff;
 
 $blue:                  hsla(175, 58.6%, 39.8%, 1);
 $blue-dark:             hsla(205, 69.4%, 48.6%, 1);
@@ -50,11 +50,14 @@ $link-hover-color:      darken($link-color, 15%);
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-
-$web-font: "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700";
+$web-font: "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800";
+@import url($web-font);
+$web-font-serif: "//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic";
+@import url($web-font-serif);
 
 $font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+$font-family-serif:       Lora, Georgia, "Times New Roman", Times, serif;
+
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;

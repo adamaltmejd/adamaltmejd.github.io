@@ -1,44 +1,43 @@
 body {
-  padding-top: 50px;
+    padding-top: 50px;
 }
 
 // Navs =======================================================================
 
 .nav {
-  .open > a,
-  .open > a:hover,
-  .open > a:focus {
-    border-color: transparent;
-  }
+    .open > a,
+    .open > a:hover,
+    .open > a:focus {
+        border-color: transparent;
+    }
 }
 
 .pagination {
-  a,
-  a:hover {
-    color: #fff;
-  }
-  .disabled {
-    &>a,
-    &>a:hover,
-    &>a:focus,
-    &>span {
-      background-color: $brand-success;
+    a,
+    a:hover {
+        color: #fff;
     }
-  }
+    .disabled {
+        & > a,
+        & > a:hover,
+        & > a:focus,
+        & > span {
+            background-color: $brand-success;
+        }
+    }
 }
 
 .pager {
-  a,
-  a:hover {
-    color: #fff;
-  }
-
-  .disabled {
-    &>a,
-    &>a:hover,
-    &>a:focus,
-    &>span {
-      background-color: $brand-success;
+    a,
+    a:hover {
+        color: #fff;
     }
-  }
+    .disabled {
+        & > a,
+        & > a:hover,
+        & > a:focus,
+        & > span {
+            background-color: $brand-success;
+        }
+    }
 }

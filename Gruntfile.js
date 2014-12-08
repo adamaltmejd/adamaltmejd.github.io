@@ -18,7 +18,7 @@ module.exports = function(grunt) {
             update: ['']
         },
 
-        // We want a builting sass compiler for development as this is faster.
+        // We want a builtin sass compiler for development as this is faster.
         // However in production we let Jekyll do it.
         // sass: {
         //     development: {
@@ -65,21 +65,23 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            fonts: {
-                expand: true,
-                src: ['bower_components/bootstrap-sass-official/assets/fonts/**', 'bower_components/font-awesome/fonts/*'],
-                dest: 'assets/fonts/'
-            },
+            // Get FA with CDN
+            // fonts: {
+            //     expand: true,
+            //     src: ['bower_components/bootstrap-sass-official/assets/fonts/**', 'bower_components/font-awesome/fonts/*'],
+            //     dest: 'assets/fonts/'
+            // },
             bootstrap: {
                 expand: true,
                 src: ['bower_components/bootstrap-sass-official/assets/stylesheets/**'],
                 dest: '_sass/bootstrap/',
             },
-            fontawesome: {
-                expand: true,
-                src: ['bower_components/font-awesome/scss/*'],
-                dest: '_sass/fa/',
-            },
+            // Get FA with CDN
+            // fontawesome: {
+            //     expand: true,
+            //     src: ['bower_components/font-awesome/scss/*'],
+            //     dest: '_sass/fa/',
+            // },
             bootswatch: {
                 expand: true,
                 src: ['bower_components/bootswatch-scss/yeti/*'],

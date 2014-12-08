@@ -1,15 +1,13 @@
 ---
 layout: post
-title:  "Test post"
+title:  "Code highlighting in R"
 date:   2013-11-01 11:47:00
 categories: test
 ---
 
-This is a nice little test post.
+> This is a nice little test post.
 
-## Code highlighting in R
-
-```r
+{% highlight r %}
 set.seed(12345)  # set RNG seed for reproducability
 runExperiment <- function(obs) {
 	experiment <- rbinom(obs,1,0.5)
@@ -21,4 +19,4 @@ runExperiment <- function(obs) {
 		ylim(0,1) + xlim(0,obs) + labs(x='', y='', title=paste('Obs:', obs, ' Average:', average[obs]))
 	)
 }
-```
+{% endhighlight %}

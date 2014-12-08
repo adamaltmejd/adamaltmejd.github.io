@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-gem 'github-pages', '>= 22'
-# gem 'jekyll', '~> 2.2.0'
-# gem 'liquid', '~> 2.6.1'
-gem 'sass', '~> 3.4.0'
+gem 'github-pages', '>= 29'
+gem 'sass'
+gem 'autoprefixer-rails'

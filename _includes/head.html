@@ -1,14 +1,27 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title == "Adam Altmejd" %}{{ page.title }}{% else %}{{ page.title }} &middot; Adam Altmejd{% endif %}
-    </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="author" content="{{ site.author.name }}">
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Add some IE-debug -->
-<!-- Add favicons etc here -->
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="author" content="{{ site.author.name }}">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>{% if page.title == "Adam Altmejd" %}{{ page.title }}{% else %}{{ page.title }} &middot; Adam Altmejd{% endif %}</title>
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend: site.baseurl }}">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>

@@ -41,3 +41,17 @@ body {
         }
     }
 }
+
+// Footer =======================================================================
+footer {
+    padding: 50px 0 50px;
+    .list-inline {
+        margin: 0;
+        padding: 0 0 10px;
+    }
+    .copyright {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}

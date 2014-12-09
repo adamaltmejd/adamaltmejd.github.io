@@ -2,19 +2,12 @@
 <html lang="en">
     {% include head.html %}
     <body>
-        <a class="sr-only" href="#content">Skip to main content</a>
         {% include nav.html %}
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    {{ content }}
-                </div><!-- /.col-lg-8 -->
-            </div><!-- /.row -->
 
-            <footer>
-                {% include footer.html %}
-            </footer>
-        </div><!-- /.container -->
+        {{ content }}
+
+        {% include footer.html %}
+
         {% include js.html %}
     </body>
 </html>

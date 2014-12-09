@@ -50,17 +50,16 @@ $link-hover-color:      darken($link-color, 15%);
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-$web-font: "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800";
+$web-font: "http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Lora:400,700,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800";
 @import url($web-font);
-$web-font-serif: "//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic";
-@import url($web-font-serif);
 
 $font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:       Lora, Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:   "Ubuntu Mono", Menlo, Monaco, "Courier New", monospace;
 
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
-$font-family-base:        $font-family-sans-serif;
+$font-family-headings:    $font-family-sans-serif;
+$font-family-base:        $font-family-serif;
+$font-family-code:        $font-family-monospace;
 
 $font-size-base:          15px;
 $font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
@@ -79,19 +78,10 @@ $line-height-base:        1.428571429; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    $font-family-base;
+$headings-font-family:    $font-family-headings;
 $headings-font-weight:    300;
 $headings-line-height:    1.1;
 $headings-color:          inherit;
-
-
-//-- Iconography
-//
-//## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
-
-
-$icon-font-name:          "glyphicons-halflings-regular";
-$icon-font-svg-id:        "glyphicons_halflingsregular";
 
 //== Components
 //

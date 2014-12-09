@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         clean: {
             development: ['_site'],
             production: ['_site'],
-            update: ['']
+            update: ['_site']
         },
 
         // We want a builtin sass compiler for development as this is faster.
@@ -65,28 +65,32 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            // Get FA with CDN
-            // fonts: {
-            //     expand: true,
-            //     src: ['bower_components/bootstrap-sass-official/assets/fonts/**', 'bower_components/font-awesome/fonts/*'],
-            //     dest: 'assets/fonts/'
-            // },
-            bootstrap: {
+            fonts: {
                 expand: true,
-                src: ['bower_components/bootstrap-sass-official/assets/stylesheets/**'],
-                dest: '_sass/bootstrap/',
+                src: ['bower_components/bootstrap-sass-official/assets/fonts/**', 'bower_components/font-awesome/fonts/*'],
+                dest: 'assets/fonts/',
+                flatten: true,
+                filter: 'isFile'
             },
-            // Get FA with CDN
+            // SASS files are imported directly from bower_components
+            // bootstrap: {
+            //     expand: true,
+            //     cwd: 'bower_components/bootstrap-sass-official/assets/stylesheets/',
+            //     src: ['**/*'],
+            //     dest: '_sass/bootstrap/',
+            // },
             // fontawesome: {
             //     expand: true,
-            //     src: ['bower_components/font-awesome/scss/*'],
+            //     cwd: 'bower_components/font-awesome/scss/',
+            //     src: ['**/*'],
             //     dest: '_sass/fa/',
             // },
-            bootswatch: {
-                expand: true,
-                src: ['bower_components/bootswatch-scss/yeti/*'],
-                dest: '_sass/bootswatch/',
-            }
+            // bootswatch: {
+            //     expand: true,
+            //     cwd: 'bower_components/bootswatch-scss/yeti/',
+            //     src: ['**/*'],
+            //     dest: '_sass/bootswatch/',
+            // }
         },
 
         watch: {
@@ -177,8 +181,8 @@ module.exports = function(grunt) {
     grunt.registerTask('update', [
         'clean',
         'copy:fonts',
-        'copy:bootstrap',
-        'copy:fontawesome',
-        'copy:bootswatch'
+        // 'copy:bootstrap',
+        // 'copy:fontawesome',
+        // 'copy:bootswatch'
     ]);
 };

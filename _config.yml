@@ -19,6 +19,10 @@ markdown: kramdown
 kramdown:
     input: GFM
 
+gems:
+  - jemoji
+  - jekyll-sitemap
+
 # Pagination
 #paginate: 2
 #paginate_path: "notes/page:num"
@@ -32,8 +36,8 @@ sass:
     style: :nested
     # style: :compressed
 
-# Disable custom plugins, and ignore symbolic links. (github: true)
-safe: true
+# Disable custom plugins, and ignore symbolic links. (github: true, but some stuff whitelisted)
+# safe: true
 
 # Publish posts with a future date
 future: false

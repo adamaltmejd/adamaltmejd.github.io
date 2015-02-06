@@ -67,7 +67,7 @@ module.exports = function(grunt) {
         copy: {
             fonts: {
                 expand: true,
-                src: ['bower_components/bootstrap-sass-official/assets/fonts/**', 'bower_components/font-awesome/fonts/*'],
+                src: ['bower_components/bootstrap-sass/assets/fonts/**', 'bower_components/font-awesome/fonts/*'],
                 dest: 'assets/fonts/',
                 flatten: true,
                 filter: 'isFile'
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
             // SASS files are imported directly from bower_components
             // bootstrap: {
             //     expand: true,
-            //     cwd: 'bower_components/bootstrap-sass-official/assets/stylesheets/',
+            //     cwd: 'bower_components/bootstrap-sass/assets/stylesheets/',
             //     src: ['**/*'],
             //     dest: '_sass/bootstrap/',
             // },

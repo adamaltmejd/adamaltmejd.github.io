@@ -7,27 +7,28 @@
 // Solarized color palette
 //## Gray and brand colors for use across Bootstrap.
 
-$black:                 hsla(192, 100%, 10.6%, 1);
-$gray-darker:           hsla(194, 14.1%, 40.2%, 1);
-$gray-dark:             hsla(196, 12.9%, 45.5%, 1);
-$gray:                  hsla(186, 8.3%, 55.1%, 1);
-$gray-light:            hsla(180, 6.9%, 60.4%, 1);
-$gray-lighter:          hsla(46, 42.4%, 88.4%, 1);
-$white:                 #fff;
+$black:                 black;
+$gray-darker:           lighten($black, 5%);
+$gray-dark:             lighten($black, 25%);
+$gray:                  lighten($black, 50%);
+$gray-light:            lighten($black, 75%);
+$gray-lighter:          lighten($black, 95%);
+$white:                 lighten($black, 100%);
+// $white-fade:            fade_out($white, 0.5);
 
-$blue:                  hsla(175, 58.6%, 39.8%, 1);
-$blue-dark:             hsla(205, 69.4%, 48.6%, 1);
+$blue:                  hsla(190, 100%, 30%, 1);
+$blue-dark:             hsla(205, 70%, 50%, 1);
 $green:                 hsla(68, 100%, 30%, 1);
-$red:                   hsla(1, 71.2%, 52.4%, 1);
-$yellow:                hsla(45, 100%, 35.5%, 1);
-$orange:                hsla(18, 80.4%, 44.1%, 1);
-$pink:                  hsla(331, 64.1%, 52%, 1);
-$purple:                hsla(237, 42.7%, 59.6%, 1);
+$red:                   hsla(0, 70%, 50%, 1);
+$yellow:                hsla(45, 100%, 35%, 1);
+$orange:                hsla(18, 80.4%, 44%, 1);
+$pink:                  hsla(331, 64%, 52%, 1);
+$purple:                hsla(237, 43%, 60%, 1);
 
 // Use brand colors rather than palette directly!
-$brand-primary:         $black;
-$brand-inverse:			$white;
-$brand-success:         $blue;
+$brand-primary:         $blue;
+$brand-inverse:         $white;
+$brand-success:         $green;
 $brand-warning:         $pink;
 $brand-danger:          $red;
 $brand-info:            $purple;
@@ -430,7 +431,7 @@ $pagination-bg:                        transparent;
 $pagination-border:                    transparent;
 
 $pagination-hover-color:               $link-hover-color;
-$pagination-hover-bg:                  $gray-lighter;
+$pagination-hover-bg:                  $brand-success;
 $pagination-hover-border:              transparent;
 
 $pagination-active-color:              $white;

@@ -1,17 +1,26 @@
 body {
-    padding-top: 50px;
+    padding-top: 45px;
 }
 
 // Navs =======================================================================
 
 .nav {
+    font-family: $font-family-sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1 px;
     .open > a,
     .open > a:hover,
     .open > a:focus {
         border-color: transparent;
     }
 }
+.navbar-brand {
+    font-family: $font-family-headings;
+    text-transform: uppercase;
+}
 
+// Pagination =======================================================================
 .pagination {
     a,
     a:hover {
@@ -27,17 +36,50 @@ body {
     }
 }
 
+// .pager {
+//     a,
+//     a:hover {
+//         color: #fff;
+//     }
+//     .disabled {
+//         & > a,
+//         & > a:hover,
+//         & > a:focus,
+//         & > span {
+//             background-color: $brand-success;
+//         }
+//     }
+// }
+
 .pager {
-    a,
-    a:hover {
-        color: #fff;
+    margin: 20px 0 0;
+
+    li {
+        > a,
+        > span {
+            font-family: $font-family-sans-serif;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            padding: 10px 5px;
+            background-color: $white;
+            border-radius: 0;
+            @media only screen and (min-width: 768px) {
+                font-size: 14px;
+                padding: 15px 25px;
+            }
+        }
     }
     .disabled {
-        & > a,
-        & > a:hover,
-        & > a:focus,
-        & > span {
-            background-color: $brand-success;
+        > a,
+        > a:hover,
+        > a:focus,
+        > span {
+            color: $gray;
+            background-color: $gray-dark;
+            cursor: not-allowed;
+            border-color: transparent;
         }
     }
 }

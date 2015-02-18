@@ -7,6 +7,7 @@ author:
     github: adamaltmejd
     twitter: adamaltmejd
     facebook: adam.altmejd
+    linkedin: adamaltmejd
 description: "Description"
 baseurl: ""
 url: "http://www.adamaltmejd.se"
@@ -24,8 +25,8 @@ gems:
   - jekyll-sitemap
 
 # Pagination
-#paginate: 2
-#paginate_path: "notes/page:num"
+paginate: 10
+paginate_path: "notes/page:num"
 
 # Syntax highlighting (github: pygments)
 highlighter: pygments
@@ -67,4 +68,4 @@ lsi: false
 
 # Permalink style
 #permalink: pretty
-permalink: /:year/:month/:title/
+permalink: /notes/:year/:month/:title/

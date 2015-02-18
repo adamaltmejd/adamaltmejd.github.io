@@ -4,48 +4,34 @@
 // --------------------------------------------------
 
 //== Colors
-// Solarized color palette
-//## Gray and brand colors for use across Bootstrap.
+// PALETTE: http://paletton.com/#uid=63E0D0ksXpbjnvFonsWvokCDWfx
+$blue:                  hsla(215, 70%, 30%, 1);
+$green:                 hsla(151, 83%, 30%, 1);
+$purple:                hsla(256, 65%, 55%, 1);
+$yellow:                hsla(38, 82%, 43%, 1);
+$red:                   hsla(10, 54%, 50%, 1);
 
-$black:                 black;
-$gray-darker:           lighten($black, 5%);
+$black:                 darken(desaturate($blue, 55%),95%);
+$gray-darker:           lighten($black, 10%);
 $gray-dark:             lighten($black, 25%);
 $gray:                  lighten($black, 50%);
 $gray-light:            lighten($black, 75%);
-$gray-lighter:          lighten($black, 95%);
-$white:                 lighten($black, 100%);
-// $white-fade:            fade_out($white, 0.5);
+$gray-lighter:          lighten($black, 90%);
+$white:                 lighten($yellow, 95%);
 
-$blue:                  hsla(190, 100%, 30%, 1);
-$blue-dark:             hsla(205, 70%, 50%, 1);
-$green:                 hsla(68, 100%, 30%, 1);
-$red:                   hsla(0, 70%, 50%, 1);
-$yellow:                hsla(45, 100%, 35%, 1);
-$orange:                hsla(18, 80.4%, 44%, 1);
-$pink:                  hsla(331, 64%, 52%, 1);
-$purple:                hsla(237, 43%, 60%, 1);
-
-// Use brand colors rather than palette directly!
 $brand-primary:         $blue;
-$brand-inverse:         $white;
+// $brand-inverse:         $white;
+$brand-inverse:         invert($blue);
 $brand-success:         $green;
-$brand-warning:         $pink;
+$brand-warning:         $yellow;
 $brand-danger:          $red;
 $brand-info:            $purple;
 
-//== Scaffolding
-//
-// ## Settings for some of the most global styles.
-
-//** Background color for `<body>`.
+//== GLOBAL
 $body-bg:               $white;
-//** Global text color on `<body>`.
 $text-color:            $gray-darker;
-
-//** Global textual link color.
 $link-color:            $brand-primary;
-//** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%);
+$link-hover-color:      $brand-inverse;
 
 
 //== Typography
@@ -216,18 +202,18 @@ $input-group-addon-border-color: $input-border;
 //** Background for the dropdown menu.
 $dropdown-bg:                    $white;
 //** Dropdown menu `border-color`.
-$dropdown-border:                rgba(0,0,0,.15);
+$dropdown-border:                $gray-darker;
 //** Dropdown menu `border-color` **for IE8**.
-$dropdown-fallback-border:       #ccc;
+$dropdown-fallback-border:       $gray;
 //** Divider color for between dropdown items.
-$dropdown-divider-bg:            rgba(0,0,0,.2);
+$dropdown-divider-bg:            $gray-darker;
 
 //** Dropdown link text color.
-$dropdown-link-color:            #555;
+$dropdown-link-color:            $white;
 //** Hover color for dropdown links.
-$dropdown-link-hover-color:      darken($gray-dark, 5%);
+$dropdown-link-hover-color:      $white;
 //** Hover background for dropdown links.
-$dropdown-link-hover-bg:         #eee;
+$dropdown-link-hover-bg:         $gray-dark;
 
 //** Active dropdown menu item text color.
 $dropdown-link-active-color:     $component-active-color;
@@ -241,7 +227,7 @@ $dropdown-link-disabled-color:   $gray-light;
 $dropdown-header-color:          $gray-light;
 
 // Note: Deprecated @dropdown-caret-color as of v3.1.0
-$dropdown-caret-color:           #000;
+$dropdown-caret-color:           $black;
 
 
 //-- Z-index master list
@@ -341,17 +327,17 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2);
 $navbar-collapse-max-height:       340px;
 
-$navbar-default-color:             $white;
-$navbar-default-bg:                $gray-dark;
+$navbar-default-color:             $black;
+$navbar-default-bg:                $white;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%);
 
 // Navbar links
-$navbar-default-link-color:                $white;
+$navbar-default-link-color:                $black;
 $navbar-default-link-hover-color:          $white;
-$navbar-default-link-hover-bg:             #272727;
+$navbar-default-link-hover-bg:             $brand-success;
 $navbar-default-link-active-color:         $white;
-$navbar-default-link-active-bg:            #272727;
-$navbar-default-link-disabled-color:       #ccc;
+$navbar-default-link-active-bg:            $brand-success;
+$navbar-default-link-disabled-color:       $gray;
 $navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
@@ -431,7 +417,7 @@ $pagination-bg:                        transparent;
 $pagination-border:                    transparent;
 
 $pagination-hover-color:               $link-hover-color;
-$pagination-hover-bg:                  $brand-success;
+$pagination-hover-bg:                  transparent;
 $pagination-hover-border:              transparent;
 
 $pagination-active-color:              $white;

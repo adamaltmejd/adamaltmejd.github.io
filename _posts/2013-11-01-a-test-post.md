@@ -1,11 +1,14 @@
 ---
 layout: post
 title:  "Code highlighting in R"
+subtitle: "In this post I look at some examples of code highlighting and how it works for different types of R code and also other programming languages. I also test if i can use markdown in the metadata of this subtitle."
 date:   2013-11-01 11:47:00
 categories: test
 ---
 
 > This is a nice little test post.
+
+I give this plugin two :+1:!
 
 {% highlight r %}
 set.seed(12345)  # set RNG seed for reproducability

@@ -1,13 +1,12 @@
-// My code
-// Load before to overwrite !deault in third party
+// Variables load before to overwrite !deault in third party
 @import 'variables';
-@import 'style';
 @import 'syntax';
 
 // Third party
-// Loads Bootswatch Yeti theme, Bootstrap and Font-Awesome
-// @import     '../bower_components/bootswatch-scss/yeti/variables';
-@import     '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass';
-@import     '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
-// @import     '../bower_components/bootswatch-scss/yeti/bootswatch';
-@import     '../bower_components/font-awesome/scss/font-awesome';
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass';
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../bower_components/font-awesome/scss/font-awesome';
+
+// My main style file
+@import 'style';
+

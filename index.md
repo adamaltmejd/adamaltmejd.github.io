@@ -1,25 +1,37 @@
 ---
 layout: page
-title: Adam Altmejd
+title: Hello There!
 slug: adam-altmejd
-lead: "PhD. Student"
-description: "The homepage of Adam Altmejd, PhD. student in economics at Stockholm School of Economics"
+description: null
 ---
 
-Hi! My name is Adam Altmejd and I am a PhD. student in Economics at Stockholm School of Economics.
+<div itemscope itemtype="http://schema.org/Person">
+    <div class="col-xs-12 col-md-8">
+        <p>My name is <span itemprop="name">Adam Altmejd</span> and I am a second-year <span itemprop="jobTitle">PhD Student</span> in <a href="http://en.wikipedia.org/wiki/Economics">Economics</a> at <a href="http://www.hhs.se/sv/personsida/?personid=31031033">Stockholm School of Economics</a>, working mainly with behavioral economics and microeconomic theory.</p>
 
-<i class="fa fa-quote-left fa-2x pull-left"></i>
-Use a few styles together and you'll have easy pull quotes or a great introductory article icon.
+        <p>I am interested in how human behavior affects society at large - the societal (and macroeconomic) consequences of humanity's limited cognitive abilities. I use evolutionary game theory to study how cognitive limitations could persist, and run experiments on the sensibility of behavioral elements in macroeconomic models.</p>
 
-<div id="home">
-  <h1>Posts</h1>
-  <ul class="posts">
-  {% for post in site.posts %}
-    <li>
-      <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-  </ul>
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        <hr>
+
+        <h2>Posts</h2>
+        <ul class="posts">
+            {% for post in site.posts %}
+            <li>
+                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div><!-- /.col-xs-8 -->
+    <div class="col-xs-12 col-md-4">
+        <div class="sidebar-module">
+            <img class="img-rounded img-responsive" src="../assets/img/adam_altmejd.jpg" itemprop="image" property="depiction" alt="Picture of Adam Altmejd"/>
+            <div class="list-group">
+                <a class="list-group-item" href="#"><i class="fa fa-file-text fa-fw"></i>&nbsp; Curriculum Vitae</a>
+                <a class="list-group-item" href="mailto:{{ site.author.email }}" itemprop="email"><i class="fa fa-envelope fa-fw"></i>&nbsp; {{ site.author.email }}</a>
+                <a class="list-group-item" href="tel:46734200120" itemprop="telephone"><i class="fa fa-phone fa-fw"></i>&nbsp; +46 (0) 734 20 01 20</a>
+                <!-- <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a> -->
+            </div>
+        </div><!-- /.sidebar-module -->
+    </div><!-- /.col-xs-4 -->
 </div>

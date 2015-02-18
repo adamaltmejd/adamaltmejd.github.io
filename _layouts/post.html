@@ -1,53 +1,38 @@
 ---
 layout: default
 ---
-<header class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
-  <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+
+<header>
+    <div>
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}
+            <h2 class="subheading">{{ page.subtitle }}</h2>
+        {% endif %}
+        <span class="meta">Posted by {{ page.author }} on {{ page.date | date: "%B %-d, %Y" }}</span>
+    </div>
 </header>
 
-<div class="row post-full">
-  <div class="col-md12">
-    <div class="date">
-      <span>{{ page.date | date_to_long_string }}</span>
-    </div>
-    <article class="content">
-      {{ content }}
+<div class="container">
+    <article>
+        <div>{{ content }}</div>
+        <nav role="pager">
+            <hr>
+            <ul>
+                {% if page.previous %}
+                    <li class="previous">
+                    <a href="{{page.previous.url}}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}" rel="prev">
+                {% else %}
+                    <li class="previous disabled"><a href="#">
+                {% endif %}
+                &larr; Previous Post</a></li>
+
+                {% if page.next %}
+                    <li class="next"><a href="{{page.next.url}}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}" rel="next">
+                {% else %}
+                    <li class="next disabled"><a href="#">
+                {% endif %}
+                Next Post &rarr;</a></li>
+            </ul>
+        </nav>
     </article>
-
-    <hr>
-      <ul class="pager">
-        {% if page.previous %}
-          <li class="previous"><a href="{{ page.previous.url }}" title="{{ page.previous.title }}">
-        {% else %}
-          <li class="previous disabled"><a href="#">
-        {% endif %}&larr; Older</a></li>
-        {% if page.next %}
-          <li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title }}">
-        {% else %}
-          <li class="next disabled"><a href="#">
-        {% endif %}Newer &rarr;</a></li>
-      </ul>
-
-  <!-- TODO: Some category listing
-  {% unless page.categories == empty %}
-    <ul class="tag_box inline">
-      <li><i class="icon-folder-open"></i></li>
-      {% assign categories_list = page.categories %}
-    </ul>
-  {% endunless %}
-  -->
-
-  {% unless page.tags == empty %}
-    <ul class="tag_box inline">
-      <li><i class="icon-tags"></i></li>
-      {% assign tags_list = page.tags %}
-      {% include JB/tags_list %}
-    </ul>
-  {% endunless %}
-
-
-    <hr>
-    <!-- TODO: Some comment system -->
-  </div>
 </div>

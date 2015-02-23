@@ -12,19 +12,34 @@ main {
         @include make-xs-column(12);
     }
     header {
-        div {
-            @extend .page-header;
-            @include make-xs-column(12);
-            // border: none;
-        }
+        padding: $line-height-computed 0 $line-height-computed;
+        margin-bottom: $line-height-computed;
+        // border-bottom: 1px solid $hr-border;
         text-align: center;
+        > div {
+            @include make-md-column(6);
+            @include make-md-column-offset(3);
+            @include make-xs-column(12);
+        }
         h1 {
             text-transform: uppercase;
             font-weight: 800;
         }
+        h2 {
+            font-size: $font-size-large;
+            font-family: $font-family-base;
+            font-weight: 300;
+            text-align: left;
+            display: block;
+            line-height: 1.4;
+        }
+        hr {
+            max-width: 200px;
+            margin: 10px auto;
+            border-top: solid 4px $text-color;
+        }
     }
     article {
-
     }
     nav {
         ul {
@@ -111,8 +126,11 @@ nav[role="navigation"] {
     }
 }
 
+// Typography etc =============================================================
+a:hover, a:focus {text-decoration:none;}
 
-// Pagination =======================================================================
+
+// Pagination =================================================================
 .pagination {
     a,
     a:hover {

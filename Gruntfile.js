@@ -111,7 +111,9 @@ module.exports = function(grunt) {
                         '_includes/**/*',
                         '_layouts/**/*',
                         '_posts/**/*',
-                        'assets/fonts/**/*'
+                        'assets/fonts/**/*',
+                        'notes/**/*',
+                        'teaching/**/*'
                        ],
                 tasks: "jekyll:development"
             },

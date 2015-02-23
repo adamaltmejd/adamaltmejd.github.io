@@ -4,10 +4,12 @@ layout: default
 <header>
     <div>
         <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-        {% if page.subtitle %}
-            <h2 class="subheading">{{ page.subtitle }}</h2>
-        {% endif %}
-        <!-- <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}<small>{{ page.description }}</small></h1> -->
+        <hr>
+<!--         {% if page.subtitle %}
+            <h2>{{ page.subtitle }}</h2>
+        {% else if page.description %}
+            <h2>{{ page.description }}</h2>
+        {% endif %} -->
     </div>
 </header>
 

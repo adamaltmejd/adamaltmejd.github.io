@@ -19,19 +19,17 @@ $gray-light:            lighten($black, 75%);
 $gray-lighter:          lighten($black, 90%);
 $white:                 lighten($yellow, 95%);
 
-$brand-primary:         $blue;
-// $brand-inverse:         $white;
-$brand-inverse:         invert($blue);
-$brand-success:         $green;
-$brand-warning:         $yellow;
-$brand-danger:          $red;
-$brand-info:            $purple;
+$brand-primary:         $red;
+$brand-success:         $blue;
+$brand-warning:         $purple;
+$brand-danger:          $yellow;
+$brand-info:            $green;
 
 //== GLOBAL
 $body-bg:               $white;
 $text-color:            $gray-darker;
-$link-color:            $brand-primary;
-$link-hover-color:      $brand-inverse;
+$link-color:            $brand-success;
+$link-hover-color:      $brand-primary;
 
 
 //== Typography
@@ -50,12 +48,12 @@ $font-family-code:        $font-family-monospace;
 
 $font-size-base:          15px;
 $font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
-$font-size-small:         12px; // ~12px
+$font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
 
-$font-size-h1:            floor(($font-size-base * 2.6)); // ~36px
-$font-size-h2:            floor(($font-size-base * 2.15)); // ~30px
-$font-size-h3:            ceil(($font-size-base * 1.7)); // ~24px
-$font-size-h4:            ceil(($font-size-base * 1.25)); // ~18px
+$font-size-h1:            floor(($font-size-base * 2.2)); // ~36px
+$font-size-h2:            floor(($font-size-base * 2)); // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.5)); // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.2)); // ~18px
 $font-size-h5:            $font-size-base;
 $font-size-h6:            ceil(($font-size-base * 0.85)); // ~12px
 
@@ -122,7 +120,7 @@ $table-bg-hover:                #f5f5f5;
 $table-bg-active:               $table-bg-hover;
 
 //** Border color for table and cell borders.
-$table-border-color:            #ddd;
+$table-border-color:            $gray-light;
 
 
 //== Buttons
@@ -328,7 +326,7 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px;
 
 $navbar-default-color:             $black;
-$navbar-default-bg:                $white;
+$navbar-default-bg:                $brand-primary;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%);
 
 // Navbar links
@@ -391,15 +389,15 @@ $nav-disabled-link-hover-color:             $gray-light;
 $nav-open-link-hover-color:                 $white;
 
 //== Tabs
-$nav-tabs-border-color:                     #ddd;
+$nav-tabs-border-color:                     $gray-light;
 
 $nav-tabs-link-hover-border-color:          $gray-lighter;
 
 $nav-tabs-active-link-hover-bg:             $body-bg;
 $nav-tabs-active-link-hover-color:          $gray;
-$nav-tabs-active-link-hover-border-color:   #ddd;
+$nav-tabs-active-link-hover-border-color:   $gray-light;
 
-$nav-tabs-justified-link-border-color:            #ddd;
+$nav-tabs-justified-link-border-color:            $gray-light;
 $nav-tabs-justified-active-link-border-color:     $body-bg;
 
 //== Pills
@@ -633,7 +631,7 @@ $progress-bar-info-bg:        $brand-info;
 //** Background color on `.list-group-item`
 $list-group-bg:                 $white;
 //** `.list-group-item` border color
-$list-group-border:             #ddd;
+$list-group-border:             $gray-light;
 //** List group border radius
 $list-group-border-radius:      $border-radius-base;
 
@@ -660,11 +658,11 @@ $panel-body-padding:          15px;
 $panel-border-radius:         $border-radius-base;
 
 //** Border color for elements within panels
-$panel-inner-border:          #ddd;
+$panel-inner-border:          $gray-light;
 $panel-footer-bg:             #f5f5f5;
 
 $panel-default-text:          $gray-dark;
-$panel-default-border:        #ddd;
+$panel-default-border:        $gray-light;
 $panel-default-heading-bg:    #f5f5f5;
 
 $panel-primary-text:          $white;
@@ -697,7 +695,7 @@ $thumbnail-padding:           4px;
 //** Thumbnail background color
 $thumbnail-bg:                $body-bg;
 //** Thumbnail border color
-$thumbnail-border:            #ddd;
+$thumbnail-border:            $gray-light;
 //** Thumbnail border radius
 $thumbnail-border-radius:     $border-radius-base;
 
@@ -796,7 +794,7 @@ $pre-scrollable-max-height:   340px;
 //##
 
 //** Horizontal line color.
-$hr-border:                   #ddd;
+$hr-border:                   $gray-light;
 
 //** Horizontal offset for forms and lists.
 $component-offset-horizontal: 180px;

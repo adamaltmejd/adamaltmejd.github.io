@@ -40,6 +40,10 @@ main {
         }
     }
     article {
+        p.meta {
+            display: block;
+            text-align: right;
+        }
     }
     nav {
         ul {
@@ -84,7 +88,7 @@ nav[role="navigation"] {
     ul#navigation {
         @extend .nav;
         @extend .navbar-nav;
-        font-family: $font-family-sans-serif;
+        font-family: $font-family-headings;
         text-transform: uppercase;
         letter-spacing: 1 px;
         .open > a,
@@ -115,14 +119,25 @@ nav[role="navigation"] {
             font-weight: 300;
         }
         > li > a:hover,
-        > .active > a,
-        > .active > a:hover {
+        > li.active > a,
+        > li.active > a:hover {
           background-color: $navbar-default-link-hover-bg;
           color: $navbar-default-color;
         }
     }
     .dropdown-header {
         color: rgba(255, 255, 255, 0.5);
+    }
+}
+// Projects page ==============================================================
+.post-preview {
+    border-top: 1px solid $gray-lighter;
+    h2 {
+        margin: 20px 0 0;
+    }
+    h3 {
+        margin: 10px 0 20px;
+        font: $font-size-h4 $font-family-base;
     }
 }
 

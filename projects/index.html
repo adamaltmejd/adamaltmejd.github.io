@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Notes
-slug: notes
+title: Projects
+slug: projects
 description: null
 ---
-
+<p>I currently work on a number of projects, some of which are described here. If you want to know more about any specific topic, please do not hesitate to contact me.</p>
 {% for post in paginator.posts %}
-<div class="post-preview">
+<section class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
             {{ post.title }}
@@ -21,9 +21,8 @@ description: null
         </h3>
         {% endif %}
     </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.author.name }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
-<hr>
+    <!-- <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.author.name }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p> -->
+</section>
 {% endfor %}
 
 <!-- Pager -->

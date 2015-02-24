@@ -17,7 +17,7 @@ layout: default
 <div class="container">
     <article>
         <div>
-            <p class="meta"><!-- {% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %} --> <i class="fa fa-clock-o"></i> {{ page.date | date: "%B %-d, %Y" }}</p>
+            <p class="meta">{{ page.date | date: "%B %-d, %Y" }}&nbsp;<i class="fa fa-clock-o"></i></p>
             {{ content }}
         </div>
         <nav role="pager">

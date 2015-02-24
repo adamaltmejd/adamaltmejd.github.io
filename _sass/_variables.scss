@@ -3,33 +3,31 @@
 // Variables
 // --------------------------------------------------
 
-//== Colors
-// PALETTE: http://paletton.com/#uid=63E0D0ksXpbjnvFonsWvokCDWfx
-$blue:                  hsla(215, 70%, 30%, 1);
-$green:                 hsla(151, 83%, 30%, 1);
-$purple:                hsla(256, 65%, 55%, 1);
-$yellow:                hsla(38, 82%, 43%, 1);
-$red:                   hsla(10, 54%, 50%, 1);
+/* Coolors Exported Palette - coolors.co/384e91-d39ec5-6c97d8-6ccfd8-aae1ff */
+$color1: #384e91;
+$color2: #d39ec5;
+$color3: #6c97d8;
+$color4: #6ccfd8;
+$color5: #aae1ff;
+$brand-primary: $color1;
+$brand-success: $color2;
+$brand-warning: $color3;
+$brand-danger: $color4;
+$brand-info: $color5;
 
-$black:                 darken(desaturate($blue, 55%),95%);
+$black:                 black;
 $gray-darker:           lighten($black, 10%);
 $gray-dark:             lighten($black, 25%);
 $gray:                  lighten($black, 50%);
 $gray-light:            lighten($black, 75%);
 $gray-lighter:          lighten($black, 90%);
-$white:                 lighten($yellow, 95%);
-
-$brand-primary:         $red;
-$brand-success:         $blue;
-$brand-warning:         $purple;
-$brand-danger:          $yellow;
-$brand-info:            $green;
+$white:                 white;
 
 //== GLOBAL
 $body-bg:               $white;
 $text-color:            $gray-darker;
-$link-color:            $brand-success;
-$link-hover-color:      $brand-primary;
+$link-color:            $brand-primary;
+$link-hover-color:      $brand-danger;
 
 
 //== Typography
@@ -325,15 +323,15 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2);
 $navbar-collapse-max-height:       340px;
 
-$navbar-default-color:             $black;
+$navbar-default-color:             $brand-warning;
 $navbar-default-bg:                $brand-primary;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%);
 
 // Navbar links
-$navbar-default-link-color:                $black;
-$navbar-default-link-hover-color:          $white;
+$navbar-default-link-color:                $navbar-default-color;
+$navbar-default-link-hover-color:          $brand-primary;
 $navbar-default-link-hover-bg:             $brand-success;
-$navbar-default-link-active-color:         $white;
+$navbar-default-link-active-color:         $brand-primary;
 $navbar-default-link-active-bg:            $brand-success;
 $navbar-default-link-disabled-color:       $gray;
 $navbar-default-link-disabled-bg:          transparent;

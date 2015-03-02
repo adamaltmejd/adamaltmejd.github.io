@@ -10,9 +10,9 @@ $color3: #6c97d8;
 $color4: #6ccfd8;
 $color5: #aae1ff;
 $brand-primary: $color1;
-$brand-success: $color2;
+$brand-success: $color4;
 $brand-warning: $color3;
-$brand-danger: $color4;
+$brand-danger: $color2;
 $brand-info: $color5;
 
 $black:                 black;
@@ -27,7 +27,7 @@ $white:                 white;
 $body-bg:               $white;
 $text-color:            $gray-darker;
 $link-color:            $brand-primary;
-$link-hover-color:      $brand-danger;
+$link-hover-color:      $brand-success;
 
 
 //== Typography
@@ -323,16 +323,16 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2);
 $navbar-collapse-max-height:       340px;
 
-$navbar-default-color:             $brand-warning;
-$navbar-default-bg:                $brand-primary;
+$navbar-default-color:             $brand-primary;
+$navbar-default-bg:                $white;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%);
 
 // Navbar links
 $navbar-default-link-color:                $navbar-default-color;
-$navbar-default-link-hover-color:          $brand-primary;
-$navbar-default-link-hover-bg:             $brand-success;
-$navbar-default-link-active-color:         $brand-primary;
-$navbar-default-link-active-bg:            $brand-success;
+$navbar-default-link-hover-color:          $brand-success;
+$navbar-default-link-hover-bg:             transparent;
+$navbar-default-link-active-color:         $brand-success;
+$navbar-default-link-active-bg:            transparent;
 $navbar-default-link-disabled-color:       $gray;
 $navbar-default-link-disabled-bg:          transparent;
 
@@ -343,7 +343,7 @@ $navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:           transparent;
-$navbar-default-toggle-icon-bar-bg:        $white;
+$navbar-default-toggle-icon-bar-bg:        $brand-primary;
 $navbar-default-toggle-border-color:       transparent;
 
 

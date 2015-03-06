@@ -113,7 +113,8 @@ module.exports = function(grunt) {
                         '_posts/**/*',
                         'assets/fonts/**/*',
                         'projects/**/*',
-                        'teaching/**/*'
+                        'teaching/**/*',
+                        'cv/**/*'
                        ],
                 tasks: "jekyll:development"
             },

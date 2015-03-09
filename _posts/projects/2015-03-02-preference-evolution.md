@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Evolution of preferences for ambiguity"
-date:   2015-03-02 12:00:00
+date:   2015-03-09 12:00:02
 categories: projects
 author: Adam Altmejd
 ---

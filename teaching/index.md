@@ -7,4 +7,11 @@ description: "An archive all notes and problem sets used in my teaching. Please 
 
 # Phd514, Mathematics I (2014)
 
-Problem sets:
+## Problem sets
+
+*   [Problem Set 1](/assets/attachments/math1/2014_PS1_Math1.pdf)
+*   [Problem Set 2](/assets/attachments/math1/2014_PS2_Math1.pdf)
+*   [Problem Set 3](/assets/attachments/math1/2014_PS3_Math1.pdf)
+*   [Problem Set 4](/assets/attachments/math1/2014_PS4_Math1.pdf)
+*   [Problem Set 5](/assets/attachments/math1/2014_PS5_Math1.pdf)
+

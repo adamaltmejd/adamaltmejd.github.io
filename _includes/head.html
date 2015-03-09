@@ -8,7 +8,7 @@
     <!-- <link rel="icon" href="../../favicon.ico"> -->
 
     <title>{% if page.title == "Adam Altmejd" %}{{ page.title }}{% else %}{{ page.title }} &middot; Adam Altmejd{% endif %}</title>
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">

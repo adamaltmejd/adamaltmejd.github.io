@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="container-fluid">
+    <header>
+        <div>
+            <h1>{{ page.title }}</h1>
+            <hr>
+<!--             {% if page.subtitle %}
+                <h2>{{ page.subtitle }}</h2>
+            {% endif %} -->
+        </div>
+    </header>
+</div>
+
+<div class="container">
+    <article>
+        <div>
+            <p class="meta">{{ page.date | date: "%B %-d, %Y" }}&nbsp;<i class="fa fa-clock-o"></i></p>
+            {{ content }}
+        </div>
+        <nav role="pager">
+            <hr>
+            <ul>
+                {% if page.previous %}
+                    <li class="previous">
+                    <a href="{{page.previous.url}}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}" rel="prev">
+                {% else %}
+                    <li class="previous disabled"><a href="#">
+                {% endif %}
+                &larr; Previous</a></li>
+
+                {% if page.next %}
+                    <li class="next"><a href="{{page.next.url}}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}" rel="next">
+                {% else %}
+                    <li class="next disabled"><a href="#">
+                {% endif %}
+                Next &rarr;</a></li>
+            </ul>
+        </nav>
+    </article>
+</div>

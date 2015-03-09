@@ -1,0 +1,12 @@
+// Variables load before to overwrite !deault in third party
+@import 'variables';
+@import 'syntax';
+
+// Third party
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass';
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../bower_components/font-awesome/scss/font-awesome';
+
+// My main style file
+@import 'style';
+

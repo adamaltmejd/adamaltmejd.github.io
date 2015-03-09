@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<header>
+    <div>
+        <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+        <hr>
+<!--         {% if page.subtitle %}
+            <h2>{{ page.subtitle }}</h2>
+        {% else if page.description %}
+            <h2>{{ page.description }}</h2>
+        {% endif %} -->
+    </div>
+</header>
+
+<div class="container">
+	<article>
+	    <div>{{ content }}</div>
+	</article>
+</div>

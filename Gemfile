@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem 'github-pages', '>= 33'
+gem 'sass'
+gem 'autoprefixer-rails'
+gem 'jemoji'
+gem 'jekyll-sitemap'

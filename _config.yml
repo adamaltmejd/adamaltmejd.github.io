@@ -1,0 +1,71 @@
+# Site settings
+title: Adam Altmejd
+tagline: My site
+author:
+    name: Adam Altmejd
+    email: adam@altmejd.se
+    github: adamaltmejd
+    twitter: adamaltmejd
+    facebook: adam.altmejd
+    linkedin: adamaltmejd
+description: "Description"
+baseurl: ""
+url: "http://www.adamaltmejd.se"
+
+# Timezone
+timezone: Europe/Stockholm
+
+# Github pages now uses Kramdown
+markdown: kramdown
+kramdown:
+    input: GFM
+
+gems:
+  - jemoji
+  - jekyll-sitemap
+
+# Pagination
+paginate: 10
+paginate_path: "projects/page:num"
+
+# Syntax highlighting (github: pygments)
+highlighter: pygments
+
+# SASS settings
+sass:
+    sass_dir: _sass
+    style: :nested
+    # style: :compressed
+
+# Disable custom plugins, and ignore symbolic links. (github: true, but some stuff whitelisted)
+# safe: true
+
+# Publish posts with a future date
+future: false
+
+# Site source (github: .)
+source: .
+
+# Where to put the compiled site
+destination: ./_site
+
+# Exclude these files from compilation (dotfiles by default)
+exclude: [
+    "Gemfile",
+    "Gemfile.lock",
+    "CNAME",
+    "README.md",
+    "bower_components",
+    "package.json",
+    "bower.json",
+    "Gruntfile.js",
+    "node_modules",
+]
+#include: [".htaccess"]
+
+# Produce an index for related posts (github: false)
+lsi: false
+
+# Permalink style
+#permalink: pretty
+permalink: /projects/:year/:month/:title/

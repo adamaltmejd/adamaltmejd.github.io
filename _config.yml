@@ -34,11 +34,10 @@ highlighter: pygments
 # SASS settings
 sass:
     sass_dir: _sass
-    style: :nested
-    # style: :compressed
+    style: :compressed
 
-# Disable custom plugins, and ignore symbolic links. (github: true, but some stuff whitelisted)
-# safe: true
+# Disable custom plugins, and ignore symbolic links. (github: true)
+safe: true
 
 # Publish posts with a future date
 future: false
@@ -61,7 +60,6 @@ exclude: [
     "Gruntfile.js",
     "node_modules",
 ]
-#include: [".htaccess"]
 
 # Produce an index for related posts (github: false)
 lsi: false

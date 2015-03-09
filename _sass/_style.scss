@@ -1,7 +1,4 @@
 // Layout =======================================================================
-body {
-    // padding-top: 45px;
-}
 main {
     header,article { @include make-row(); }
     article > div, article > nav {

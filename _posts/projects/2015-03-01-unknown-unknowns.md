@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Games with *unknown unknowns*"
+title:  "Games with Unknown Unknowns"
 date:   2015-03-01 12:00:00
 categories: projects
 author: Adam Altmejd

@@ -6,3 +6,4 @@ bower_components/
 npm-debug.log
 tmp/
 .sass-cache/
+Gemfile.lock

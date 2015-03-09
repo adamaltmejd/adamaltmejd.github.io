@@ -1,6 +1,6 @@
 # Site settings
 title: Adam Altmejd
-tagline: My site
+tagline: "Adam Altmejd's personal webpage"
 author:
     name: Adam Altmejd
     email: adam@altmejd.se
@@ -8,9 +8,9 @@ author:
     twitter: adamaltmejd
     facebook: adam.altmejd
     linkedin: adamaltmejd
-description: "Description"
+description: "Personal webpage of Adam Altmejd, PhD Student in Economics"
 baseurl: ""
-url: "http://www.adamaltmejd.se"
+url: "https://adamaltmejd.se"
 
 # Timezone
 timezone: Europe/Stockholm
@@ -67,5 +67,4 @@ exclude: [
 lsi: false
 
 # Permalink style
-#permalink: pretty
-permalink: /projects/:year/:month/:title/
+permalink: /:categories/:year/:month/:day/:title/

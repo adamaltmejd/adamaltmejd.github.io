@@ -11,26 +11,15 @@ module.exports = function(grunt) {
                 ' * Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
                 ' * Uses Jekyll, with Twitter Bootstrap, and theme based on Bootswatch' +
                 ' */\n\n',
+
         // Clean task to remove output folder
         clean: {
             development: ['_site'],
             production: ['_site'],
-            update: ['_site']
+            update: ['_site','_sass/bootstrap/**/*','_sass/fa/**/*','/assets/fonts/**/*']
         },
 
-        // We want a builtin sass compiler for development as this is faster.
-        // However in production we let Jekyll do it.
-        // sass: {
-        //     development: {
-        //         options: {
-        //             style: 'expanded',
-        //             loadPath: '_sass/',
-        //             bundleExec: true
-        //         },
-        //         files: { '_site/assets/css/style.css': '_sass/main.scss' }
-        //     }
-        // },
-        // Using grunt-sass instead
+        // Using grunt-sass in development
         sass: {
             development: {
                 options: {
@@ -50,15 +39,17 @@ module.exports = function(grunt) {
             development: {
                 options: {
                     drafts: true,
-                    future: true
-                    // raw: 'sass: \n' +
-                    //      '  style: :expanded\n'
+                    future: true,
+                    raw: 'sass: \n' +
+                         '    style: :expanded\n',
+                    config: '_config.yml'
                 }
             },
             production: {
                 options: {
                     serve: true,
-                    watch: true
+                    watch: true,
+                    port: 8080,
                 }
 
             }
@@ -72,25 +63,18 @@ module.exports = function(grunt) {
                 flatten: true,
                 filter: 'isFile'
             },
-            // SASS files are imported directly from bower_components
-            // bootstrap: {
-            //     expand: true,
-            //     cwd: 'bower_components/bootstrap-sass/assets/stylesheets/',
-            //     src: ['**/*'],
-            //     dest: '_sass/bootstrap/',
-            // },
-            // fontawesome: {
-            //     expand: true,
-            //     cwd: 'bower_components/font-awesome/scss/',
-            //     src: ['**/*'],
-            //     dest: '_sass/fa/',
-            // },
-            // bootswatch: {
-            //     expand: true,
-            //     cwd: 'bower_components/bootswatch-scss/yeti/',
-            //     src: ['**/*'],
-            //     dest: '_sass/bootswatch/',
-            // }
+            bootstrap: {
+                expand: true,
+                cwd: 'bower_components/bootstrap-sass/assets/stylesheets/',
+                src: ['**/*'],
+                dest: '_sass/bootstrap/',
+            },
+            fontawesome: {
+                expand: true,
+                cwd: 'bower_components/font-awesome/scss/',
+                src: ['**/*'],
+                dest: '_sass/fa/',
+            },
         },
 
         watch: {
@@ -165,12 +149,8 @@ module.exports = function(grunt) {
         'jekyll:development',
         'sass:development',
         'connect',
-        'open:server',
+        'open',
         'watch'
-    ]);
-    // Test task
-    grunt.registerTask('test', [
-        'sass:development'
     ]);
 
     // Production task - we do not need to use jekyll task here since github will do this
@@ -182,10 +162,9 @@ module.exports = function(grunt) {
 
     // Update task, run to update dependencies
     grunt.registerTask('update', [
-        'clean',
+        'clean:update',
         'copy:fonts',
-        // 'copy:bootstrap',
-        // 'copy:fontawesome',
-        // 'copy:bootswatch'
+        'copy:bootstrap',
+        'copy:fontawesome',
     ]);
 };

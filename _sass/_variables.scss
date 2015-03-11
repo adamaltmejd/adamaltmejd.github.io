@@ -33,7 +33,7 @@ $link-hover-color:      $brand-success;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-$web-font: "http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Lora:400,700,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800";
+$web-font: "https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Lora:400,700,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800";
 @import url($web-font);
 
 $font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;

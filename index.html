@@ -6,7 +6,7 @@ description: null
 ---
 
 <div class="row" itemscope itemtype="http://schema.org/Person">
-    <div class="col-xs-12 col-md-8">
+    <div class="col-xs-12 col-sm-8">
         <p>I'm <span itemprop="firstName">Adam</span>, a second-year <span itemprop="jobTitle">PhD Student</span> at the <a href="https://www.hhs.se/en/Research/Departments/DE/">Department of Economics</a> at <a itemprop="affiliation" href="https://www.hhs.se/en/">Stockholm School of Economics</a>, working mainly with behavioral economics and game theory.</p>
 
         <p>I am interested in how our behavior affects society at large - the macroeconomic consequences of humanity's limited cognitive abilities. I use evolutionary game theory to study how such limitations could persist, and run experiments on the explanatory power of behavioral elements in macroeconomic models.</p>
@@ -21,16 +21,15 @@ description: null
             </li>
             {% endfor %}
         </ul>
-    </div><!-- /.col-xs-8 -->
-    <div class="col-xs-12 col-md-4">
+    </div>
+    <div class="col-xs-12 col-sm-4">
         <div class="sidebar-module">
-            <img class="img-rounded img-responsive" src="../assets/img/Adam_Altmejd.jpg" itemprop="image" property="depiction" alt="Picture of Adam Altmejd"/>
-            <div class="list-group">
+            <div class="list-group" style="max-width: 400px;">
+                <img class="img-responsive" src="../assets/img/Adam_Altmejd.jpg" itemprop="image" property="depiction" alt="Picture of Adam Altmejd"/>
                 <a class="list-group-item" href="/cv/"><i class="fa fa-file-text fa-fw"></i>&nbsp; Curriculum Vitae</a>
                 <a class="list-group-item" href="mailto:{{ site.author.email }}" itemprop="email"><i class="fa fa-envelope fa-fw"></i>&nbsp; {{ site.author.email }}</a>
                 <a class="list-group-item" href="tel:46734200120" itemprop="telephone"><i class="fa fa-phone fa-fw"></i>&nbsp; +46 (0) 734 20 01 20</a>
-                <!-- <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a> -->
             </div>
-        </div><!-- /.sidebar-module -->
-    </div><!-- /.col-xs-4 -->
+        </div>
+    </div>
 </div>

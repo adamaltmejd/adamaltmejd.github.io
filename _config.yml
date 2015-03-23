@@ -65,4 +65,4 @@ exclude: [
 lsi: false
 
 # Permalink style
-permalink: /:categories/:year/:month/:day/:title/
+permalink: /:categories/:title/

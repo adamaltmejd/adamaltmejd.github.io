@@ -1,3 +1,4 @@
 [submodule "cv"]
 	path = cv
 	url = https://github.com/adamaltmejd/cv.git
+	branch = master

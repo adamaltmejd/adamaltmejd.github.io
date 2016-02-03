@@ -15,7 +15,6 @@ url: "https://adamaltmejd.se"
 # Timezone
 timezone: Europe/Stockholm
 
-# Github pages now uses Kramdown
 markdown: kramdown
 kramdown:
     input: GFM
@@ -29,8 +28,7 @@ gems:
 paginate: 10
 paginate_path: "projects/page:num"
 
-# Syntax highlighting (github: pygments)
-highlighter: pygments
+highlighter: rouge
 
 # SASS settings
 sass:

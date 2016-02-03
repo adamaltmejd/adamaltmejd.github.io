@@ -5,7 +5,8 @@ slug: projects
 description: null
 ---
 <p>I currently work on a number of projects, some of which are described here. If you want to know more about any specific topic, please do not hesitate to contact me.</p>
-{% for post in paginator.posts %}
+
+{% for post in site.categories.projects %}
 <section class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">

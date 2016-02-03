@@ -23,6 +23,7 @@ kramdown:
 gems:
   - jemoji
   - jekyll-sitemap
+  - jekyll-paginate
 
 # Pagination
 paginate: 10

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'github-pages', '>= 33'
+gem 'github-pages', '>= 44'
 gem 'sass'
 gem 'autoprefixer-rails'
 gem 'jemoji'

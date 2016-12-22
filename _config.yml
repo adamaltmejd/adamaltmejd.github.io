@@ -44,6 +44,9 @@ future: false
 # Site source (github: .)
 source: .
 
+# Include .well-known (for keybase, robots.txt, etc)
+include: [".well-known"]
+
 # Where to put the compiled site
 destination: ./_site
 

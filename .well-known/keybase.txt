@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/adamaltmejd
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://adamaltmejd.se
+  * I am adamaltmejd (https://keybase.io/adamaltmejd) on keybase.
+  * I have a public key ASDnLJKfbatOu0fnmL7oixq66WrRPuUp-_AYFZf-AlYl_wo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120e72c929f6dab4ebb47e798bee88b1abae96ad13ee529fbf0181597fe025625ff0a",
+            "host": "keybase.io",
+            "kid": "0120e72c929f6dab4ebb47e798bee88b1abae96ad13ee529fbf0181597fe025625ff0a",
+            "uid": "3aa62d604fad51438f7fdf6a6f9c9f19",
+            "username": "adamaltmejd"
+        },
+        "service": {
+            "hostname": "adamaltmejd.se",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.18"
+    },
+    "ctime": 1482424474,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1482424418,
+        "hash": "c3b31be3ae305b24a08a29cc88940b4c8b60e851a8de7b2000456db5a17d95069c80dc0b2982536e84e0918a1e9e1ff5fcc0fb9d296f8b6b4484dc3f531e74f1",
+        "seqno": 771765
+    },
+    "prev": "4a73768ac9107b01b4962fd7dcca589774f6b04fdd32114c1b503e9881319c36",
+    "seqno": 14,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg5yySn22rTrtH55i+6Isauulq0T7lKfvwGBWX/gJWJf8Kp3BheWxvYWTFAvp7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZTcyYzkyOWY2ZGFiNGViYjQ3ZTc5OGJlZTg4YjFhYmFlOTZhZDEzZWU1MjlmYmYwMTgxNTk3ZmUwMjU2MjVmZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZTcyYzkyOWY2ZGFiNGViYjQ3ZTc5OGJlZTg4YjFhYmFlOTZhZDEzZWU1MjlmYmYwMTgxNTk3ZmUwMjU2MjVmZjBhIiwidWlkIjoiM2FhNjJkNjA0ZmFkNTE0MzhmN2ZkZjZhNmY5YzlmMTkiLCJ1c2VybmFtZSI6ImFkYW1hbHRtZWpkIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJhZGFtYWx0bWVqZC5zZSIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE4In0sImN0aW1lIjoxNDgyNDI0NDc0LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0ODI0MjQ0MTgsImhhc2giOiJjM2IzMWJlM2FlMzA1YjI0YTA4YTI5Y2M4ODk0MGI0YzhiNjBlODUxYThkZTdiMjAwMDQ1NmRiNWExN2Q5NTA2OWM4MGRjMGIyOTgyNTM2ZTg0ZTA5MThhMWU5ZTFmZjVmY2MwZmI5ZDI5NmY4YjZiNDQ4NGRjM2Y1MzFlNzRmMSIsInNlcW5vIjo3NzE3NjV9LCJwcmV2IjoiNGE3Mzc2OGFjOTEwN2IwMWI0OTYyZmQ3ZGNjYTU4OTc3NGY2YjA0ZmRkMzIxMTRjMWI1MDNlOTg4MTMxOWMzNiIsInNlcW5vIjoxNCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBO2tBwNtV4UvCWyfbWOrk8MklIkw1em0vJ/5puCbyxX/T2jDn4mdQ0JU8Zv/UwJWNkUBiCooN+ge6kQK8cSzwNqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgz6dmeh99dN/WMcq+GH693n06i0Fot4onf+x9bZff7uajdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/adamaltmejd
+
+==================================================================

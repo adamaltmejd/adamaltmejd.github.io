@@ -233,9 +233,6 @@ body {
     dd, h3, > p, section > p {
         margin-left: 85px;
     }
-    dd, dt {
-        padding-top: 7px;
-    }
     h3 {
         color: $brand-success;
         font-size: $font-size-h5;
@@ -243,8 +240,8 @@ body {
         margin-bottom: 0;
     }
     p {
-        margin-top: 0;
-        margin-bottom: 0px;
+        margin-top:0;
+        margin-bottom:7px;
     }
 }
 

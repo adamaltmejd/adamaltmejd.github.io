@@ -50,7 +50,7 @@ highlighter: rouge
 # SASS settings
 sass:
   sass_dir: _sass
-  style: :compressed
+  style: :expanded
 
 # Disable custom plugins, and ignore symbolic links. (github: true)
 safe: true

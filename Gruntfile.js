@@ -40,7 +40,8 @@ module.exports = function(grunt) {
                 options: {
                     drafts: true,
                     future: true,
-                    raw: 'sass: \n' +
+                    raw: 'url: ""\n' +
+                         'sass:\n' +
                          '    style: :expanded\n',
                     config: '_config.yml'
                 }
@@ -50,6 +51,7 @@ module.exports = function(grunt) {
                     serve: true,
                     watch: true,
                     port: 8080,
+                    raw: 'url : ""'
                 }
 
             }

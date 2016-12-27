@@ -15,19 +15,26 @@ url: "https://adamaltmejd.se"
 # Timezone
 timezone: Europe/Stockholm
 
+# Markdown
 markdown: kramdown
 kramdown:
     input: GFM
+    math_engine: mathjax # github: mathjax
+
+gist:
+    noscript: false # github: false
 
 gems:
   - jemoji
   - jekyll-sitemap
-  - jekyll-paginate
+  - jekyll-coffeescript # github default
+  - jekyll-paginate # github default
 
 # Pagination
 paginate: 10
 paginate_path: "projects/page:num"
 
+# Syntax highlighting (github: rouge)
 highlighter: rouge
 
 # SASS settings
@@ -49,6 +56,9 @@ include: [".well-known"]
 
 # Where to put the compiled site
 destination: ./_site
+
+# Incremental builds (github: false)
+incremental: false
 
 # Exclude these files from compilation (dotfiles by default)
 exclude: [

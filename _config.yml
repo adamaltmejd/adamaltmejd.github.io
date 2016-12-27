@@ -2,15 +2,16 @@
 title: Adam Altmejd
 tagline: "Adam Altmejd's personal webpage"
 author:
-    name: Adam Altmejd
-    email: adam@altmejd.se
-    github: adamaltmejd
-    twitter: adamaltmejd
-    facebook: adam.altmejd
-    linkedin: adamaltmejd
+  name: Adam Altmejd
+  email: adam@altmejd.se
+  github: adamaltmejd
+  twitter: adamaltmejd
+  facebook: adam.altmejd
+  linkedin: adamaltmejd
 description: "Personal webpage of Adam Altmejd, PhD Student in Economics"
 baseurl: ""
 url: "https://adamaltmejd.se"
+repository: adamaltmejd/adamaltmejd.github.io
 
 # Timezone
 timezone: Europe/Stockholm
@@ -18,17 +19,26 @@ timezone: Europe/Stockholm
 # Markdown
 markdown: kramdown
 kramdown:
-    input: GFM
-    math_engine: mathjax # github: mathjax
+  input: GFM
+  math_engine: mathjax # github: mathjax
 
 gist:
-    noscript: false # github: false
+  noscript: false # github: false
 
 gems:
-  - jemoji
-  - jekyll-sitemap
   - jekyll-coffeescript # github default
   - jekyll-paginate # github default
+  - jekyll-github-metadata
+  - jemoji
+  - jekyll-sitemap
+
+# because we have safe: true to mimic github pages we need to add
+whitelist:
+  - jekyll-coffeescript # github default
+  - jekyll-paginate # github default
+  - jekyll-github-metadata
+  - jemoji
+  - jekyll-sitemap
 
 # Pagination
 paginate: 10
@@ -39,8 +49,8 @@ highlighter: rouge
 
 # SASS settings
 sass:
-    sass_dir: _sass
-    style: :compressed
+  sass_dir: _sass
+  style: :compressed
 
 # Disable custom plugins, and ignore symbolic links. (github: true)
 safe: true
@@ -62,15 +72,15 @@ incremental: false
 
 # Exclude these files from compilation (dotfiles by default)
 exclude: [
-    "Gemfile",
-    "Gemfile.lock",
-    "CNAME",
-    "README.md",
-    "bower_components",
-    "package.json",
-    "bower.json",
-    "Gruntfile.js",
-    "node_modules",
+  "Gemfile",
+  "Gemfile.lock",
+  "CNAME",
+  "README.md",
+  "bower_components",
+  "package.json",
+  "bower.json",
+  "Gruntfile.js",
+  "node_modules"
 ]
 
 # Produce an index for related posts (github: false)

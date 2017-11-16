@@ -2,19 +2,25 @@
 	<hr>
 	<div>
 		<ul class="list-inline text-center">
-		    <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss fa-2x"></i></a></li>
-		    {% if site.author.twitter %}
+		    <!-- <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss fa-2x"></i></a></li> -->
+			{% if site.author.gscholarid %}
+		    <li><a href="https://scholar.google.se/citations?user={{ site.author.linkedin }}"><i class="ai ai-google-scholar-square ai-2x"></i></a></li>
+		    {% endif %}
+			{% if site.author.twitter %}
 		    <li><a href="https://twitter.com/{{ site.author.twitter }}"><i class="fa fa-twitter fa-2x"></i></a></li>
 		    {% endif %}
 		    {% if site.author.facebook %}
 		    <li><a href="https://www.facebook.com/{{ site.author.facebook }}"><i class="fa fa-facebook-official fa-2x"></i></a></li>
 		    {% endif %}
-		    {% if site.author.github %}
+			{% if site.author.linkedin %}
+		    <li><a href="https://linkedin.com/in/{{ site.author.linkedin }}"><i class="fa fa-linkedin fa-2x"></i></a></li>
+			{% endif %}
+			{% if site.author.github %}
 		    <li><a href="https://github.com/{{ site.author.github }}"><i class="fa fa-github fa-2x"></i></a></li>
 		    {% endif %}
-		    {% if site.author.linkedin %}
-		    <li><a href="https://linkedin.com/in/{{ site.author.linkedin }}"><i class="fa fa-linkedin fa-2x"></i></a></li>
-		    {% endif %}
+			<!-- {% if site.author.orcid %}
+		    <li><a href="https://orcid.org/{{ site.author.orcid }}"><i class="ai ai-orcid ai-2x"></i></a></li>
+			{% endif %} -->
 		</ul>
 		<p class="copyright text-muted">&copy; {{ site.author.name }} {{ site.time | date: '%Y' }}</p>
 	</div>

@@ -8,6 +8,8 @@ author:
   twitter: adamaltmejd
   facebook: adam.altmejd
   linkedin: adamaltmejd
+  orcid: 0000-0002-4248-0677
+  gscholarid: xyMRB8cAAAAJ
 description: "Personal webpage of Adam Altmejd, PhD Student in Economics"
 baseurl: ""
 url: "https://adamaltmejd.se"
@@ -40,9 +42,9 @@ plugins:
   - jekyll-seo-tag # github optional
   - jekyll-sitemap # github optional
   - jekyll-redirect-from # github optional
+  - jekyll-feed # github optional
 
 #  - jekyll-include-cache # github optional
-#  - jekyll-feed # github optional
 #  - jekyll-avatar # github optional
 #  - jekyll-mentions # github optional
 

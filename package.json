@@ -8,10 +8,12 @@
         "type": "git",
         "url": "git://github.com/adamaltmejd/adamaltmejd.github.io.git"
     },
-    "licenses": [ {
-        "type": "MIT",
-        "url": "http://opensource.org/licenses/MIT"
-    } ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
     "engines": {
         "node": ">=0.10.30"
     },

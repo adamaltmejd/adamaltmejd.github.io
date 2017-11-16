@@ -25,20 +25,42 @@ kramdown:
 gist:
   noscript: false # github: false
 
-gems:
+# https://help.github.com/articles/configuring-jekyll-plugins/
+plugins:
   - jekyll-coffeescript # github default
+  - jekyll-gist # github default
+  - jekyll-github-metadata # github default
   - jekyll-paginate # github default
-  - jekyll-github-metadata
-  - jemoji
-  - jekyll-sitemap
+  - jekyll-relative-links # github default
+  - jekyll-optional-front-matter # github default
+  - jekyll-readme-index # github default
+  - jekyll-default-layout # github default
+  - jekyll-titles-from-headings # github default
+  - jemoji # github optional
+  - jekyll-seo-tag # github optional
+  - jekyll-sitemap # github optional
+  - jekyll-redirect-from # github optional
 
-# because we have safe: true to mimic github pages we need to add
+#  - jekyll-include-cache # github optional
+#  - jekyll-feed # github optional
+#  - jekyll-avatar # github optional
+#  - jekyll-mentions # github optional
+
+# Need to whitelist all plugins to mimic github pages
 whitelist:
-  - jekyll-coffeescript # github default
-  - jekyll-paginate # github default
+  - jekyll-coffeescript
+  - jekyll-gist
   - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
   - jemoji
+  - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Pagination
 paginate: 10

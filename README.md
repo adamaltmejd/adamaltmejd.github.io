@@ -2,9 +2,9 @@ adamaltmejd.github.io
 =====================
 My personal website.
 
-Uses Grunt for testing/development. 
+Uses Grunt for testing/development.
 
-The submodule (cv) now tracks a the master branch. To update use
+The submodule (cv) now tracks the master branch. To update use
 ```
 git submodule update --remote
 ```

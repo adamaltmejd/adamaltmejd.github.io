@@ -6,7 +6,7 @@ categories: projects
 author: Adam Altmejd
 ---
 
-I study the effects of education choice using a unique data set of applications to Swedish universities, and identify causal relationships by exploiting lotteries used to break ties in the application process. All projects were [pre registered at the OSF](https://osf.io/cjba7/) before I was given access to the data, to avoid any risks of accidentally exploiting the many degrees of freedom in research design that are available when using a large data set such as this.
+I study the effects of education choice using a unique data set of applications to Swedish universities, and identify causal relationships by exploiting lotteries used to break ties in the application process. All projects were [pre registered at the OSF](https://osf.io/rj6t7/) before I was given access to the data, to avoid any risks of accidentally exploiting the many degrees of freedom in research design that are available when using a large data set such as this.
 
 # Sibling Spill-overs
 

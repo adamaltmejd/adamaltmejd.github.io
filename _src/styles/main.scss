@@ -1,0 +1,15 @@
+// Variables load before to overwrite !deault in third party
+@import 'variables';
+//@import 'syntax';
+
+// Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Font-awesome
+@import "../../node_modules/font-awesome/scss/font-awesome";
+
+// My main style file
+//@import 'style';
+@import "style";
+@import 'cv';
+

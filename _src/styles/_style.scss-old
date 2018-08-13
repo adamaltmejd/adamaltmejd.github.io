@@ -1,28 +1,28 @@
 main {
     header,article { @include make-row(); }
     article > div, article > nav {
-        @include make-lg-column(8);
-        @include make-lg-column-offset(2);
-        @include make-md-column(10);
-        @include make-md-column-offset(1);
-        @include make-xs-column(12);
+        // @include make-lg-column(8);
+        // @include make-lg-column-offset(2);
+        // @include make-md-column(10);
+        // @include make-md-column-offset(1);
+        // @include make-xs-column(12);
     }
     header {
-        padding: $line-height-computed 0 $line-height-computed;
-        margin-bottom: $line-height-computed;
+        padding: $font-size-base * $line-height-base 0;
+        margin-bottom: $font-size-base * $line-height-base;
         // border-bottom: 1px solid $hr-border;
         text-align: center;
         > div {
-            @include make-md-column(6);
-            @include make-md-column-offset(3);
-            @include make-xs-column(12);
+            // @include make-md-column(6);
+            // @include make-md-column-offset(3);
+            // @include make-xs-column(12);
         }
         h1 {
             text-transform: uppercase;
             font-weight: 800;
         }
         h2 {
-            font-size: $font-size-large;
+            font-size: $font-size-lg;
             font-family: $font-family-base;
             font-weight: 300;
             text-align: left;
@@ -32,7 +32,7 @@ main {
         hr {
             max-width: 200px;
             margin: 10px auto;
-            border-top: solid 4px $text-color;
+            border-top: solid 4px $body-color;
         }
     }
     article {
@@ -50,7 +50,9 @@ main {
 footer {
     @extend .container-fluid;
     > div { @include make-row(); }
-    > div > div { @include make-xs-column(12); }
+    > div > div {
+      // @include make-xs-column(12);
+    }
     padding-bottom: 20px;
     .list-inline {
         margin: 0;
@@ -76,14 +78,14 @@ nav[role="navigation"] {
         @extend .navbar-header;
         a {
             @extend .navbar-brand;
-            font-family: $font-family-headings;
+            font-family: $font-family-sans-serif;
             text-transform: uppercase;
         }
     }
     ul {
         @extend .nav;
         @extend .navbar-nav;
-        font-family: $font-family-headings;
+        font-family: $font-family-sans-serif;
         text-transform: uppercase;
         letter-spacing: 1 px;
         .open > a,
@@ -94,19 +96,19 @@ nav[role="navigation"] {
     }
     ul.dropdown-menu {
         border: none;
-        background-color: $navbar-default-bg;
+        //background-color: $navbar-default-bg;
         > li > a,
         > li > a:focus {
             background-color: hsla(0, 100%, 100%, 0);
-            color: $navbar-default-color;
+            color: $navbar-light-color;
             font-size: 13px;
             font-weight: 300;
         }
         > li > a:hover,
         > li.active > a,
         > li.active > a:hover {
-          background-color: $navbar-default-link-hover-bg;
-          color: $navbar-default-color;
+          //background-color: $navbar-default-link-hover-bg;
+          color: $navbar-light-color;
         }
     }
     .dropdown-header {
@@ -248,28 +250,28 @@ body {
   .dropdown-toggle {
 
     &.btn-default ~ .dropdown-menu {
-      background-color: $btn-default-bg;
-      border-color: $btn-default-border;
+      //background-color: $btn-default-bg;
+      border-color: #dadada;
 
       > li > a {
-        color: $btn-default-color;
+        color: gray-dark;
       }
 
       > li > a:hover {
-        background-color: darken($btn-default-bg, 8%);
+        //background-color: darken($btn-default-bg, 8%);
       }
     }
 
     &.btn-primary ~ .dropdown-menu {
-      background-color: $btn-primary-bg;
-      border-color: $btn-primary-border;
+      background-color: $brand-primary;
+      border-color: darken($brand-primary, 5%);
 
       > li > a {
-        color: $btn-primary-color;
+        color: white;
       }
 
       > li > a:hover {
-        background-color: darken($btn-primary-bg, 8%);
+        background-color: darken($brand-primary, 8%);
       }
     }
 
@@ -392,12 +394,12 @@ label,
 .nav-tabs {
   > li > a {
     background-color: $btn-default-bg;
-    color: $text-color;
+    color: $body-color;
   }
 
   .caret {
-    border-top-color: $text-color;
-    border-bottom-color: $text-color;
+    border-top-color: $body-color;
+    border-bottom-color: $body-color;
   }
 }
 
@@ -506,7 +508,7 @@ label,
 
 .label-default {
   background-color: $btn-default-bg;
-  color: $btn-default-color;
+  color: gray-dark;
 }
 
 .badge {

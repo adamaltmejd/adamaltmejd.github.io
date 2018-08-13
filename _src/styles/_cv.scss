@@ -1,0 +1,40 @@
+// SPECIFIC CV PAGE DESIGN
+.cv_page {
+  dl, dd, dt, p, h2, h3 {
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    text-align: center;
+    font-size: $h4-font-size;
+  }
+  h2 {
+      color: map_get($theme-colors, 'success');
+      margin-top: $spacer;
+      font-size: $h4-font-size;
+      font-weight: bold;
+  }
+  h2:before {
+      content: "";
+      display: inline-block;
+      margin-right: 5px;
+      width: 85px;
+      height: 8px;
+      background-color: map_get($theme-colors, 'success');;
+  }
+  dt {
+      float: left;
+      clear: left;
+      width: 90px;
+      font-weight: $font-weight-normal;
+  }
+  dd, h3, > p, section > p {
+      margin-left: 90px;
+  }
+
+  h3 {
+      color: map_get($theme-colors, 'success');
+      font-size: $h5-font-size;
+      margin-top: $spacer / 2;
+  }
+}

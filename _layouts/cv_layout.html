@@ -1,8 +1,10 @@
 ---
 layout: page
 ---
-<div id="cv">
-    <p class="meta"><a href="cv.pdf"><i class="fa fa-file-pdf-o"></i> Download PDF</a></p>
-    <!-- Instead of parsing Markdown content we include the cv.html file processed with pandoc (for citations to work) -->
-    {% include_relative cv.html %}
+<div class="cv_page">
+  <header>
+    <a href="cv.pdf"><i class="fa fa-file-pdf-o"></i> Download PDF</a>
+  </header>
+  <!-- Instead of parsing Markdown content with Jekyll we include the cv.html file processed with pandoc (for citations to work) -->
+  {% include_relative cv.html %}
 </div>

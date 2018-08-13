@@ -1,0 +1,155 @@
+// ===========================
+// MAIN LAYOUT/SCAFFOLDING
+
+div.site_container {
+  @include make-container();
+  max-width: 1000px;
+}
+
+main {
+  @include make-row();
+
+  justify-content: center;
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: row; // put nav in sidebar
+  }
+  @include media-breakpoint-only(xs) {
+    flex-direction: column-reverse; // on phones order nav before content
+  }
+
+  > article {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 100%;
+  }
+
+  > aside {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 220px;
+  }
+}
+
+footer {
+  @include make-row();
+
+  > div {
+    @include make-col-ready();
+    @extend .mx-auto;
+    @extend .d-flex;
+    @extend .flex-column;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+    }
+
+    > ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      @extend .mx-auto;
+
+      > li {
+        float: left;
+        @extend .px-1;
+      }
+    }
+  }
+}
+
+// ===========================
+// HEADERS
+
+.dropdown-menu.collapsing {
+    display:block;
+}
+
+div.site_header {
+  @include make-row();
+
+  > header {
+    @include make-col-ready();
+    @include make-col(12);
+
+    @extend .pt-sm-4; // padding top 5 (responsive spacing)
+    @extend .pb-sm-4; // padding top 5 (responsive spacing)
+
+    > div { // put the burger in the header
+      @extend .navbar-light;
+      @extend .navbar-expand-sm;
+      text-align: center;
+
+      a.navbar-brand {
+        font-size: $h1-font-size;
+        @include media-breakpoint-only(xs) {
+          font-size: $h3-font-size;
+        }
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-right: 0;
+      }
+    }
+    hr {
+      max-width: 200px;
+      margin: 0 auto 1rem;
+      border-top: solid 0.25rem $body-color;
+    }
+    button {
+      position: absolute;
+      top: 0.6rem;
+      right: 0.3rem;
+      padding: 0.1rem 0.3rem;
+    }
+  }
+
+}
+
+//=========================
+// NAV
+nav {
+  @extend .navbar;
+  @extend .navbar-light;
+  @extend .bg-light;
+  @extend .navbar-expand-sm;
+  @extend .flex-column;
+
+  > div {
+    @extend .collapse;
+    @extend .navbar-collapse;
+
+    > ul {
+      @extend .navbar-nav;
+      @extend .flex-column;
+      @extend .mb-3;
+
+      > li {
+        @extend .nav-item;
+        > a {
+          @extend .nav-link;
+        }
+      }
+
+      hr {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  img {
+    border-radius: 2rem !important;
+    max-width: 200px;
+    @extend .img-fluid;
+    @extend .rounded;
+    @extend .align-top;
+
+    @include media-breakpoint-only(xs) {
+      order: 13;
+    }
+  }
+}

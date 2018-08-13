@@ -1,20 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    {% include head.html %}
-    <body>
-		<a class="sr-only" href="#content">Skip to main content</a>
-		<nav role="navigation">
-        	{% include nav.html %}
-		</nav>
+{% include head.html %}
 
-		<main>
-        	{{ content }}
-        </main>
+<body>
+  <a class="sr-only" href="#content">Skip to main content</a>
+  <div class="site_container">
+    <div class="site_header">
+      <header>
+        <div>
+          <a class="navbar-brand" href="/">{{ site.title }}</a>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <hr>
+      </header>
+    </div>
 
-		<footer>
-        	{% include footer.html %}
-		</footer>
+    <main>
+      <article id="content">{{ content }}</article>
+      <aside>{% include nav.html %}</aside>
+    </main>
 
-        {% include js.html %}
-    </body>
+    <hr>
+
+    <footer>
+      <div>{% include footer.html %}</div>
+    </footer>
+  </div>
+
+  {% include js.html %}
+</body>
+
 </html>

@@ -18,97 +18,69 @@ repository: adamaltmejd/adamaltmejd.github.io
 # Timezone
 timezone: Europe/Stockholm
 
-# Markdown
-markdown: kramdown
-kramdown:
-  input: GFM
-  math_engine: mathjax # github: mathjax
-
-gist:
-  noscript: false # github: false
-
-# https://help.github.com/articles/configuring-jekyll-plugins/
-plugins:
-  - jekyll-coffeescript # github default
-  - jekyll-gist # github default
-  - jekyll-github-metadata # github default
-  - jekyll-paginate # github default
-  - jekyll-relative-links # github default
-  - jekyll-optional-front-matter # github default
-  - jekyll-readme-index # github default
-  - jekyll-default-layout # github default
-  - jekyll-titles-from-headings # github default
-  - jemoji # github optional
-  - jekyll-seo-tag # github optional
-  - jekyll-sitemap # github optional
-  - jekyll-redirect-from # github optional
-  - jekyll-feed # github optional
-
-#  - jekyll-include-cache # github optional
-#  - jekyll-avatar # github optional
-#  - jekyll-mentions # github optional
-
-# Need to whitelist all plugins to mimic github pages
-whitelist:
-  - jekyll-coffeescript
-  - jekyll-gist
-  - jekyll-github-metadata
-  - jekyll-paginate
-  - jekyll-relative-links
-  - jekyll-optional-front-matter
-  - jekyll-readme-index
-  - jekyll-default-layout
-  - jekyll-titles-from-headings
-  - jemoji
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-redirect-from
+# Publish posts with a future date
+future: false
 
 # Pagination
 paginate: 10
 paginate_path: "projects/page:num"
 
-# Syntax highlighting (github: rouge)
-highlighter: rouge
+# https://help.github.com/articles/configuring-jekyll-plugins/
+plugins:
+  - jekyll-coffeescript # github forced
+  - jekyll-gist # github forced
+  - jekyll-github-metadata # github forced
+  - jekyll-paginate # github forced
+  - jekyll-relative-links # github forced
+  - jekyll-optional-front-matter # github forced
+  - jekyll-readme-index # github forced
+  - jekyll-default-layout # github forced
+  - jekyll-titles-from-headings # github forced
+  #- jemoji # github optional
+  #- jekyll-seo-tag # github optional
+  #- jekyll-sitemap # github optional
+  #- jekyll-redirect-from # github optional
+  #- jekyll-feed # github optional
+  #- jekyll-include-cache # github optional
+  #- jekyll-avatar # github optional
+  #- jekyll-mentions # github optional
 
 # SASS settings
-sass:
-  sass_dir: _sass
-  style: :compressed
-
-# Disable custom plugins, and ignore symbolic links. (github: true)
-safe: true
-
-# Publish posts with a future date
-future: false
-
-# Site source (github: .)
-source: .
+# sass:
+#   sass_dir: _sass
+#   style: :expanded
+#   sourcemap: true
 
 # Include .well-known (for keybase, robots.txt, etc)
 include: [".well-known"]
 
-# Where to put the compiled site
-destination: ./_site
-
-# Incremental builds (github: false)
-incremental: false
-
 # Exclude these files from compilation (dotfiles by default)
 exclude: [
+  "node_modules",
   "Gemfile",
   "Gemfile.lock",
   "CNAME",
   "README.md",
-  "bower_components",
+  ".editorconfig",
   "package.json",
-  "bower.json",
+  "package-lock.json",
+  "yarn.lock",
   "Gruntfile.js",
-  "node_modules"
+  "gulpfile.babel.js",
+  "adamaltmejd.code-workspace"
 ]
-
-# Produce an index for related posts (github: false)
-lsi: false
 
 # Permalink style
 permalink: /:categories/:title/
+
+# Github pages defaults (forced)
+lsi: false
+safe: true
+source: .
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge

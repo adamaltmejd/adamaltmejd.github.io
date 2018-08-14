@@ -1,24 +1,114 @@
 // Variables
 // adamaltmejd.se
 
-$theme-colors: (
-  "primary":    #384e91,
-  "success":    #D0404E,
-  "info":       #aae1ff,
-  "warning":    #6c97d8,
-  "danger":     #6ccfd8
+//
+// Color system
+//
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
 );
-// "secondary":  $secondary,
-// "light":      $light,
-// "dark":       $dark
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary:       #384e91;
+$secondary:     $gray-600 !default;
+$success:       #D0404E;
+$info:          #aae1ff;
+$warning:       #6c97d8;
+$danger:        #6ccfd8;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+// Body
+//
+// Settings for the `<body>` element
+$body-bg:                   $white !default;
+$body-color:                $gray-900 !default;
 
 // // Links
 // //
 // // Style anchor elements.
-$link-color:                map_get($theme-colors, 'primary');
+/* $link-color:                map_get($theme-colors, 'primary');
 $link-decoration:           none;
 $link-hover-color:          map_get($theme-colors, 'success');
+$link-hover-decoration:     none; */
+$link-color:                $body-color;
+$link-decoration:           none;
+$link-hover-color:          $body-color;
 $link-hover-decoration:     none;
+
 
 // // Grid breakpoints
 // //
@@ -86,15 +176,14 @@ $link-hover-decoration:     none;
 // $transition-collapse:         height .35s ease;
 
 
-// // Fonts
-// //
-// // Font, line-height, and color for body text, headings, and more.
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Lora:400,700,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
 
-// // stylelint-disable value-keyword-case
-// $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-// $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-// $font-family-base:            $font-family-sans-serif;
-// // stylelint-enable value-keyword-case
+$font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       Lora, Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:   "Ubuntu Mono", Menlo, Monaco, "Courier New", monospace;
 
 // $font-size-base:              1rem; // Assumes the browser default, typically `16px`
 // $font-size-lg:                ($font-size-base * 1.25);
@@ -115,7 +204,7 @@ $link-hover-decoration:     none;
 // $h6-font-size:                $font-size-base;
 
 // $headings-margin-bottom:      ($spacer / 2);
-// $headings-font-family:        inherit;
+$headings-font-family:           $font-family-sans-serif;
 // $headings-font-weight:        500;
 // $headings-line-height:        1.2;
 // $headings-color:              inherit;

@@ -1,7 +1,6 @@
 'use strict';
 
 import gulp from 'gulp';
-// import babel from 'gulp-babel';
 import del from 'del';
 import sass from 'gulp-sass';
 import cp from 'child_process';

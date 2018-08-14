@@ -1,41 +1,31 @@
 {
+  "name": "adamaltmejd.github.io",
+  "version": "2.0.0",
+  "description": "Adam Altmejd's personal webpage",
+  "main": "gulpfile.js",
+  "repository": "git@github.com:adamaltmejd/adamaltmejd.github.io.git",
+  "author": "Adam Altmejd <adam@altmejd.se>",
+  "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.1.3",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.4"
+    "bootstrap": "~4.1.3",
+    "font-awesome": "~4.7.0",
+    "jquery": "~3.3.1",
+    "popper.js": "~1.14.4"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-rc.1",
-    "autoprefixer": "^9.1.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "browser-sync": "^2.24.6",
-    "child_process": "^1.0.2",
-    "cssnano": "^4.0.5",
-    "del": "^3.0.0",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^5.0.0",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/register": "^7.0.0-rc.1",
+    "autoprefixer": "~9.1.1",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "~2.24.6",
+    "child_process": "~1.0.2",
+    "cssnano": "~4.0.5",
+    "del": "~3.0.0",
+    "gulp": "~4.0.0",
     "gulp-babel": "^8.0.0-beta.2",
     "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "~4.0.1",
     "gulp-sourcemaps": "^2.6.4"
-  },
-  "name": "adamaltmejd.github.io",
-  "description": "Adam Altmejd's personal webpage",
-  "version": "2.0.0",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adamaltmejd/adamaltmejd.github.io.git"
-  },
-  "author": "Adam Altmejd",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/adamaltmejd/adamaltmejd.github.io/issues"
-  },
-  "homepage": "https://github.com/adamaltmejd/adamaltmejd.github.io#readme"
+  }
 }

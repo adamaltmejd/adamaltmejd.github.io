@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Effects of Education Choice"
-date:   2017-11-16 12:00:03
+title: "College Choice"
+date: 2017-11-16 12:00:03
 categories: projects
 author: Adam Altmejd
 ---

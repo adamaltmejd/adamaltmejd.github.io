@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Scientific Reproducibility and its Predictability"
-date:   2016-09-20 12:00:03
+title: "Reproducibility"
+date: 2018-08-14 12:00:03
 categories: projects
 author: Adam Altmejd
 ---
 
-I study the reproducibility of results from lab experiments in social sciences and how well these can be predicted.
+In a series of papers, we replicate lab experiments in the social sciences. We also study how accurately replicability can be predicted, by peer scientists in prediction markets, and also by machine learning algorithms.
 
-## Reproducibility
-In Camerer et. al. (2016), we replicate 18 studies in experimental economics published in the American Economic Review and the Quarterly Journal of Economics in 2011-2014. We follow a carefully designed procedure and find a significant effect in the right direction in 11 of the replications. See [the article](http://science.sciencemag.org/content/early/2016/03/02/science.aaf0918) and [our website](http://experimentaleconreplications.com) for more information.
+## Replications
+In Camerer et. al. (2016), we replicated 18 studies in experimental economics published in the American Economic Review and the Quarterly Journal of Economics in 2011-2014. We follow a carefully designed procedure and find a significant effect in the right direction in 11 of the replications. See [the article](http://science.sciencemag.org/content/early/2016/03/02/science.aaf0918) and [our website](http://experimentaleconreplications.com) for more information.
 
 In a new project, we plan to replicate 22 experimental studies in the social sciences published in Nature and Science in 2010-2015. We plan to conduct the replications between September 2016 and September 2017. See [our website](http://socialsciencesreplicationproject.com) for more information.
 

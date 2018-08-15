@@ -1,6 +1,6 @@
 // SPECIFIC CV PAGE DESIGN
 .cv_page {
-  dl, dd, dt, p, h2, h3 {
+  dl, dd, dt, p, h1, h2 {
     margin: 0;
     padding: 0;
   }
@@ -8,33 +8,54 @@
     text-align: center;
     font-size: $h4-font-size;
   }
-  h2 {
-      color: map_get($theme-colors, 'success');
+  h1 {
+      color: $body-color;
       margin-top: $spacer;
       font-size: $h4-font-size;
       font-weight: bold;
   }
-  h2:before {
+  h1:before {
       content: "";
       display: inline-block;
-      margin-right: 5px;
+      margin-right: 8px;
       width: 85px;
-      height: 8px;
-      background-color: map_get($theme-colors, 'success');;
+      height: 5px;
+      background-color: $body-color;
+      background-position: bottom left;
   }
   dt {
-      float: left;
-      clear: left;
-      width: 90px;
-      font-weight: $font-weight-normal;
+    // The years
+    float: left;
+    width: 85px;
+    margin-right: 8px;
+    text-align: right;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-sm;
+    font-family: $font-family-sans-serif;
   }
-  dd, h3, > p, section > p {
-      margin-left: 90px;
+  dd {
+    // The content
+    width: auto;
+    font-weight: $font-weight-normal;
+  }
+  dd, h2, > p, section > p {
+      margin-left: 93px;
   }
 
-  h3 {
-      color: map_get($theme-colors, 'success');
+  h2 {
+      color: $body-color;
       font-size: $h5-font-size;
       margin-top: $spacer / 2;
   }
+  a,a:hover {
+    text-decoration: none; background-image: none;
+  }
+  a {
+    color: $navbar-light-color;
+  }
+  a:hover {
+    color: $navbar-light-hover-color;
+  }
 }
+
+

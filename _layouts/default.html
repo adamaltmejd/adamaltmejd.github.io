@@ -7,11 +7,14 @@
   <div class="site_container">
     <div class="site_header">
       <header>
-        <div>
-          <a class="navbar-brand" href="/">{{ site.title }}</a>
-          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <div itemscope itemtype="https://schema.org/Person">
+          <a class="navbar-brand" href="/">
+            <span itemprop="givenName">{{ site.author.givenName }}</span>
+            <span itemprop="familyName">{{ site.author.familyName }}</span>
+          </a>
+          {% comment %} <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button> {% endcomment %}
         </div>
         <hr>
       </header>
@@ -21,8 +24,6 @@
       <article id="content">{{ content }}</article>
       <aside>{% include nav.html %}</aside>
     </main>
-
-    <hr>
 
     <footer>
       <div>{% include footer.html %}</div>

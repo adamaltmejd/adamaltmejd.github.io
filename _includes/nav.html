@@ -1,27 +1,29 @@
 <nav>
   <a href="/"><img src="/assets/img/Adam_Altmejd.jpg" itemprop="image" property="depiction" alt="Picture of Adam Altmejd"/></a>
-  <div id="navbarToggler">
+  <div>{% comment %} id="navbarToggler" {% endcomment %}
     <ul>
       <li>
-        <a href="/cv/"><i class="fa fa-file-text fa-fw"></i>&nbsp; Curriculum Vitae</a>
+        <a href="mailto:{{ site.author.email }}" itemprop="email"><i class="fa fa-envelope fa-fw"></i>&nbsp;{{ site.author.email }}</a>
       </li>
       <li>
-        <a{% if page.slug=="projects" or page.id contains "projects" %} class="active"{% endif %} href="{{ "/projects/" | prepend: site.baseurl }}">
-          <i class="fa fa-pencil fa-fw"></i>&nbsp; Projects
+        <a href="tel:{{ site.author.phone }}" itemprop="telephone"><i class="fa fa-phone fa-fw"></i>&nbsp;{{ site.author.phone }}</a>
+      </li>
+      <hr>
+      <li{% if page.slug=="cv"%} class="active"{% endif %}>
+        <a href="{{ "/cv/" | prepend: site.baseurl }}">
+          <i class="fa fa-file-text fa-fw"></i>&nbsp;&nbsp;Curriculum&nbsp;&nbsp;Vitae
+        </a>
+      </li>
+      <li{% if page.slug=="projects" or page.id contains "projects" %} class="active"{% endif %}>
+        <a href="{{ "/projects/" | prepend: site.baseurl }}">
+          <i class="fa fa-pencil fa-fw"></i>&nbsp;Research&nbsp;Projects
         </a>
       </li>
       {% comment %} <li>
         <a{% if page.slug=="teaching" or page.id contains "teaching" %} class="active"{% endif %} href="{{ "/teaching/" | prepend: site.baseurl }}">
-         <i class="fa fa-book fa-fw"></i>&nbsp; Teaching
+         <i class="fa fa-book fa-fw"></i>&nbsp;Teaching
        </a>
       </li> {% endcomment %}
-      <hr>
-      <li>
-        <a href="mailto:{{ site.author.email }}" itemprop="email"><i class="fa fa-envelope fa-fw"></i>&nbsp; {{ site.author.email }}</a>
-      </li>
-      <li>
-        <a href="tel:46734200120" itemprop="telephone"><i class="fa fa-phone fa-fw"></i>&nbsp;+46 734 20 01 20</a>
-      </li>
     </ul>
   </div>
 </nav>

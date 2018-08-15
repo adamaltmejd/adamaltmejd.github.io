@@ -4,11 +4,11 @@
 // --------------------------------------------------
 
 /* Coolors Exported Palette - coolors.co/384e91-d39ec5-6c97d8-6ccfd8-aae1ff */
-$color1: #384e91;
-$color2: #D0404E;
-$color3: #6c97d8;
-$color4: #6ccfd8;
-$color5: #aae1ff;
+$color1: ;
+$color2: ;
+$color3: ;
+$color4: ;
+$color5: ;
 $brand-primary: $color1;
 $brand-success: $color2;
 $brand-warning: $color3;

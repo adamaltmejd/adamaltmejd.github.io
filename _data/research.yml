@@ -1,0 +1,118 @@
+- id: camerer2016
+  type: Publications
+  project: Reproducibility
+  title: Evaluating Replicability of Laboratory Experiments in Economics
+  coauthors:
+    - name: Colin F. Camerer
+      site: http://www.its.caltech.edu/~camerer/camerer.html
+    - name: Anna Dreber
+    - name: Eskil Forsell
+    - name: Teck-Hua Ho
+    - name: Jürgen Huber
+    - name: Magnus Johannesson
+    - name: Michael Kirchler
+    - name: Johan Almenberg
+    - name: Adam Altmejd
+    - name: Taizan Chan
+    - name: Emma Heikensten
+    - name: Felix Holzmeister
+    - name: Taisuke Imai
+    - name: Siri Isaksson
+    - name: Gideon Nave
+    - name: Thomas Pfeiffer
+    - name: Michael Razen
+    - name: Hang Wu
+  journal: Science
+  year: 2016
+  doi: 10.1126/science.aaf0918
+  abstract: 'The replicability of some scientific findings has recently been called into question. To contribute data about replicability in economics, we replicated 18 studies published in the <i>American Economic Review</i> and the <i>Quarterly Journal of Economics</i> between 2011 and 2014. All of these replications followed predefined analysis plans that were made publicly available beforehand, and they all have a statistical power of at least 90% to detect the original effect size at the 5% significance level. We found a significant effect in the same direction as in the original study for 11 replications (61%); on average, the replicated effect size is 66% of the original. The replicability rate varies between 67% and 78% for four additional replicability indicators, including a prediction market measure of peer beliefs.'
+
+- id: camerer2018
+  type: Publications
+  project: Reproducibility
+  title: Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015
+  journal: Nature Human Behavior
+  year: 2018
+  doi: 10.1038/s41562-018-0399-z
+  coauthors:
+    - name: Colin F. Camerer
+      site: http://www.its.caltech.edu/~camerer/camerer.html
+    - name: Anna Dreber
+    - name: Felix Holzmeister
+    - name: Teck-Hua Ho
+    - name: Jürgen Huber
+    - name: Magnus Johannesson
+    - name: Michael Kirchler
+    - name: Gideon Nave
+    - name: Brian A. Nosek
+    - name: Thomas Pfeiffer
+    - name: Adam Altmejd
+    - name: Nick Buttrick
+    - name: Taizan Chan
+    - name: Yiling Chen
+    - name: Eskil Forsell
+    - name: Anup Gampa
+    - name: Emma Heikensten
+    - name: Lily Hummer
+    - name: Taisuke Imai
+    - name: Siri Isaksson
+    - name: Dylan Manfredi
+    - name: Julia Rose
+    - name: Eric-Jan Wagenmakers
+    - name: Hang Wu
+  abstract: 'Being able to replicate scientific findings is crucial for scientific progress. We replicate 21 systematically selected experimental studies in the social sciences published in Nature and Science between 2010 and 2015. The replications follow analysis plans reviewed by the original authors and pre-registered prior to the replications. The replications are high powered, with sample sizes on average about five times higher than in the original studies. We find a significant effect in the same direction as the original study for 13 (62%) studies, and the effect size of the replications is on average about 50% of the original effect size. Replicability varies between 12 (57%) and 14 (67%) studies for complementary replicability indicators. Consistent with these results, the estimated true-positive rate is 67% in a Bayesian analysis. The relative effect size of true positives is estimated to be 71%, suggesting that both false positives and inflated effect sizes of true positives contribute to imperfect reproducibility. Furthermore, we find that peer beliefs of replicability are strongly related to replicability, suggesting that the research community could predict which results would replicate and that failures to replicate were not the result of chance alone.'
+
+- id: munafo2015
+  type: Publications
+  project: Reproducibility
+  title: Using Prediction Markets to Forecast Research Evaluations
+  journal: Royal Society Open Science
+  year: 2015
+  doi: 10.1098/rsos.150287
+  coauthors:
+    - name: Marcus Munafo
+      site: http://www.bristol.ac.uk/expsych/people/marcus-r-munafo/index.html
+    - name: Thomas Pfeiffer
+    - name: Adam Altmejd
+    - name: Emma Heikensten
+    - name: Johan Almenberg
+    - name: Alexander Bird
+    - name: Yiling Chen
+    - name: Brad Wilson
+    - name: Magnus Johannesson
+    - name: Anna Dreber
+  abstract: 'The 2014 Research Excellence Framework (REF2014) was conducted to assess the quality of research carried out at higher education institutions in the UK over a 6 year period. However, the process was criticized for being expensive and bureaucratic, and it was argued that similar information could be obtained more simply from various existing metrics. We were interested in whether a prediction market on the outcome of REF2014 for 33 chemistry departments in the UK would provide information similar to that obtained during the REF2014 process. Prediction markets have become increasingly popular as a means of capturing what is colloquially known as the ‘wisdom of crowds’, and enable individuals to trade ‘bets’ on whether a specific outcome will occur or not. These have been shown to be successful at predicting various outcomes in a number of domains (e.g. sport, entertainment and politics), but have rarely been tested against outcomes based on expert judgements such as those that formed the basis of REF2014.'
+
+- id: altmejd2018siblings
+  type: Work in Progress
+  project: College Choice
+  title: Sibling Influence on College Choice
+  year: 2018
+  pdf: siblings.pdf
+  abstract: "How are college choices shaped by the experiences of peers? Using registry data of applications to Swedish universities, I study how an individual's education experience influences the college applications of their siblings. Tie breaking lotteries at admission margins provide causal identification. I find that successful admission to a specific institution-program combination increases the likelihood that a sibling ranks that specific combination as their most preferred option from 2 to 3 percent. Siblings are five times as likely to follow one another to the same institution compared to the same field. The effect is stronger when both siblings are male but does not vary with the education level of the parents or with the popularity of the program. The observed spillovers seem to mainly be driven by a demand for convenience rather than the transmission of information between siblings."
+
+- id: altmejd2018returns
+  type: Work in Progress
+  project: College Choice
+  title: Relative Returns to Swedish College Fields
+  year: 2018
+  abstract: 'This paper studies the economic returns to fields of college education, using a unique Swedish data set of applicant preferences and university admissions. Field payoffs eight years after initial application vary substantially by field, but not nearly as much as in Norway (Kirkebøen et. al., 2016). Medicine, engineering, and business degree holders enjoy positive returns of around $10 000 per year, when compared to most other fields. Humanities, which is the worst paying field, incurs losses of almost as much. These results are causally identified using a regression discontinuity approach and confirmed by admission lotteries. In contrast to many other countries, the findings indicate that Swedish students do not necessarily prefer fields where their potential earnings indicate that they would have a comparative advantage.'
+
+- id: altmejd2018predicting
+  type: Work in Progress
+  project: Reproducibility
+  title: Predicting Replication
+  year: 2018
+  coauthors:
+    - name: Anna Dreber
+      site: https://sites.google.com/site/annadreber/
+    - name: Eskil Forsell
+    - name: Gideon Nave
+    - name: Juergen Huber
+    - name: Magnus Johannesson
+    - name: Michael Kirchler
+    - name: Taisuke Imai
+    - name: Teck Ho
+    - name: Colin Camerer
+
+

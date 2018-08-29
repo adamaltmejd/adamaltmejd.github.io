@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: project
 title: "College Choice"
+project: College Choice
 date: 2017-11-16 12:00:03
 categories: projects
 author: Adam Altmejd

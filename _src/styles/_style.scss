@@ -86,7 +86,7 @@ div.site_header {
 
 //=========================
 // NAV
-nav {
+nav[role="navigation"] {
   @extend .navbar;
   @extend .navbar-light;
   @extend .navbar-expand-sm;
@@ -176,4 +176,52 @@ article p a {
 }
 article p a:hover {
   color: $body-color;
+}
+
+a.noline {
+  background: none !important;
+}
+
+// Publist: list of publications/working papers
+section.publist {
+  h2 {
+    font-size: $h3-font-size;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      @extend .pb-3;
+      h3 {
+        font-family: $font-family-base;
+        font-size: $h6-font-size;
+        font-weight: $font-weight-bold;
+        @extend .mb-1;
+      }
+      > div {
+        p {
+          font-size: $font-size-sm;
+          @extend .mb-1;
+        }
+        @extend .pl-3;
+      }
+
+    }
+  }
+  [data-toggle="collapse"]:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f0d7";
+    transform: rotate(0deg);
+    transition: all linear 0.25s;
+    margin-right: 0.2rem;
+  }
+  [data-toggle="collapse"].collapsed:before {
+    transform: rotate(-90deg);
+  }
 }

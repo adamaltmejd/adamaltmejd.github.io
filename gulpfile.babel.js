@@ -20,7 +20,7 @@ const paths = {
     sitedest: '_site/assets/styles/'
   },
   jekyll: {
-    src: ['**/*.{html,md}', '!_src/**/*', '!_site/**/*'],
+    src: ['**/*.{html,md,yml}', '!_src/**/*', '!_site/**/*'],
     dest: ['_site/']
   }
 };

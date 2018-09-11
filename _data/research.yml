@@ -60,6 +60,29 @@
     - name: Julia Rose
     - name: Eric-Jan Wagenmakers
     - name: Hang Wu
+  coverage:
+    - outlet: Science News
+      url: https://www.sciencenews.org/blog/science-public/replication-crisis-psychology-science-studies-statistics?tgt=nr
+    - outlet: Vox
+      url: https://www.vox.com/science-and-health/2018/8/27/17761466/psychology-replication-crisis-nature-social-science
+    - outlet: The Atlantic
+      url: https://www.theatlantic.com/science/archive/2018/08/scientists-can-collectively-sense-which-psychology-studies-are-weak/568630/
+    - outlet: NPR
+      url: https://www.npr.org/sections/health-shots/2018/08/27/642218377/in-psychology-and-other-social-sciences-many-studies-fail-the-reproducibility-te?t=1535386468547
+    - outlet: Wired
+      url: https://www.wired.com/story/social-science-reproducibility/
+    - outlet: The Washington Post
+      url: https://www.washingtonpost.com/news/speaking-of-science/wp/2018/08/27/researchers-replicate-just-13-of-21-social-science-experiments-published-in-top-journals/?noredirect=on&utm_term=.82fb4a32e969
+    - outlet: Nature
+      url: https://www.nature.com/articles/d41586-018-06075-z
+    - outlet: Science Mag
+      url: http://www.sciencemag.org/news/2018/08/generous-approach-replication-confirms-many-high-profile-social-science-findings
+    - outlet: The Guardian
+      url: https://www.theguardian.com/science/2018/aug/27/attempt-to-replicate-major-social-scientific-findings-of-past-decade-fails
+    - outlet: Buzzfeed News
+      url: https://www.buzzfeednews.com/article/stephaniemlee/psychology-replication-crisis-studies
+    - outlet: Marginal Revolution
+      url: https://marginalrevolution.com/marginalrevolution/2018/08/gambling-can-save-science-2.html
   abstract: 'Being able to replicate scientific findings is crucial for scientific progress. We replicate 21 systematically selected experimental studies in the social sciences published in Nature and Science between 2010 and 2015. The replications follow analysis plans reviewed by the original authors and pre-registered prior to the replications. The replications are high powered, with sample sizes on average about five times higher than in the original studies. We find a significant effect in the same direction as the original study for 13 (62%) studies, and the effect size of the replications is on average about 50% of the original effect size. Replicability varies between 12 (57%) and 14 (67%) studies for complementary replicability indicators. Consistent with these results, the estimated true-positive rate is 67% in a Bayesian analysis. The relative effect size of true positives is estimated to be 71%, suggesting that both false positives and inflated effect sizes of true positives contribute to imperfect reproducibility. Furthermore, we find that peer beliefs of replicability are strongly related to replicability, suggesting that the research community could predict which results would replicate and that failures to replicate were not the result of chance alone.'
 
 - id: munafo2015

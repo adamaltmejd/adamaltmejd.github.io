@@ -14,8 +14,8 @@
   h1 {
       color: $body-color;
       margin-top: $spacer !important;
-      font-size: $h4-font-size;
-      font-weight: bold;
+      font-size: $h3-font-size;
+      font-weight: $font-weight-normal;
   }
   h1:before {
       content: "";
@@ -25,6 +25,9 @@
       height: 5px;
       background-color: $body-color;
       background-position: bottom left;
+  }
+  h2 {
+    font-size: $h4-font-size;
   }
   dt {
     // The years
@@ -36,6 +39,7 @@
     font-size: $font-size-sm;
     font-family: $font-family-sans-serif;
   }
+  strong { font-weight: $font-weight-normal; }
   dd {
     // The content
     width: auto;

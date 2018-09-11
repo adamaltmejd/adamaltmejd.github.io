@@ -168,47 +168,63 @@ footer {
 //=========================
 // Styling
 
-article p a {
-  background-image: linear-gradient(to right, $body-color, $body-color);
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: 100% 0.1em;
-}
-article p a:hover {
-  color: $body-color;
+article {
+  text-align: justify;
+  text-justify: auto;
+
+  h1, h2 {
+    display: inline-block;
+    @extend .mb-2;
+  }
+
+  a, h1, h2 {
+    background-image: linear-gradient(to right, $body-color, $body-color);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+  }
+  a:hover {
+    color: $body-color;
+  }
+
+  p {
+    @extend .mb-3;
+  }
 }
 
-a.noline {
+.noline {
   background: none !important;
 }
 
 // Publist: list of publications/working papers
 section.publist {
-  h2 {
-    font-size: $h3-font-size;
-  }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    li {
-      @extend .pb-3;
-      h3 {
-        font-family: $font-family-base;
-        font-size: $h6-font-size;
-        font-weight: $font-weight-bold;
-        @extend .mb-1;
-      }
-      > div {
-        p {
-          font-size: $font-size-sm;
-          @extend .mb-1;
-        }
-        @extend .pl-3;
-      }
+  text-align: left;
 
+  ul, p, h3 {
+    @extend .m-0;
+    @extend .p-0;
+  }
+  p, a {
+    font-size: $font-size-sm;
+  }
+
+  h2 { font-size: $h3-font-size; }
+  h3 {
+    // font-family: $font-family-base;
+    font-size: $h6-font-size;
+    font-weight: 600;
+  }
+
+  ul { list-style-type: none; }
+  ul li { @extend .mb-3; }
+
+  ul.paperlinks {
+    li {
+      display: inline;
+      @extend .pr-2;
     }
   }
+
   [data-toggle="collapse"]:before {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;

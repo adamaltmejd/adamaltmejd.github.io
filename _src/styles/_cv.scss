@@ -1,23 +1,26 @@
 // SPECIFIC CV PAGE DESIGN
 .cv_page {
+  text-align: left !important;
+
   dl, dd, dt, p, h1, h2 {
-    margin: 0;
-    padding: 0;
+    @extend .m-0;
+    @extend .p-0;
   }
   header {
     text-align: center;
     font-size: $h4-font-size;
   }
+  h1, h2, h3 { background: none !important; }
   h1 {
       color: $body-color;
-      margin-top: $spacer;
+      margin-top: $spacer !important;
       font-size: $h4-font-size;
       font-weight: bold;
   }
   h1:before {
       content: "";
       display: inline-block;
-      margin-right: 8px;
+      margin-right: 8px !important;
       width: 85px;
       height: 5px;
       background-color: $body-color;
@@ -27,7 +30,7 @@
     // The years
     float: left;
     width: 85px;
-    margin-right: 8px;
+    margin-right: 8px !important;
     text-align: right;
     font-weight: $font-weight-normal;
     font-size: $font-size-sm;
@@ -39,13 +42,13 @@
     font-weight: $font-weight-normal;
   }
   dd, h2, > p, section > p {
-      margin-left: 93px;
+      margin-left: 93px !important;
   }
 
   h2 {
       color: $body-color;
       font-size: $h5-font-size;
-      margin-top: $spacer / 2;
+      margin-top: $spacer / 2 !important;
   }
   a,a:hover {
     text-decoration: none; background-image: none;

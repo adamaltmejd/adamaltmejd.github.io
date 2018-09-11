@@ -1,41 +1,75 @@
 {%- if page.project -%}
-  {%- assign typelist = site.data.research | where:"project",page.project | map:"type" | uniq -%}
+{%- assign typelist = site.data.research | where:"project",page.project | map:"type" | uniq -%}
 {%- else -%}
-  {%- assign typelist = site.data.research | map:"type" | uniq -%}
+{%- assign typelist = site.data.research | map:"type" | uniq -%}
 {%- endif -%}
 {%- for type in typelist -%}
 <section class="publist">
   <h2>{{ type }}</h2>
   <ul>
-  {%- assign sorted = site.data.research | where:"type",type | sort: 'year' | reverse -%}
-  {%- if page.project -%}
+    {%- assign sorted = site.data.research | where:"type",type | sort: 'year' | reverse -%}
+    {%- if page.project -%}
     {%- assign sorted = sorted | where:"project",page.project -%}
-  {%- endif -%}
-  {% for paper in sorted %}
+    {%- endif -%}
+    {% for paper in sorted %}
     <li>
-    <h3>{{ paper.title }}</h3>
-    <div>
-      {% if paper.journal %}<p><i>{{ paper.journal }}, {{ paper.year }}</i></p>{% endif %}
-      <p>
-        {% if paper.abstract %}<a class="collapsed noline" data-toggle="collapse" href="#{{ paper.id }}" role="button" aria-expanded="false" aria-controls="{{ paper.id }}">Abstract</a>&nbsp;{% endif %}
-        {% if paper.doi %}<a class="noline" href="{{ paper.doi | prepend: 'https://doi.org/' }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;{% if type=="Publications" %}Published Paper{% elsif type=="Work in Progress" %}Working Paper{% endif %}</a>{% endif %}
-        {% if paper.pdf %}<a class="noline" href="{{ paper.pdf | prepend: '/assets/papers/' }}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;{% if type=="Publications" %}Ungated Version{% elsif type=="Work in Progress" %}Download Paper{% endif %}</a>{% endif %}
-        {% unless page.project %}{% if paper.project %}<a class="noline" href="{{ paper.project | slugify | prepend: '/projects/' | prepend: site.baseurl }}"><i class="fa fa-pencil fa-fw"></i>Project: {{ paper.project }}</a>{% endif %}{% endunless %}
-      </p>
-      {% comment %} Prints list of authors if less than 3 authors, otherwise only first author and "et. al." {% endcomment %}
-      {%- for coauthor in paper.coauthors limit:3 -%}
+      <h3 class="noline">{{ paper.title }}</h3>
+      <div>
+        {% if paper.journal %}<p><i>{{ paper.journal }}, {{ paper.year }}</i></p>{% endif %}
+
+        {%- for coauthor in paper.coauthors limit:3 -%}
         {%- if forloop.first == true -%}<p>with&nbsp;
-        {%- elsif paper.coauthors.size > 3 -%}{%- break -%}
-        {%- elsif forloop.length > 1 -%}{%- if forloop.last == true -%},&nbsp;and&nbsp;{%- else -%},&nbsp;{%- endif -%}
-        {%- endif -%}
-        {%- if coauthor.site -%}<a href="{{ coauthor.site }}" target="_blank">{%- endif -%}{{ coauthor.name }}{%- if coauthor.site -%}</a>{%- endif -%}
-        {%- if forloop.last == true -%}</p>{%- endif -%}
-      {%- endfor -%}
-      {% if paper.coauthors.size > 3 %} et. al.</p>{% endif %}
-      {% if paper.abstract %}<div class="collapse" id="{{ paper.id }}"><div class="card card-body"><p>{{ paper.abstract }}</p></div></div>{% endif %}
-    </div>
+          {%- elsif paper.coauthors.size > 3 -%}{%- break -%}
+          {%- elsif forloop.length > 1 -%}{%- if forloop.last == true -%},&nbsp;and&nbsp;{%- else -%},&nbsp;{%- endif
+          -%}
+          {%- endif -%}
+          {%- if coauthor.site -%}<a class="noline" href="{{ coauthor.site }}" target="_blank">{%- endif -%}{{
+            coauthor.name }}{%- if
+            coauthor.site -%}</a>{%- endif -%}
+          {%- if forloop.last == true -%}</p>{%- endif -%}
+        {%- endfor -%}
+        {% if paper.coauthors.size > 3 %} et. al.</p>{% endif %}
+
+        <p>
+          <ul class="paperlinks">
+            {% if paper.abstract %}
+            <li>
+              <a class="collapsed noline" data-toggle="collapse" href="#{{ paper.id }}" role="button" aria-expanded="false"
+                aria-controls="{{ paper.id }}">Abstract</a>
+            </li>
+            {% endif %}
+            {% if paper.doi %}
+            <li>
+              <a class="noline" href="{{ paper.doi | prepend: 'https://doi.org/' }}" target="_blank"><i class="fa fa-external-link fa-sm"></i>&nbsp;{%
+                if type=="Publications" %}Published Paper{% elsif type=="Work in Progress" %}Working Paper{% endif %}</a>
+            </li>
+            {% endif %}
+            {% if paper.pdf %}
+            <li>
+              <a class="noline" href="{{ paper.pdf | prepend: '/assets/papers/' }}" target="_blank"><i class="fa fa-external-link fa-sm"></i>&nbsp;{%
+                if type=="Publications" %}Ungated Version{% elsif type=="Work in Progress" %}Download Paper{% endif %}</a>
+            </li>
+            {% endif %}
+            {% unless page.project %}
+            {% if paper.project %}
+            <li>
+              <a class="noline" href="{{ paper.project | slugify | prepend: '/projects/' | prepend: site.baseurl }}"><i
+                  class="fa fa-pencil fa-fw"></i>{{ paper.project }}</a>
+            </li>
+            {% endif %}
+            {% endunless %}
+          </ul>
+        </p>
+        {% if paper.abstract %}
+        <div class="collapse" id="{{ paper.id }}">
+          <div class="card card-body">
+            <p>{{ paper.abstract }}</p>
+          </div>
+        </div>
+        {% endif %}
+      </div>
     </li>
-  {% endfor %}
+    {% endfor %}
   </ul>
 </section>
 {% endfor %}

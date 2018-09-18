@@ -6,7 +6,7 @@ slug: projects
 
 {% for post in site.categories.projects %}
 <section>
-  <a href="{{ post.url | prepend: site.baseurl }}">
+  <a class="noline colorhover" href="{{ post.url | prepend: site.baseurl }}">
     <h2>{{ post.title }}</h2>
     {% if post.subtitle %}<p class="post-subtitle">{{ post.subtitle }}</p>{% endif %}
     <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' | strip_html }}</p>

@@ -1,7 +1,7 @@
 {%- if page.project -%}
 {%- assign typelist = site.data.research | where:"project",page.project | map:"type" | uniq -%}
 {%- else -%}
-{%- assign typelist = site.data.research | map:"type" | uniq -%}
+{%- assign typelist = site.data.research | map:"type" | uniq | sort | reverse -%}
 {%- endif -%}
 {%- for type in typelist -%}
 <section class="publist">
@@ -34,36 +34,55 @@
           <ul class="paperlinks">
             {% if paper.abstract %}
             <li>
-              <a class="collapsed noline" data-toggle="collapse" href="#{{ paper.id }}" role="button" aria-expanded="false"
-                aria-controls="{{ paper.id }}">Abstract</a>
+              <a class="collapsed noline" data-toggle="collapse" href="#{{ paper.id | prepend: 'abstract' }}" role="button" aria-expanded="false" aria-controls="{{ paper.id | prepend: 'abstract' }}">Abstract</a>
             </li>
             {% endif %}
             {% if paper.doi %}
             <li>
-              <a class="noline" href="{{ paper.doi | prepend: 'https://doi.org/' }}" target="_blank"><i class="fa fa-external-link fa-sm"></i>&nbsp;{%
-                if type=="Publications" %}Published Paper{% elsif type=="Work in Progress" %}Working Paper{% endif %}</a>
+              <a class="noline" href="{{ paper.doi | prepend: 'https://doi.org/' }}" target="_blank"><i class="fa fa-external-link fa-sm"></i>&nbsp;{% if type=="Publications" %}Published Paper{% elsif type=="Work in Progress" %}Working Paper{% endif %}</a>
             </li>
             {% endif %}
-            {% if paper.pdf %}
+            {% if paper.wp %}
             <li>
-              <a class="noline" href="{{ paper.pdf | prepend: '/assets/papers/' }}" target="_blank"><i class="fa fa-external-link fa-sm"></i>&nbsp;{%
-                if type=="Publications" %}Ungated Version{% elsif type=="Work in Progress" %}Download Paper{% endif %}</a>
+              <a class="noline" href="{{ paper.wp | prepend: '/assets/papers/' }}" target="_blank"><i class="fa fa-external-link fa-sm"></i>&nbsp;
+                Working Paper</a>
+            </li>
+            {% endif %}
+            {% if paper.ungated %}
+            <li>
+              <a class="noline" href="{{ paper.ungated }}" target="_blank"><i class="fa fa-external-link fa-sm"></i>&nbsp; Ungated</a>
+            </li>
+            {% endif %}
+            {% if paper.coverage %}
+            <li>
+              <a class="collapsed noline" data-toggle="collapse" href="#{{ paper.id | prepend: 'coverage' }}" role="button" aria-expanded="false" aria-controls="{{ paper.id | prepend: 'coverage' }}">Media Coverage</a>
             </li>
             {% endif %}
             {% unless page.project %}
-            {% if paper.project %}
-            <li>
-              <a class="noline" href="{{ paper.project | slugify | prepend: '/projects/' | prepend: site.baseurl }}"><i
-                  class="fa fa-pencil fa-fw"></i>{{ paper.project }}</a>
-            </li>
-            {% endif %}
+              {% if paper.project %}
+              <li>
+                <a class="noline" href="{{ paper.project | slugify | prepend: '/projects/' | prepend: site.baseurl }}"><i class="fa fa-pencil fa-fw"></i>{{ paper.project }}</a>
+              </li>
+              {% endif %}
             {% endunless %}
           </ul>
         </p>
         {% if paper.abstract %}
-        <div class="collapse" id="{{ paper.id }}">
+        <div class="collapse" id="{{ paper.id | prepend: 'abstract' }}">
           <div class="card card-body">
             <p>{{ paper.abstract }}</p>
+          </div>
+        </div>
+        {% endif %}
+        {% if paper.coverage %}
+        <div class="collapse" id="{{ paper.id | prepend: 'coverage' }}">
+          <div class="card card-body">
+            <p>
+              {% for media in paper.coverage %}
+                <a class="noline colorhover" href="{{ media.url }}" target="_blank">{{ media.outlet }}</a>
+                {%- unless forloop.last == true -%},{%- endunless -%}
+              {% endfor %}
+            </p>
           </div>
         </div>
         {% endif %}

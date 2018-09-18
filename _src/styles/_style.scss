@@ -177,7 +177,7 @@ article {
     @extend .mb-2;
   }
 
-  a, h1, h2 {
+  a { // h1 , h1
     background-image: linear-gradient(to right, $body-color, $body-color);
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -194,6 +194,9 @@ article {
 
 .noline {
   background: none !important;
+}
+.colorhover:hover {
+  color: $link-hover-color !important;
 }
 
 // Publist: list of publications/working papers

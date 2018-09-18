@@ -34,6 +34,7 @@
   journal: Nature Human Behavior
   year: 2018
   doi: 10.1038/s41562-018-0399-z
+  ungated: https://rdcu.be/6VWt
   coauthors:
     - name: Colin F. Camerer
       site: http://www.its.caltech.edu/~camerer/camerer.html
@@ -111,7 +112,7 @@
   project: College Choice
   title: Sibling Influence on College Choice
   year: 2018
-  pdf: siblings.pdf
+  wp: siblings.pdf
   abstract: "How are college choices shaped by the experiences of peers? Using registry data of applications to Swedish universities, I study how an individual's education experience influences the college applications of their siblings. Tie breaking lotteries at admission margins provide causal identification. I find that successful admission to a specific institution-program combination increases the likelihood that a sibling ranks that specific combination as their most preferred option from 2 to 3 percent. Siblings are five times as likely to follow one another to the same institution compared to the same field. The effect is stronger when both siblings are male but does not vary with the education level of the parents or with the popularity of the program. The observed spillovers seem to mainly be driven by a demand for convenience rather than the transmission of information between siblings."
 
 - id: altmejd2018returns

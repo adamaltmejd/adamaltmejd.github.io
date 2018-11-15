@@ -63,6 +63,9 @@
   a:hover {
     color: $navbar-light-hover-color;
   }
+  p + p {
+    text-indent: 0;
+  }
 }
 
 

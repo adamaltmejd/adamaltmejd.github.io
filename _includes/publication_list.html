@@ -39,18 +39,27 @@
             {% endif %}
             {% if paper.doi %}
             <li>
-              <a class="noline" href="{{ paper.doi | prepend: 'https://doi.org/' }}" target="_blank"><i class="fa fa-external-link fa-sm"></i>&nbsp;{% if type=="Publications" %}Published Paper{% elsif type=="Work in Progress" %}Working Paper{% endif %}</a>
+              <a class="noline" href="{{ paper.doi | prepend: 'https://doi.org/' }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;{% if type=="Publications" %}Published Paper{% elsif type=="Work in Progress" %}Working Paper{% endif %}</a>
+            </li>
+            {% endif %}
+            {% if paper.preprint %}
+            <li>
+              <a class="noline" href="{{ paper.preprint }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Preprint</a>
+            </li>
+            {% endif %}
+            {% if paper.pdf %}
+            <li>
+              <a class="noline" href="{{ paper.pdf | prepend: '/assets/papers/' }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Latest Version</a>
             </li>
             {% endif %}
             {% if paper.wp %}
             <li>
-              <a class="noline" href="{{ paper.wp | prepend: '/assets/papers/' }}" target="_blank"><i class="fa fa-external-link fa-sm"></i>&nbsp;
-                Working Paper</a>
+              <a class="noline" href="{{ paper.wp }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Working Paper</a>
             </li>
             {% endif %}
             {% if paper.ungated %}
             <li>
-              <a class="noline" href="{{ paper.ungated }}" target="_blank"><i class="fa fa-external-link fa-sm"></i>&nbsp; Ungated</a>
+              <a class="noline" href="{{ paper.ungated }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Ungated</a>
             </li>
             {% endif %}
             {% if paper.coverage %}
@@ -61,7 +70,7 @@
             {% unless page.project %}
               {% if paper.project %}
               <li>
-                <a class="noline" href="{{ paper.project | slugify | prepend: '/projects/' | prepend: site.baseurl }}"><i class="fa fa-pencil fa-fw"></i>{{ paper.project }}</a>
+                <a class="noline" href="{{ paper.project | slugify | prepend: '/projects/' | prepend: site.baseurl }}"><i class="fas fa-pencil-alt"></i>&nbsp;{{ paper.project }}</a>
               </li>
               {% endif %}
             {% endunless %}

@@ -3,20 +3,20 @@
   <div>
     <ul>
       <li>
-        <a href="mailto:{{ site.author.email }}" itemprop="email"><i class="fa fa-envelope fa-fw"></i>&nbsp;{{ site.author.email }}</a>
+        <a href="mailto:{{ site.author.email }}" itemprop="email"><i class="fas fa-envelope"></i>&nbsp;{{ site.author.email }}</a>
       </li>
       <li>
-        <a href="tel:{{ site.author.phone }}" itemprop="telephone"><i class="fa fa-phone fa-fw"></i>&nbsp;{{ site.author.phone }}</a>
+        <a href="tel:{{ site.author.phone }}" itemprop="telephone"><i class="fas fa-phone"></i>&nbsp;{{ site.author.phone }}</a>
       </li>
       <hr>
       <li{% if page.slug=="cv"%} class="active"{% endif %}>
         <a href="{{ "/cv/" | prepend: site.baseurl }}">
-          <i class="fa fa-file-text fa-fw"></i>&nbsp;&nbsp;Curriculum&nbsp;&nbsp;Vitae
+          <i class="fas fa-file-alt"></i>&nbsp;&nbsp;Curriculum&nbsp;&nbsp;Vitae
         </a>
       </li>
       <li{% if page.slug=="projects" or page.id contains "projects" %} class="active"{% endif %}>
         <a href="{{ "/projects/" | prepend: site.baseurl }}">
-          <i class="fa fa-pencil fa-fw"></i>&nbsp;Research&nbsp;Projects
+          <i class="fas fa-pencil-alt"></i>&nbsp;Research&nbsp;Projects
         </a>
       </li>
     </ul>

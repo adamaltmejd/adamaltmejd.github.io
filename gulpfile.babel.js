@@ -11,7 +11,6 @@ import autoprefixer from 'autoprefixer';
 import browserSync from 'browser-sync';
 const server = browserSync.create();
 
-
 const paths = {
   main_sass: '_src/styles/main.scss',
   styles: {

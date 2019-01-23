@@ -121,7 +121,7 @@
   project: College Choice
   title: Sibling Influence on College Choice
   year: 2018
-  wp: siblings.pdf
+  pdf: siblings.pdf
   abstract: "How are college choices shaped by the experiences of peers? Using registry data of applications to Swedish universities, I study how an individual's education experience influences the college applications of their siblings. Tie breaking lotteries at admission margins provide causal identification. I find that successful admission to a specific institution-program combination increases the likelihood that a sibling ranks that specific combination as their most preferred option from 2 to 3 percent. Siblings are five times as likely to follow one another to the same institution compared to the same field. The effect is stronger when both siblings are male but does not vary with the education level of the parents or with the popularity of the program. The observed spillovers seem to mainly be driven by a demand for convenience rather than the transmission of information between siblings."
 
 - id: altmejd2018returns
@@ -136,6 +136,7 @@
   project: Reproducibility
   title: Predicting Replication
   year: 2018
+  preprint: https://osf.io/preprints/bitss/zamry/
   coauthors:
     - name: Anna Dreber
       site: https://sites.google.com/site/annadreber/
@@ -147,5 +148,6 @@
     - name: Taisuke Imai
     - name: Teck Ho
     - name: Colin Camerer
+  abstract: 'We measure how accurately replication of experimental results can be predicted by a black-box statistical model. With data from four large- scale replication projects in experimental psychology and economics, and techniques from machine learning, we train a predictive model and study which variables drive predictable replication. The model predicts binary replication with a cross validated accuracy rate of 70% (AUC of 0.79) and relative effect size with a Spearman ρ of 0.38. The accuracy level is similar to the market-aggregated beliefs of peer scientists (Camerer et al., 2016; Dreber et al., 2015). The predictive power is validated in a pre-registered out of sample test of the outcome of Camerer et al. (2018b), where 71% (AUC of 0.73) of replications are predicted correctly and effect size correlations amount to ρ = 0.25. Basic features such as the sample and effect sizes in original papers, and whether reported effects are single-variable main effects or two- variable interactions, are predictive of successful replication. The models presented in this paper are simple tools to produce cheap, prognostic replicability metrics. These models could be useful in institutionalizing the process of evaluation of new findings and guiding resources to those direct replications that are likely to be most informative.'
 
 

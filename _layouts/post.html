@@ -2,7 +2,7 @@
 layout: default
 ---
 <section>
-    <p class="meta">{{ page.date | date: "%B %-d, %Y" }}&nbsp;<i class="fa fa-clock-o"></i></p>
+    <p class="meta">{{ page.date | date: "%B %-d, %Y" }}&nbsp;<i class="fas fa-clock"></i></p>
     {{ content }}
 </section>
 <nav role="pager">
@@ -17,8 +17,8 @@ layout: default
                 &larr; Previous</a></li>
 
         {% if page.next %}
-        <li class="next"><a href="{{page.next.url}}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}"
-                rel="next">
+        <li class="next"><a href="{{page.next.url}}" data-toggle="tooltip" data-placement="top"
+                title="{{ page.next.title }}" rel="next">
                 {% else %}
         <li class="next disabled"><a href="#">
                 {% endif %}

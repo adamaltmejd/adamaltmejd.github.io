@@ -3,10 +3,10 @@ layout: default
 ---
 <header>
   {% if page.title %}
-    <h1>{{ page.title }}</h1>
+  <h1>{{ page.title }}</h1>
   {% endif %}
   {% if page.date %}
-    <p class="meta"><i class="fa fa-clock-o"></i>&nbsp;Last update: {{ page.date | date: "%B %-d, %Y" }}</p>
+  <p class="meta"><i class="fas fa-clock"></i>&nbsp;Last update: {{ page.date | date: "%B %-d, %Y" }}</p>
   {% endif %}
 </header>
 {{ content }}

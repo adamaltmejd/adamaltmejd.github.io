@@ -173,6 +173,7 @@ article {
   text-align: justify;
   text-justify: auto;
   hyphens: auto;
+  overflow-wrap: break-word;
 
   h1, h2 {
     display: inline-block;
@@ -183,12 +184,14 @@ article {
   p.meta { @extend .mb-2; }
 
   a { // h1 , h1
-    background-image: linear-gradient(to right, $body-color, $body-color);
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: 100% 0.1em;
+    // background-image: linear-gradient(to right, $body-color, $body-color);
+    // background-position: left bottom;
+    // background-repeat: no-repeat;
+    // background-size: 100% 0.1em;
+    text-decoration: underline;
   }
   a:hover {
+    text-decoration: underline;
     color: $body-color;
   }
 
@@ -257,6 +260,7 @@ article {
 
 .noline {
   background: none !important;
+  text-decoration: none !important;
 }
 .colorhover:hover {
   color: $link-hover-color !important;

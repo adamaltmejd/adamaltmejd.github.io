@@ -247,13 +247,13 @@ article {
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      content: "\f0d7";
-      transform: rotate(0deg);
+      content: "\f0da"; // "caret-right"
+      transform: rotate(90deg);
       transition: all linear 0.25s;
       margin-right: 0.2rem;
     }
     [data-toggle="collapse"].collapsed:before {
-      transform: rotate(-90deg);
+      transform: rotate(0deg);
     }
   }
 }

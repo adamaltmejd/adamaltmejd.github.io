@@ -241,18 +241,20 @@ article {
     }
 
     [data-toggle="collapse"]:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900; // "solid"
       display: inline-block;
-      font: normal normal normal 14px/1 FontAwesome;
-      font-size: inherit;
+      font-style: normal;
+      font-variant: normal;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       content: "\f0da"; // "caret-right"
-      transform: rotate(90deg);
       transition: all linear 0.25s;
-      margin-right: 0.2rem;
+      transform: rotate(90deg);
+      margin-right: 0.22rem;
     }
     [data-toggle="collapse"].collapsed:before {
+      // Starts as collapsed
       transform: rotate(0deg);
     }
   }

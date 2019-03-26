@@ -1,6 +1,6 @@
 {
   "name": "adamaltmejd.github.io",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Adam Altmejd's personal webpage",
   "main": "gulpfile.js",
   "repository": "git@github.com:adamaltmejd/adamaltmejd.github.io.git",

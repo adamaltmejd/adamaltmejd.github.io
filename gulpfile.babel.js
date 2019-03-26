@@ -12,11 +12,11 @@ import browserSync from 'browser-sync';
 const server = browserSync.create();
 
 const paths = {
-  main_sass: '_src/styles/main.scss',
+  main_sass: '_src/css/style.scss',
   styles: {
-    src: '_src/styles/**/*',
-    dest: 'assets/styles/',
-    sitedest: '_site/assets/styles/'
+    src: '_src/css/**/*',
+    dest: 'assets/css/',
+    sitedest: '_site/assets/css/'
   },
   jekyll: {
     src: ['**/*.{html,md,yml}', '!_src/**/*', '!_site/**/*'],
@@ -30,19 +30,30 @@ function jekyll_build(done) {
   return cp.spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' }).on('close', done);
 };
 
-function compile_styles() {
+function compile_styles_dev() {
+  var plugins = [
+    autoprefixer({ browsers: ['last 2 version', '> 5%'] }),
+  ];
+  return gulp
+    .src(paths.styles.src)
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(postcss(plugins))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(gulp.dest(paths.styles.sitedest));
+};
+
+function compile_styles_prod() {
   var plugins = [
     autoprefixer({ browsers: ['last 2 version', '> 5%'] }),
     cssnano()
   ];
   return gulp
     .src(paths.styles.src)
-    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss(plugins))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(paths.styles.dest))
-    .pipe(gulp.dest(paths.styles.sitedest));
+    .pipe(gulp.dest(paths.styles.dest));
 };
 
 function reload(done) {
@@ -62,10 +73,13 @@ function serve(done) {
 
 function watch() {
   // gulp.watch(paths.scripts.src, scripts);
-  gulp.watch(paths.styles.src, gulp.series(compile_styles, reload));
+  gulp.watch(paths.styles.src, gulp.series(compile_styles_dev, reload));
   gulp.watch(paths.jekyll.src, gulp.series(jekyll_build, reload));
 }
 
 // Exports
-const dev = gulp.series(clean, compile_styles, jekyll_build, serve, watch)
+export const prod = gulp.series(clean, compile_styles_prod, jekyll_build, serve);
+
+export const dev = gulp.series(clean, compile_styles_dev, jekyll_build, serve, watch);
+
 export default dev;

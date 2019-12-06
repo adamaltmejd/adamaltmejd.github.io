@@ -32,7 +32,7 @@ function jekyll_build(done) {
 
 function compile_styles_dev() {
   var plugins = [
-    autoprefixer({ browsers: ['last 2 version', '> 5%'] }),
+    autoprefixer(),
   ];
   return gulp
     .src(paths.styles.src)
@@ -46,7 +46,7 @@ function compile_styles_dev() {
 
 function compile_styles_prod() {
   var plugins = [
-    autoprefixer({ browsers: ['last 2 version', '> 5%'] }),
+    autoprefixer(),
     cssnano()
   ];
   return gulp

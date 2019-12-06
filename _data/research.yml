@@ -6,11 +6,14 @@
     - name: Colin F. Camerer
       site: http://www.its.caltech.edu/~camerer/camerer.html
     - name: Anna Dreber
+      site: https://sites.google.com/site/annadreber/
     - name: Eskil Forsell
-    - name: Teck-Hua Ho
-    - name: Jürgen Huber
+    - name: Teck Ho
+    - name: Juergen Huber
+      site: https://www.uibk.ac.at/ibf/mitarbeiter/huberj.html
     - name: Magnus Johannesson
     - name: Michael Kirchler
+      site: https://www.uibk.ac.at/ibf/team/kirchler.html.en
     - name: Johan Almenberg
     - name: Adam Altmejd
     - name: Taizan Chan
@@ -19,6 +22,7 @@
     - name: Taisuke Imai
     - name: Siri Isaksson
     - name: Gideon Nave
+      site: https://marketing.wharton.upenn.edu/profile/gnave/
     - name: Thomas Pfeiffer
     - name: Michael Razen
     - name: Hang Wu
@@ -49,14 +53,15 @@
       site: http://www.its.caltech.edu/~camerer/camerer.html
     - name: Anna Dreber
     - name: Felix Holzmeister
-    - name: Teck-Hua Ho
-    - name: Jürgen Huber
+    - name: Teck Ho
+    - name: Juergen Huber
     - name: Magnus Johannesson
     - name: Michael Kirchler
+      site: https://www.uibk.ac.at/ibf/team/kirchler.html.en
     - name: Gideon Nave
+      site: https://marketing.wharton.upenn.edu/profile/gnave/
     - name: Brian A. Nosek
     - name: Thomas Pfeiffer
-    - name: Adam Altmejd
     - name: Nick Buttrick
     - name: Taizan Chan
     - name: Yiling Chen
@@ -116,13 +121,22 @@
     - name: Anna Dreber
   abstract: 'The 2014 Research Excellence Framework (REF2014) was conducted to assess the quality of research carried out at higher education institutions in the UK over a 6 year period. However, the process was criticized for being expensive and bureaucratic, and it was argued that similar information could be obtained more simply from various existing metrics. We were interested in whether a prediction market on the outcome of REF2014 for 33 chemistry departments in the UK would provide information similar to that obtained during the REF2014 process. Prediction markets have become increasingly popular as a means of capturing what is colloquially known as the ‘wisdom of crowds’, and enable individuals to trade ‘bets’ on whether a specific outcome will occur or not. These have been shown to be successful at predicting various outcomes in a number of domains (e.g. sport, entertainment and politics), but have rarely been tested against outcomes based on expert judgements such as those that formed the basis of REF2014.'
 
-- id: altmejd2018siblings
+- id: altmejd2019siblings
   type: Work in Progress
   project: College Choice
-  title: Sibling Influence on College Choice
-  year: 2018
-  pdf: siblings.pdf
-  abstract: "How are college choices shaped by the experiences of peers? Using registry data of applications to Swedish universities, I study how an individual's education experience influences the college applications of their siblings. Tie breaking lotteries at admission margins provide causal identification. I find that successful admission to a specific institution-program combination increases the likelihood that a sibling ranks that specific combination as their most preferred option from 2 to 3 percent. Siblings are five times as likely to follow one another to the same institution compared to the same field. The effect is stronger when both siblings are male but does not vary with the education level of the parents or with the popularity of the program. The observed spillovers seem to mainly be driven by a demand for convenience rather than the transmission of information between siblings."
+  title: "Siblings' Effects on College and Major Choices: Evidence from Chile, Croatia and Sweden"
+  year: 2019
+  wp: https://dataspace.princeton.edu/jspui/bitstream/88435/dsp01h128nh58q/5/633.pdf
+  coauthors:
+    - name: Andrés Barrios-Fernández
+      site: https://andresbarriosf.github.io
+    - name: Marin Drlje
+    - name: Dejan Kovac
+      site: https://sites.google.com/site/dejankovacecon/
+    - name: Christopher Neilson
+      site: https://christopherneilson.github.io
+
+  abstract: "While it is a widely held belief that family and social networks can inﬂuence important life decisions, identifying causal effects is notoriously difficult. This paper presents causal evidence from three countries at different stages of economic development that the educational trajectories of older siblings can signiﬁcantly inﬂuence the college and major choice of younger siblings. We exploit institutional features of centralized college assignment systems in Chile, Croatia, and Sweden to generate quasi-random variation in the educational paths taken by older siblings. Using a regression discontinuity design, we show that younger siblings in each country are signiﬁcantly more likely to apply and enroll in the same college and major that their older sibling was assigned to. These results persist for siblings far apart in age who are unlikely to attend higher education at the same time. We propose three broad classes of mechanisms that can explain why the trajectory of an older sibling can causally affect the college and major choice of a younger sibling. We ﬁnd that spillovers are stronger when older siblings enroll and are successful in majors that on average have higher scoring peers, lower dropout rates and higher earnings from graduates. The evidence presented shows that the decisions, and even random luck, of your close family members and peer network, can have signiﬁcant effects on important life decisions such as the choice of specialization in higher education. The results also suggest that college access programs such as aﬃrmative action, may have important spillover effects through family and social networks."
 
 - id: altmejd2018returns
   type: Work in Progress
@@ -131,23 +145,29 @@
   year: 2018
   abstract: 'This paper studies the economic returns to fields of college education, using a unique Swedish data set of applicant preferences and university admissions. Field payoffs eight years after initial application vary substantially by field, but not nearly as much as in Norway (Kirkebøen et. al., 2016). Medicine, engineering, and business degree holders enjoy positive returns of around $10 000 per year, when compared to most other fields. Humanities, which is the worst paying field, incurs losses of almost as much. These results are causally identified using a regression discontinuity approach and confirmed by admission lotteries. In contrast to many other countries, the findings indicate that Swedish students do not necessarily prefer fields where their potential earnings indicate that they would have a comparative advantage.'
 
-- id: altmejd2018predicting
-  type: Work in Progress
+- id: altmejd2019predicting
+  type: Publications
   project: Reproducibility
-  title: Predicting Replication
-  year: 2018
-  preprint: https://osf.io/preprints/bitss/zamry/
+  title: Predicting the replicability of social science lab experiments
+  year: 2019
+  doi: 10.1371/journal.pone.0225826
+  journal: PLOS One
   coauthors:
     - name: Anna Dreber
       site: https://sites.google.com/site/annadreber/
     - name: Eskil Forsell
     - name: Gideon Nave
+      site: https://marketing.wharton.upenn.edu/profile/gnave/
     - name: Juergen Huber
+      site: https://www.uibk.ac.at/ibf/mitarbeiter/huberj.html
     - name: Magnus Johannesson
+      site: https://www.hhs.se/en/person/?personid=1981033
     - name: Michael Kirchler
+      site: https://www.uibk.ac.at/ibf/team/kirchler.html.en
     - name: Taisuke Imai
+      site: https://www.taisukeimai.com
     - name: Teck Ho
+      site: http://www.teckho.com/
     - name: Colin Camerer
-  abstract: 'We measure how accurately replication of experimental results can be predicted by a black-box statistical model. With data from four large- scale replication projects in experimental psychology and economics, and techniques from machine learning, we train a predictive model and study which variables drive predictable replication. The model predicts binary replication with a cross validated accuracy rate of 70% (AUC of 0.79) and relative effect size with a Spearman ρ of 0.38. The accuracy level is similar to the market-aggregated beliefs of peer scientists (Camerer et al., 2016; Dreber et al., 2015). The predictive power is validated in a pre-registered out of sample test of the outcome of Camerer et al. (2018b), where 71% (AUC of 0.73) of replications are predicted correctly and effect size correlations amount to ρ = 0.25. Basic features such as the sample and effect sizes in original papers, and whether reported effects are single-variable main effects or two- variable interactions, are predictive of successful replication. The models presented in this paper are simple tools to produce cheap, prognostic replicability metrics. These models could be useful in institutionalizing the process of evaluation of new findings and guiding resources to those direct replications that are likely to be most informative.'
-
-
+      site: http://www.its.caltech.edu/~camerer/camerer.html
+  abstract: 'We measure how accurately replication of experimental results can be predicted by black-box statistical models. With data from four large-scale replication projects in experimental psychology and economics, and techniques from machine learning, we train predictive models and study which variables drive predictable replication. The models predicts binary replication with a cross-validated accuracy rate of 70% (AUC of 0.77) and estimates of relative effect sizes with a Spearman ρ of 0.38. The accuracy level is similar to market-aggregated beliefs of peer scientists (Camerer et al., 2016; Dreber et al., 2015). The predictive power is validated in a pre-registered out of sample test of the outcome of Camerer et al. (2018), where 71% (AUC of 0.73) of replications are predicted correctly and effect size correlations amount to ρ = 0.25. Basic features such as the sample and effect sizes in original papers, and whether reported effects are single-variable main effects or two-variable interactions, are predictive of successful replication. The models presented in this paper are simple tools to produce cheap, prognostic replicability metrics. These models could be useful in institutionalizing the process of evaluation of new findings and guiding resources to those direct replications that are likely to be most informative.'

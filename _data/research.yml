@@ -125,8 +125,8 @@
   type: Work in Progress
   project: College Choice
   title: "Siblings' Effects on College and Major Choices: Evidence from Chile, Croatia and Sweden"
-  year: 2019
-  wp: https://dataspace.princeton.edu/jspui/bitstream/88435/dsp01h128nh58q/5/633.pdf
+  year: 2020
+  wp: https://dataspace.princeton.edu/jspui/bitstream/88435/dsp01z890rx142/3/633a.pdf
   coauthors:
     - name: Andrés Barrios-Fernández
       site: https://andresbarriosf.github.io
@@ -135,7 +135,6 @@
       site: https://sites.google.com/site/dejankovacecon/
     - name: Christopher Neilson
       site: https://christopherneilson.github.io
-
   abstract: "While it is a widely held belief that family and social networks can inﬂuence important life decisions, identifying causal effects is notoriously difficult. This paper presents causal evidence from three countries at different stages of economic development that the educational trajectories of older siblings can signiﬁcantly inﬂuence the college and major choice of younger siblings. We exploit institutional features of centralized college assignment systems in Chile, Croatia, and Sweden to generate quasi-random variation in the educational paths taken by older siblings. Using a regression discontinuity design, we show that younger siblings in each country are signiﬁcantly more likely to apply and enroll in the same college and major that their older sibling was assigned to. These results persist for siblings far apart in age who are unlikely to attend higher education at the same time. We propose three broad classes of mechanisms that can explain why the trajectory of an older sibling can causally affect the college and major choice of a younger sibling. We ﬁnd that spillovers are stronger when older siblings enroll and are successful in majors that on average have higher scoring peers, lower dropout rates and higher earnings from graduates. The evidence presented shows that the decisions, and even random luck, of your close family members and peer network, can have signiﬁcant effects on important life decisions such as the choice of specialization in higher education. The results also suggest that college access programs such as aﬃrmative action, may have important spillover effects through family and social networks."
 
 - id: altmejd2018returns

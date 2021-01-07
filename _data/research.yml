@@ -122,11 +122,13 @@
   abstract: "The 2014 Research Excellence Framework (REF2014) was conducted to assess the quality of research carried out at higher education institutions in the UK over a 6 year period. However, the process was criticized for being expensive and bureaucratic, and it was argued that similar information could be obtained more simply from various existing metrics. We were interested in whether a prediction market on the outcome of REF2014 for 33 chemistry departments in the UK would provide information similar to that obtained during the REF2014 process. Prediction markets have become increasingly popular as a means of capturing what is colloquially known as the ‘wisdom of crowds’, and enable individuals to trade ‘bets’ on whether a specific outcome will occur or not. These have been shown to be successful at predicting various outcomes in a number of domains (e.g. sport, entertainment and politics), but have rarely been tested against outcomes based on expert judgements such as those that formed the basis of REF2014."
 
 - id: altmejd2020siblings
-  type: Work in Progress
+  type: Publications
   project: College Choice
   title: "O Brother, Where Start Thou? Sibling Spillovers on College and Major Choice in Four Countries"
-  year: 2020
-  wp: https://www.edworkingpapers.com/sites/default/files/ai20-230.pdf
+  journal: Quarterly Journal of Economics
+  year: forthcoming
+  ungated: /assets/papers/sibling_spillovers.pdf
+  appendix: /assets/papers/sibling_spillovers_appendix.pdf
   coauthors:
     - name: Andres Barrios-Fernandez
       site: https://andresbarriosf.github.io
@@ -144,7 +146,7 @@
       site: https://christopherneilson.github.io
     - name: Jonathan Smith
       site: https://sites.google.com/site/jonathansmithphd/
-  abstract: "Family and social networks are widely believed to influence important life decisions but identifying their causal effects is notoriously difficult. Using admissions thresholds that directly affect older but not younger siblings’ college options, we present evidence from the United States, Chile, Sweden and Croatia that older siblings’ college and major choices can significantly influence their younger siblings’ college and major choices. On the extensive margin, an older sibling’s enrollment in a better college increases a younger sibling’s probability of enrolling in college at all, especially for families with low predicted probabilities of enrollment. On the intensive margin, an older sibling’s choice of college or major increases the probability that a younger sibling applies to and enrolls in that same college or major. Spillovers in major choice are stronger when older siblings enroll and succeed in more selective and higher-earning majors. The observed spillovers are not well-explained by price, income, proximity or legacy effects, but are most consistent with older siblings transmitting otherwise unavailable information about the college experience and its potential returns. The importance of such personally salient information may partly explain persistent differences in college-going rates by geography, income, and other determinants of social networks."
+  abstract: "Family and social networks are widely believed to influence important life decisions but causal identification of those effects is notoriously challenging. Using data from Chile, Croatia, Sweden, and the United States, we study within-family spillovers in college and major choice across a variety of national contexts. Exploiting college-specific admissions thresholds that directly affect older but not younger siblings’ college options, we show that in all four countries a meaningful portion of younger siblings follow their older sibling to the same college or college-major combination. Older siblings are followed regardless of whether their target and counterfactual options have large, small or even negative differences in quality. Spillover effects disappear, however, if the older sibling drops out of college, suggesting that older siblings’ college experiences matter. That siblings influence important human capital investment decisions across such varied contexts suggests that our findings are not an artifact of particular institutional detail but instead a more generalizable description of human behavior. Causal links between the postsecondary paths of close peers may partly explain persistent college enrollment inequalities between social groups and suggests that interventions to improve college access may have multiplier effects."
 
 - id: altmejd2018returns
   type: Work in Progress

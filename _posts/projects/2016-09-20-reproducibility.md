@@ -2,7 +2,7 @@
 layout: project
 title: "Reproducibility"
 project: Reproducibility
-date: 2018-09-11 12:00:03
+date: 2021-01-11 09:00:03
 categories: projects
 author: Adam Altmejd
 ---
@@ -21,4 +21,8 @@ Both replication studies included prediction markets, where experienced psycholo
 
 Prediction markets can be used to validate whole departments just as well as individual research papers. In Munafo et. al. (2015) we study how the outcome of the 2014 Research Excellence Framework (REF) evaluation of UK Chemistry departments could be predicted in a market where the traders were faculty members at the participating schools. We show that prediction markets can be a useful tool to complement costly large-scale quality evaluations.
 
-While cheaper than running actual replications, markets require many traders and a large transaction volume to function efficiently. Using market makers to clear trades can end up being quite costly. In comparison, using a statistical model is almost free. In "Predicting Replication" we use machine learning to predict replication outcomes and explore which experimental features drive replicability. The model's [pre-registered](https://osf.io/w2y96/) predictions of the replicability of Science and Nature papers is only slightly worse than those produced by the prediction market.
+While cheaper than running actual replications, markets require many traders and a large transaction volume to function efficiently. Using market makers to clear trades can end up being quite costly. In comparison, using a statistical model is almost free. In "Predicting the replicability of social science lab experiments" we use machine learning to predict replication outcomes and explore which experimental features drive replicability. The model's [pre-registered](https://osf.io/w2y96/) predictions of the replicability of Science and Nature papers is only slightly worse than those produced by the prediction market.
+
+## Talks and activities
+
+I strive to conduct research that is open and reproducible and try to help others do the same. I am [BITSS Catalyst](http://www.bitss.org/people/adam-altmejd/) and occasionally give talks related to both methods and theory around reproducibility and how we can upgrade the scientific process. Slides from these talks are available at <https://adamaltmejd.se/slides/>.

@@ -15,20 +15,20 @@
     <li>
       <h3 class="noline">{{ paper.title }}</h3>
       <div>
-        {% if paper.journal %}<p><i>{{ paper.journal }}, {{ paper.year }}</i></p>{% endif %}
-
+        {% if type=="Publications" %}
+          {% if paper.journal %}<p><i>{{ paper.journal }}{{ paper.year | prepend: ', ' }}</i></p>{% endif %}
+        {% else %}
+          {% if paper.status %}<p><i>{{ paper.status }}</i></p>{% endif %}
+        {% endif %}
         {%- for coauthor in paper.coauthors limit:3 -%}
-        {%- if forloop.first == true -%}<p>with&nbsp;
-          {%- elsif paper.coauthors.size > 3 -%}{%- break -%}
-          {%- elsif forloop.length > 1 -%}{%- if forloop.last == true -%},&nbsp;and&nbsp;{%- else -%},&nbsp;{%- endif
-          -%}
+          {%- if forloop.first == true -%}<p>with&nbsp;
+            {%- elsif paper.coauthors.size > 3 -%}{%- break -%}
+            {%- elsif forloop.length > 1 -%}{%- if forloop.last == true -%}{%- if forloop.index > 2 -%},{%- endif -%}&nbsp;and&nbsp;{%- else -%},&nbsp;{%- endif -%}
           {%- endif -%}
-          {%- if coauthor.site -%}<a class="noline" href="{{ coauthor.site }}" target="_blank">{%- endif -%}{{
-            coauthor.name }}{%- if
-            coauthor.site -%}</a>{%- endif -%}
+          {%- if coauthor.site -%}<a class="noline" href="{{ coauthor.site }}" target="_blank">{%- endif -%}{{ coauthor.name }}{%- if coauthor.site -%}</a>{%- endif -%}
           {%- if forloop.last == true -%}</p>{%- endif -%}
         {%- endfor -%}
-        {% if paper.coauthors.size > 3 %} et. al.</p>{% endif %}
+        {%- if paper.coauthors.size > 3 -%}&nbsp;<a class="collapsed noline" data-toggle="collapse" href="#{{ paper.id | prepend: 'etal' }}" role="button" aria-expanded="false" aria-controls="{{ paper.id | prepend: 'etal' }}">et al.</a></p>{%- endif -%}
 
         <p>
           <ul class="paperlinks">
@@ -49,7 +49,7 @@
             {% endif %}
             {% if paper.pdf %}
             <li>
-              <a class="noline" href="{{ paper.pdf | prepend: '/assets/papers/' }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Latest Version</a>
+              <a class="noline" href="{{ paper.pdf | prepend: '/assets/papers/' }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Latest Version{{ paper.updated | prepend: ' (updated: ' | append: ')' }}</a>
             </li>
             {% endif %}
             {% if paper.wp %}
@@ -64,7 +64,7 @@
             {% endif %}
             {% if paper.appendix %}
             <li>
-              <a class="noline" href="{{ paper.appendix | prepend: '/assets/papers/' }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Online Appendix</a>
+              <a class="noline" href="{{ paper.appendix | prepend: '/assets/papers/' }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Appendix</a>
             </li>
             {% endif %}
             {% if paper.coverage %}
@@ -81,6 +81,19 @@
             {% endunless %}
           </ul>
         </p>
+        {% if paper.coauthors.size > 3 %}
+        <div class="collapse" id="{{ paper.id | prepend: 'etal' }}">
+          <div class="card card-body">
+            {%- for coauthor in paper.coauthors -%}
+              {%- if forloop.first == true -%}<p>with&nbsp;
+                {%- elsif forloop.length > 1 -%}{%- if forloop.last == true -%}{%- if forloop.index > 2 -%},{%- endif -%}&nbsp;and&nbsp;{%- else -%},&nbsp;{%- endif -%}
+              {%- endif -%}
+              {%- if coauthor.site -%}<a class="noline" href="{{ coauthor.site }}" target="_blank">{%- endif -%}{{ coauthor.name }}{%- if coauthor.site -%}</a>{%- endif -%}
+              {%- if forloop.last == true -%}</p>{%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+        {% endif %}
         {% if paper.abstract %}
         <div class="collapse" id="{{ paper.id | prepend: 'abstract' }}">
           <div class="card card-body">

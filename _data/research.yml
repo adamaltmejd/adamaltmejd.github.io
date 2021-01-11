@@ -125,7 +125,10 @@
   type: Work in Progress
   project: College Choice
   title: "O Brother, Where Start Thou? Sibling Spillovers on College and Major Choice in Four Countries"
-  journal: Quarterly Journal of Economics (forthcoming)
+  journal: Quarterly Journal of Economics
+  year: 2020
+  status: Forthcoming in the Quarterly Journal of Economics
+  updated: "2020-12-24"
   pdf: sibling_spillovers.pdf
   appendix: sibling_spillovers_appendix.pdf
   coauthors:
@@ -180,3 +183,17 @@
     - name: Colin Camerer
       site: http://www.its.caltech.edu/~camerer/camerer.html
   abstract: "We measure how accurately replication of experimental results can be predicted by black-box statistical models. With data from four large-scale replication projects in experimental psychology and economics, and techniques from machine learning, we train predictive models and study which variables drive predictable replication. The models predicts binary replication with a cross-validated accuracy rate of 70% (AUC of 0.77) and estimates of relative effect sizes with a Spearman ρ of 0.38. The accuracy level is similar to market-aggregated beliefs of peer scientists (Camerer et al., 2016; Dreber et al., 2015). The predictive power is validated in a pre-registered out of sample test of the outcome of Camerer et al. (2018), where 71% (AUC of 0.73) of replications are predicted correctly and effect size correlations amount to ρ = 0.25. Basic features such as the sample and effect sizes in original papers, and whether reported effects are single-variable main effects or two-variable interactions, are predictive of successful replication. The models presented in this paper are simple tools to produce cheap, prognostic replicability metrics. These models could be useful in institutionalizing the process of evaluation of new findings and guiding resources to those direct replications that are likely to be most informative."
+
+- id: altmejd2020nowcasting
+  type: Work in Progress
+  status: Under review at Scientific Reports
+  updated: "2020-06-05"
+  project: Covid-19
+  title: "Nowcasting Covid-19 statistics reported withdelay: a case-study of Sweden"
+  preprint: https://arxiv.org/abs/2006.06840
+  coauthors:
+    - name: Joacim Rocklöv
+      site: https://www.umu.se/en/staff/joacim-rocklov/
+    - name: Jonas Wallin
+      site: https://jonaswallin.github.io/
+  abstract: "The new corona virus disease -- COVID-2019 -- is rapidly spreading through the world. The availability of unbiased timely statistics of trends in disease events are a key to effective responses. But due to reporting delays, the most recently reported numbers are frequently underestimating of the total number of infections, hospitalizations and deaths creating an illusion of a downward trend. Here we describe a statistical methodology for predicting true daily quantities and their uncertainty, estimated using historical reporting delays. The methodology takes into account the observed distribution pattern of the lag. It is derived from the removal method, a well-established estimation framework in the field of ecology."

@@ -38,8 +38,8 @@ main {
 // https://aykevl.nl/2014/09/fix-jumping-scrollbar
 @include media-breakpoint-up(sm) {
   html {
-        margin-left: calc(100vw - 100%);
-        margin-right: 0;
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
   }
 }
 
@@ -47,7 +47,7 @@ main {
 // HEADERS
 
 .dropdown-menu.collapsing {
-    display:block;
+  display: block;
 }
 
 div.site_header {
@@ -60,7 +60,8 @@ div.site_header {
     @extend .pt-sm-4; // padding top 5 (responsive spacing)
     @extend .pb-sm-4; // padding top 5 (responsive spacing)
 
-    > div { // put the burger in the header
+    > div {
+      // put the burger in the header
       // @extend .navbar-light;
       // @extend .navbar-expand-sm;
       text-align: center;
@@ -76,11 +77,15 @@ div.site_header {
         font-weight: 600;
         margin-right: 0;
       }
-      a.navbar-brand:hover { color: $body-color; }
+      a.navbar-brand:hover {
+        color: $body-color;
+      }
     }
     hr {
       max-width: 200px;
-      @include media-breakpoint-only(xs) { max-width: 100px; }
+      @include media-breakpoint-only(xs) {
+        max-width: 100px;
+      }
       margin: 0 auto 1rem;
       border-top: solid 0.25rem $body-color;
     }
@@ -184,15 +189,21 @@ article {
   hyphens: auto;
   overflow-wrap: break-word;
 
-  h1, h2 {
+  h1,
+  h2 {
     display: inline-block;
     @extend .mb-1;
   }
-  h2 { @extend .mt-3; }
+  h2 {
+    @extend .mt-3;
+  }
 
-  p.meta { @extend .mb-2; }
+  p.meta {
+    @extend .mb-2;
+  }
 
-  a { // h1 , h1
+  a {
+    // h1 , h1
     // background-image: linear-gradient(to right, $body-color, $body-color);
     // background-position: left bottom;
     // background-repeat: no-repeat;
@@ -211,31 +222,43 @@ article {
     text-indent: 1em;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   // Publist: list of publications/working papers
   section.publist {
     text-align: left;
 
-    ul, h3 {
+    ul,
+    h3 {
       @extend .m-0;
       @extend .p-0;
     }
 
-    p, a {
+    p,
+    a {
       font-size: $font-size-sm;
     }
     p + p {
       text-indent: 0;
     }
 
-    h2 { font-size: $h3-font-size; }
+    h2 {
+      font-size: $h3-font-size;
+    }
     h3 {
       // font-family: $font-family-base;
       font-size: $h6-font-size;
       font-weight: 600;
     }
 
-    ul { list-style-type: none; }
-    li + li { @extend .mt-3; }
+    ul {
+      list-style-type: none;
+    }
+    li + li {
+      @extend .mt-3;
+    }
 
     ul.paperlinks {
       li {

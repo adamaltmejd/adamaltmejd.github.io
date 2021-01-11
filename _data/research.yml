@@ -188,12 +188,12 @@
   type: Work in Progress
   status: Under review at Scientific Reports
   updated: "2020-06-05"
-  project: Covid-19
-  title: "Nowcasting Covid-19 statistics reported withdelay: a case-study of Sweden"
+  project: Covid 19
+  title: "Nowcasting Covid-19 statistics reported with delay: a case-study of Sweden"
   preprint: https://arxiv.org/abs/2006.06840
   coauthors:
     - name: Joacim Rocklöv
       site: https://www.umu.se/en/staff/joacim-rocklov/
     - name: Jonas Wallin
       site: https://jonaswallin.github.io/
-  abstract: "The new corona virus disease -- COVID-2019 -- is rapidly spreading through the world. The availability of unbiased timely statistics of trends in disease events are a key to effective responses. But due to reporting delays, the most recently reported numbers are frequently underestimating of the total number of infections, hospitalizations and deaths creating an illusion of a downward trend. Here we describe a statistical methodology for predicting true daily quantities and their uncertainty, estimated using historical reporting delays. The methodology takes into account the observed distribution pattern of the lag. It is derived from the removal method, a well-established estimation framework in the field of ecology."
+  abstract: "The new corona virus disease - COVID-2019 - is rapidly spreading through the world. The availability of unbiased timely statistics of trends in disease events are a key to effective responses. But due to reporting delays, the most recently reported numbers are frequently underestimating of the total number of infections, hospitalizations and deaths creating an illusion of a downward trend. Here we describe a statistical methodology for predicting true daily quantities and their uncertainty, estimated using historical reporting delays. The methodology takes into account the observed distribution pattern of the lag. It is derived from the removal method, a well-established estimation framework in the field of ecology."

@@ -8,3 +8,4 @@ tmp/
 .sass-cache/
 Gemfile.lock
 .jekyll-metadata
+yarn-error.log

@@ -2,7 +2,7 @@
 
 import gulp from 'gulp';
 import del from 'del';
-import sass from 'gulp-sass';
+var sass = require('gulp-sass')(require('sass'));
 import cp from 'child_process';
 import sourcemaps from 'gulp-sourcemaps';
 import postcss from 'gulp-postcss';

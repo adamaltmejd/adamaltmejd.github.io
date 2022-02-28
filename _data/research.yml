@@ -151,6 +151,8 @@
       url: https://universitetslararen.se/2021/06/01/smasyskon-valjer-samma-utbildning-som-aldre-syskon/
     - outlet: Aftonbladet
       url: https://www.aftonbladet.se/nyheter/a/nA25gm/storasyskon-paverkar-smasyskons-skolval
+    - outlet: "Animated explainer - Econimate"
+      url: https://www.youtube.com/watch?v=fEF38iA5zWs
 
 - id: altmejd2018returns
   type: Work in Progress

@@ -209,10 +209,12 @@
   title: Business Education and Wealth
   year: 2021
 
-- id: altmejd2021inheritance
+- id: altmejd2022inheritance
   type: Work in Progress
-  status: Early draft available upon request.
+  status: Draft available to download. Comments appreciated.
   project: College Choice
   title: Inheritance of fields of study
-  year: 2021
-  abstract: "The study of intergenerational mobility has long been a core concept of social science. Even in countries with relatively high income mobility like Sweden, an individual's social origin is a key determinant for their socio-cultural destination. This paper goes beyond the intergenerational transmission of years of schooling to study how occupations are inherited through field of study specialization in university. Swedish children are often three times more likely than the average child to attain the degree that their parent holds. To estimate how much of this association is caused by the choices of the parent, I employ a regression discontinuity design to study the choices of individuals who applied to Swedish universities between 1977 and 1999 and evaluate if their enrollment in fields increase the probability that their children later study the same topic. I find strong causal influence, with children being 50-150% more likely to enroll and graduate in a field studied by their parents. The effect is positive for most specializations, but varies substantially in size, with medicine, business, law, and engineering showing some of the largest effects. Children are twice as likely to follow their fathers, and the effect increases substantially with the earnings and competitiveness of the field."
+  year: 2022
+  updated: "2022-08-11"
+  abstract: "I study how occupations are inherited through field of study choice in university. Children of parents with a degree in a specific field are often more than three times as likely to attain said degree themselves. To estimate how much of this association is caused by the educational choices of parents, I exploit admission thresholds to university programs in a regression discontinuity design. I study individuals who applied to Swedish universities between 1977 and 1999 and evaluate if their enrollment in different fields of study increases the probability that their children later study the same topic. I find strong causal influence. At the aggregate level, children are about twice as likely to graduate in the field studied by their parent. The effect is positive for most fields, but varies substantially in size. Technology, engineering, humanities, medicine, natural science, and business have some of the largest effects, for which parental enrollment increases the likelihood to graduate with between 4.5 and 11.6 percentage points. I show that occupation choices and labor market outcomes play an important role in explaining the results. I argue that while, children who follow their parents are on average better off, their comparative advantage explains only part of the results. Parents also act as role models, as is indicated by the fact that children become less like to follow parents with really weak labor market outcomes, and that daughters more often inherit the field of their mothers, and sons the choice of their fathers."
+  pdf: Altmejd_Inheritance.pdf

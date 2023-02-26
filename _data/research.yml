@@ -188,19 +188,19 @@
       site: http://www.its.caltech.edu/~camerer/camerer.html
   abstract: "We measure how accurately replication of experimental results can be predicted by black-box statistical models. With data from four large-scale replication projects in experimental psychology and economics, and techniques from machine learning, we train predictive models and study which variables drive predictable replication. The models predicts binary replication with a cross-validated accuracy rate of 70% (AUC of 0.77) and estimates of relative effect sizes with a Spearman ρ of 0.38. The accuracy level is similar to market-aggregated beliefs of peer scientists (Camerer et al., 2016; Dreber et al., 2015). The predictive power is validated in a pre-registered out of sample test of the outcome of Camerer et al. (2018), where 71% (AUC of 0.73) of replications are predicted correctly and effect size correlations amount to ρ = 0.25. Basic features such as the sample and effect sizes in original papers, and whether reported effects are single-variable main effects or two-variable interactions, are predictive of successful replication. The models presented in this paper are simple tools to produce cheap, prognostic replicability metrics. These models could be useful in institutionalizing the process of evaluation of new findings and guiding resources to those direct replications that are likely to be most informative."
 
-- id: altmejd2020nowcasting
+- id: altmejd2023nowcasting
   type: Work in Progress
-  status: Under review
-  updated: "2020-06-05"
+  year: 2023
+  journal: IJERPH
   project: COVID-19
-  title: "Nowcasting COVID-19 statistics reported with delay: a case-study of Sweden and the UK"
-  preprint: https://arxiv.org/abs/2006.06840
+  doi: 10.3390/ijerph20043040
+  title: "Nowcasting COVID-19 Statistics Reported with Delay: A Case-Study of Sweden and the UK"
   coauthors:
     - name: Joacim Rocklöv
       site: https://www.umu.se/en/staff/joacim-rocklov/
     - name: Jonas Wallin
       site: https://jonaswallin.github.io/
-  abstract: "The new corona virus disease - COVID-2019 - is rapidly spreading through the world. The availability of unbiased timely statistics of trends in disease events are a key to effective responses. But due to reporting delays, the most recently reported numbers are frequently underestimating of the total number of infections, hospitalizations and deaths creating an illusion of a downward trend. Here we describe a statistical methodology for predicting true daily quantities and their uncertainty, estimated using historical reporting delays. The methodology takes into account the observed distribution pattern of the lag. It is derived from the removal method, a well-established estimation framework in the field of ecology."
+  abstract: "The COVID-19 pandemic has demonstrated the importance of unbiased, real-time statistics of trends in disease events in order to achieve an effective response. Because of reporting delays, real-time statistics frequently underestimate the total number of infections, hospitalizations and deaths. When studied by event date, such delays also risk creating an illusion of a downward trend. Here, we describe a statistical methodology for predicting true daily quantities and their uncertainty, estimated using historical reporting delays. The methodology takes into account the observed distribution pattern of the lag. It is derived from the “removal method”—a well-established estimation framework in the field of ecology."
 
 - id: altmejd2022businessreturns
   type: Work in Progress

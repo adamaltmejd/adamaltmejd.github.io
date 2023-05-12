@@ -49,7 +49,7 @@
             {% endif %}
             {% if paper.pdf %}
             <li>
-              <a class="noline" href="{{ paper.pdf | prepend: '/assets/papers/' }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Latest Version{{ paper.updated | prepend: ' (updated: ' | append: ')' }}</a>
+              <a class="noline" href="{{ paper.pdf | prepend: '/assets/papers/' }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Latest Version{{ paper.updated | prepend: ' (' | append: ')' }}</a>
             </li>
             {% endif %}
             {% if paper.wp %}

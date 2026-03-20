@@ -8,8 +8,7 @@
       {{- partial "author-list.html" (dict "authors" .) -}}
     </p>
     {{ end }}
-    {{ $year := .Params.year }}
-    {{ with .Params.journal }}<p>Published in: <em>{{ . }}{{ with $year }}, {{ . }}{{ end }}</em></p>{{ end }}
+    {{ with .Params.journal }}<p>Published in: <em>{{ . }}</em></p>{{ end }}
     {{ with .Params.status }}<p>{{ . }}</p>{{ end }}
     <nav class="paper-links">
       {{ with .Params.doi }}

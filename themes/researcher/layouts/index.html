@@ -1,4 +1,4 @@
 {{ define "main" }}
 {{ .Content }}
-{{ partial "publication-list.html" . }}
+{{ partial "paper-list.html" (where site.RegularPages "Section" "research") }}
 {{ end }}

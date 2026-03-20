@@ -21,6 +21,9 @@ params:
     orcid: "0000-0002-4248-0677"
     gscholarid: "xyMRB8cAAAAJ"
 
+taxonomies:
+  project: projects
+
 menu:
   main:
     - name: "Curriculum\u00A0\u00A0Vitae"
@@ -33,10 +36,6 @@ menu:
       weight: 20
       params:
         icon: "fas fa-pencil-alt"
-
-disableKinds:
-  - taxonomy
-  - term
 
 markup:
   goldmark:

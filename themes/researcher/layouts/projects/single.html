@@ -1,8 +1,0 @@
-{{ define "main" }}
-<header>
-  {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
-  {{ with .Date }}<p class="meta"><i class="fas fa-clock"></i>&nbsp;Last update: {{ .Format "January 2, 2006" }}</p>{{ end }}
-</header>
-{{ .Content }}
-{{ partial "publication-list.html" . }}
-{{ end }}

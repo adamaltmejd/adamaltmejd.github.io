@@ -1,0 +1,7 @@
+{{ define "main" }}
+<header>
+  <h1>{{ .Title }}</h1>
+</header>
+{{ .Content }}
+{{ partial "paper-list.html" .Pages }}
+{{ end }}

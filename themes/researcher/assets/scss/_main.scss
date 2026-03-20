@@ -191,11 +191,16 @@ article {
 
     ul, h3 { margin: 0; padding: 0; }
 
-    p, a { font-size: $font-size-sm; }
+    p, ul.paperlinks a { font-size: $font-size-sm; }
     p + p { text-indent: 0; }
 
     h2 { font-size: $h3-font-size; }
-    h3 { font-size: $h6-font-size; font-weight: 600; }
+    h3 {
+      font-size: $h6-font-size;
+      font-weight: 600;
+      a { text-decoration: none; }
+      a:hover { color: $link-hover-color; }
+    }
 
     ul { list-style-type: none; }
     li + li { margin-top: 1rem; }
@@ -213,13 +218,23 @@ article {
       font-variant: normal;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
-      content: "\f0da"; // caret-right
+      content: "\f0da";
       transition: all linear 0.25s;
       transform: rotate(90deg);
       margin-right: 0.22rem;
     }
     [data-toggle="collapse"].collapsed:before {
       transform: rotate(0deg);
+    }
+  }
+
+  // Paper detail page links
+  p.paper-links {
+    a {
+      display: inline-block;
+      margin-right: 0.75rem;
+      margin-bottom: 0.25rem;
+      font-size: $font-size-sm;
     }
   }
 }

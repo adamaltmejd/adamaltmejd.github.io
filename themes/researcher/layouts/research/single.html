@@ -1,0 +1,64 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+
+  {{ with .Params.coauthors }}
+  <p>
+    {{- $total := len . -}}
+    {{- range $i, $ca := . -}}
+      {{- if and (gt $i 0) (lt $i (sub $total 1)) -}},&nbsp;{{ end -}}
+      {{- if and (eq $i (sub $total 1)) (gt $total 1) -}}
+        {{- if gt $i 1 -}},{{ end -}}&nbsp;and&nbsp;
+      {{- end -}}
+      {{- if $ca.site -}}<a href="{{ $ca.site }}" target="_blank">{{ end -}}
+      {{- $ca.name -}}
+      {{- if $ca.site -}}</a>{{ end -}}
+    {{- end -}}
+  </p>
+  {{ end }}
+
+  {{ if eq .Params.publication_type "Publications" }}
+    {{ $year := .Params.year }}
+    {{ with .Params.journal }}<p><em>{{ . }}{{ with $year }}, {{ . }}{{ end }}</em></p>{{ end }}
+  {{ end }}
+  {{ with .Params.status }}<p><em>{{ . }}</em></p>{{ end }}
+
+  <p class="paper-links">
+    {{ with .Params.doi }}
+      <a href="https://doi.org/{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;{{ if eq $.Params.publication_type "Publications" }}Published Paper{{ else }}Working Paper{{ end }}</a>
+    {{ end }}
+    {{ with .Params.wp }}
+      <a href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Working Paper</a>
+    {{ end }}
+    {{ with .Params.ungated }}
+      <a href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Ungated</a>
+    {{ end }}
+    {{ with .Params.pdf }}
+      <a href="/assets/papers/{{ . }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;PDF{{ with $.Params.updated }} ({{ . }}){{ end }}</a>
+    {{ end }}
+    {{ with .Params.appendix }}
+      <a href="/assets/papers/{{ . }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Appendix</a>
+    {{ end }}
+  </p>
+
+  {{ with .Params.projects }}
+  <p>
+    {{ range $i, $p := . }}{{ if $i }}, {{ end }}<a href="/projects/{{ $p | urlize }}/"><i class="fas fa-pencil-alt"></i>&nbsp;{{ $p }}</a>{{ end }}
+  </p>
+  {{ end }}
+
+  {{ with .Params.abstract }}
+  <h2>Abstract</h2>
+  <p>{{ . | safeHTML }}</p>
+  {{ end }}
+
+  {{ with .Params.coverage }}
+  <h2>Media Coverage</h2>
+  <p>
+    {{ range $i, $m := . }}{{ if $i }}, {{ end }}<a href="{{ $m.url }}" target="_blank">{{ $m.outlet }}</a>{{ end }}
+  </p>
+  {{ end }}
+
+  {{ with .Content }}{{ . }}{{ end }}
+</article>
+{{ end }}

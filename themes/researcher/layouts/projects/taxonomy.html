@@ -1,9 +1,10 @@
 {{ define "main" }}
-{{ range .Pages.ByDate.Reverse }}
+<h1>Research Projects</h1>
+{{ range .Pages }}
 <section>
   <a class="noline colorhover" href="{{ .RelPermalink }}">
     <h2>{{ .Title }}</h2>
-    <p>{{ .Summary | plainify }}</p>
+    {{ with .Content }}<p>{{ . | plainify | truncate 200 }}</p>{{ end }}
   </a>
 </section>
 {{ end }}

@@ -1,44 +1,35 @@
-{{- $project := .Params.project -}}
-{{- $research := site.Data.research -}}
+{{/* Renders a grouped list of research papers with collapsible details. */}}
+{{- $pages := . -}}
 
-{{- if $project -}}
-  {{- $research = where $research "project" $project -}}
-{{- end -}}
-
-{{/* Get unique types, preserving first-occurrence order */}}
 {{- $types := slice -}}
-{{- range $research -}}
-  {{- if not (in $types .type) -}}
-    {{- $types = $types | append .type -}}
+{{- range $pages -}}
+  {{- if not (in $types .Params.publication_type) -}}
+    {{- $types = $types | append .Params.publication_type -}}
   {{- end -}}
 {{- end -}}
+{{- $types = sort $types | collections.Reverse -}}
 
-{{/* On the main page (no project filter), sort alphabetically reversed so "Work in Progress" comes before "Publications" */}}
-{{- if not $project -}}
-  {{- $types = sort $types -}}
-  {{- $types = collections.Reverse $types -}}
-{{- end -}}
-
-{{- range $type := $types -}}
+{{ range $type := $types }}
 <section class="publist">
-  <h2>{{ $type }}</h2>
+  <h2>{{ if eq $type "Publications" }}Publications{{ else }}Work in Progress{{ end }}</h2>
   <ul>
-    {{- $papers := where $research "type" $type -}}
-    {{- $papers = sort $papers "year" "desc" -}}
-    {{ range $paper := $papers }}
+    {{- $papers := where $pages "Params.publication_type" $type -}}
+    {{- $papers = sort $papers "Params.year" "desc" -}}
+    {{ range $papers }}
+    {{- $id := .File.ContentBaseName -}}
     <li>
-      <h3 class="noline">{{ $paper.title }}</h3>
+      <h3 class="noline"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
       <div>
         {{ if eq $type "Publications" }}
-          {{ with $paper.journal }}<p><i>{{ . }}{{ with $paper.year }}, {{ . }}{{ end }}</i></p>{{ end }}
+          {{ $year := .Params.year }}
+          {{ with .Params.journal }}<p><em>{{ . }}{{ with $year }}, {{ . }}{{ end }}</em></p>{{ end }}
         {{ else }}
-          {{ with $paper.status }}<p><i>{{ . }}</i></p>{{ end }}
+          {{ with .Params.status }}<p><em>{{ . }}</em></p>{{ end }}
         {{ end }}
 
-        {{- with $paper.coauthors -}}
+        {{- with .Params.coauthors -}}
           {{- $total := len . -}}
           {{- if gt $total 3 -}}
-            {{/* Show first 3, then collapsible "et al." */}}
             <p>with&nbsp;
             {{- range $i, $ca := first 3 . -}}
               {{- if eq $i 1 -}},&nbsp;{{ end -}}
@@ -47,7 +38,7 @@
               {{- $ca.name -}}
               {{- if $ca.site -}}</a>{{ end -}}
             {{- end -}}
-            &nbsp;<a class="collapsed noline" data-toggle="collapse" href="#etal{{ $paper.id }}" role="button" aria-expanded="false" aria-controls="etal{{ $paper.id }}">et al.</a></p>
+            &nbsp;<a class="collapsed noline" data-toggle="collapse" href="#etal{{ $id }}" role="button" aria-expanded="false" aria-controls="etal{{ $id }}">et al.</a></p>
           {{- else -}}
             <p>with&nbsp;
             {{- range $i, $ca := . -}}
@@ -63,56 +54,51 @@
         {{- end }}
 
         <ul class="paperlinks">
-            {{ with $paper.abstract }}
+            {{ with .Params.abstract }}
             <li>
-              <a class="collapsed noline" data-toggle="collapse" href="#abstract{{ $paper.id }}" role="button" aria-expanded="false" aria-controls="abstract{{ $paper.id }}">Abstract</a>
+              <a class="collapsed noline" data-toggle="collapse" href="#abstract{{ $id }}" role="button" aria-expanded="false" aria-controls="abstract{{ $id }}">Abstract</a>
             </li>
             {{ end }}
-            {{ with $paper.doi }}
+            {{ with .Params.doi }}
             <li>
               <a class="noline" href="https://doi.org/{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;{{ if eq $type "Publications" }}Published Paper{{ else }}Working Paper{{ end }}</a>
             </li>
             {{ end }}
-            {{ with $paper.preprint }}
-            <li>
-              <a class="noline" href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Preprint</a>
-            </li>
-            {{ end }}
-            {{ with $paper.pdf }}
-            <li>
-              <a class="noline" href="/assets/papers/{{ . }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Latest Version{{ with $paper.updated }} ({{ . }}){{ end }}</a>
-            </li>
-            {{ end }}
-            {{ with $paper.wp }}
+            {{ with .Params.wp }}
             <li>
               <a class="noline" href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Working Paper</a>
             </li>
             {{ end }}
-            {{ with $paper.ungated }}
+            {{ with .Params.ungated }}
             <li>
               <a class="noline" href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Ungated</a>
             </li>
             {{ end }}
-            {{ with $paper.appendix }}
+            {{ with .Params.pdf }}
+            <li>
+              <a class="noline" href="/assets/papers/{{ . }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;PDF{{ with $.Params.updated }} ({{ . }}){{ end }}</a>
+            </li>
+            {{ end }}
+            {{ with .Params.appendix }}
             <li>
               <a class="noline" href="/assets/papers/{{ . }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Appendix</a>
             </li>
             {{ end }}
-            {{ with $paper.coverage }}
+            {{ with .Params.coverage }}
             <li>
-              <a class="collapsed noline" data-toggle="collapse" href="#coverage{{ $paper.id }}" role="button" aria-expanded="false" aria-controls="coverage{{ $paper.id }}">Media Coverage</a>
+              <a class="collapsed noline" data-toggle="collapse" href="#coverage{{ $id }}" role="button" aria-expanded="false" aria-controls="coverage{{ $id }}">Media Coverage</a>
             </li>
             {{ end }}
-            {{ if and (not $project) $paper.project }}
+            {{ with .Params.projects }}
             <li>
-              <a class="noline" href="/projects/{{ $paper.project | urlize }}/"><i class="fas fa-pencil-alt"></i>&nbsp;{{ $paper.project }}</a>
+              {{ range $i, $p := . }}{{ if $i }}, {{ end }}<a class="noline" href="/projects/{{ $p | urlize }}/"><i class="fas fa-pencil-alt"></i>&nbsp;{{ $p }}</a>{{ end }}
             </li>
             {{ end }}
         </ul>
 
         {{/* Full coauthor list (collapsed) */}}
-        {{ with $paper.coauthors }}{{ if gt (len .) 3 }}
-        <div class="collapse" id="etal{{ $paper.id }}">
+        {{ with .Params.coauthors }}{{ if gt (len .) 3 }}
+        <div class="collapse" id="etal{{ $id }}">
           <div class="card card-body">
             <p>with&nbsp;
             {{- $total := len . -}}
@@ -129,16 +115,16 @@
         </div>
         {{ end }}{{ end }}
 
-        {{ with $paper.abstract }}
-        <div class="collapse" id="abstract{{ $paper.id }}">
+        {{ with .Params.abstract }}
+        <div class="collapse" id="abstract{{ $id }}">
           <div class="card card-body">
             <p>{{ . | safeHTML }}</p>
           </div>
         </div>
         {{ end }}
 
-        {{ with $paper.coverage }}
-        <div class="collapse" id="coverage{{ $paper.id }}">
+        {{ with .Params.coverage }}
+        <div class="collapse" id="coverage{{ $id }}">
           <div class="card card-body">
             <p>
               {{ range $i, $media := . }}

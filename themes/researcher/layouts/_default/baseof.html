@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ .Site.LanguageCode | default "en" }}">
 {{ partial "head.html" . }}
 
 <body>
@@ -9,8 +9,12 @@
       <header>
         <div itemscope itemtype="https://schema.org/Person">
           <a class="navbar-brand" href="/">
-            <span itemprop="givenName">{{ .Site.Params.author.givenName }}</span>
-            <span itemprop="familyName">{{ .Site.Params.author.familyName }}</span>
+            {{- with .Site.Params.author.givenName -}}
+              <span itemprop="givenName">{{ . }}</span>
+            {{- end -}}
+            {{- with .Site.Params.author.familyName -}}
+              {{ " " }}<span itemprop="familyName">{{ . }}</span>
+            {{- end -}}
           </a>
         </div>
         <hr>

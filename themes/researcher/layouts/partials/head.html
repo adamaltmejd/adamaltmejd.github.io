@@ -5,7 +5,7 @@
   <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta name="author" content="{{ .Site.Params.author.name }}">
 
-  <title>{{ with .Title }}{{ . }} &middot; Adam Altmejd{{ else }}Adam Altmejd{{ end }}</title>
+  <title>{{ with .Title }}{{ . }} &middot; {{ $.Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
   <link rel="canonical" href="{{ .Permalink }}" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">

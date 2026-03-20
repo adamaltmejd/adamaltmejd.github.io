@@ -1,0 +1,27 @@
+<nav role="navigation">
+  {{ with .Site.Params.author.photo }}
+  <a href="/"><img src="{{ . }}" itemprop="image" property="depiction" alt="Photo"/></a>
+  {{ end }}
+  <div>
+    <ul>
+      {{ with .Site.Params.author.email }}
+      <li>
+        <a href="mailto:{{ . }}" itemprop="email"><i class="fas fa-envelope"></i>&nbsp;{{ . }}</a>
+      </li>
+      {{ end }}
+      {{ with .Site.Params.author.phone }}
+      <li>
+        <a href="tel:{{ . }}" itemprop="telephone"><i class="fas fa-phone"></i>&nbsp;{{ . }}</a>
+      </li>
+      {{ end }}
+      {{ if or (.Site.Params.author.email) (.Site.Menus.main) }}<hr>{{ end }}
+      {{ range .Site.Menus.main }}
+      <li{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>
+        <a href="{{ .URL }}">
+          {{ with .Params.icon }}<i class="{{ . }}"></i>&nbsp;{{ end }}{{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>

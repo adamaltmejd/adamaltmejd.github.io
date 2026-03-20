@@ -2,41 +2,38 @@
 // MAIN LAYOUT/SCAFFOLDING
 
 div.site_container {
-  @include make-container();
   max-width: 800px;
+  padding: 0 0.75rem;
+  margin: 0 auto;
 }
 
 main {
-  @include make-row();
-
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
-  @include media-breakpoint-up(sm) {
-    flex-direction: row; // put nav in sidebar
+  @media (min-width: $bp-sm) {
+    flex-direction: row;
   }
-  @include media-breakpoint-only(xs) {
-    flex-direction: column-reverse; // on phones order nav before content
+  @media (max-width: $bp-sm - 0.02px) {
+    flex-direction: column-reverse;
   }
 
   > article {
-    flex-basis: 0;
-    flex-grow: 1;
-    padding-left: 15px;
-    padding-right: 15px;
+    flex: 1;
+    padding: 0 15px;
     position: relative;
     width: 100%;
+    min-width: 0;
   }
 
   > aside {
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 220px;
+    flex: 0 0 220px;
   }
 }
 
 // Avoid "jumping" scrollbar
-// https://aykevl.nl/2014/09/fix-jumping-scrollbar
-@include media-breakpoint-up(sm) {
+@media (min-width: $bp-sm) {
   html {
     margin-left: calc(100vw - 100%);
     margin-right: 0;
@@ -44,21 +41,20 @@ main {
 }
 
 // ===========================
-// HEADERS
-
-.dropdown-menu.collapsing {
-  display: block;
-}
+// HEADER
 
 div.site_header {
-  @include make-row();
+  display: flex;
+  flex-wrap: wrap;
 
   > header {
-    @include make-col-ready();
-    @include make-col(12);
+    width: 100%;
+    padding: 0 0.75rem;
 
-    @extend .pt-sm-4;
-    @extend .pb-sm-4;
+    @media (min-width: $bp-sm) {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
 
     > div {
       text-align: center;
@@ -69,15 +65,17 @@ div.site_header {
         color: $body-color;
         text-transform: uppercase;
         font-weight: 600;
-        margin-right: 0;
+        text-decoration: none;
       }
       a.navbar-brand:hover {
         color: $body-color;
+        text-decoration: none;
       }
     }
+
     hr {
       max-width: 200px;
-      @include media-breakpoint-only(xs) {
+      @media (max-width: $bp-sm - 0.02px) {
         max-width: 100px;
       }
       margin: 0 auto 1rem;
@@ -88,41 +86,45 @@ div.site_header {
 
 //=========================
 // NAV
+
 nav[role="navigation"] {
-  @extend .navbar;
-  @extend .navbar-expand-sm;
-  @extend .flex-column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  > div {
-    > ul {
-      @extend .navbar-nav;
-      @extend .flex-column;
-      @extend .mb-3;
+  > div > ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 1rem;
+    list-style: none;
 
-      > li {
-        @extend .nav-item;
-        > a {
-          @extend .nav-link;
-          font-family: $font-family-sans-serif;
-          font-weight: $font-weight-light;
-        }
-      }
+    > li > a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: $nav-color;
+      text-decoration: none;
+      font-family: $font-family-sans-serif;
+      font-weight: $font-weight-light;
 
-      hr {
-        width: 100%;
-        margin: 0.5rem 0;
-        border-width: 2px;
-      }
+      &:hover { color: $nav-hover-color; }
+    }
+
+    > li.active > a {
+      color: $nav-active-color;
+    }
+
+    hr {
+      width: 100%;
+      margin: 0.5rem 0;
+      border-width: 2px;
     }
   }
 
-  a {
-    img {
-      border-radius: 2rem !important;
-      max-width: 200px;
-      @extend .img-fluid;
-      @extend .rounded;
-    }
+  a img {
+    border-radius: 2rem;
+    max-width: 200px;
+    height: auto;
   }
 }
 
@@ -130,37 +132,38 @@ nav[role="navigation"] {
 // FOOTER
 
 footer {
-  @extend .pt-4;
-  @include make-row();
+  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
 
   > div {
-    @include make-col-ready();
-    @extend .mx-auto;
-    @extend .d-flex;
-    @extend .flex-column;
+    width: 100%;
+    padding: 0 0.75rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 
-    @include media-breakpoint-up(sm) {
-      @include make-col(6);
+    @media (min-width: $bp-sm) {
+      flex: 0 0 auto;
+      width: 50%;
     }
 
     > ul {
-      margin: 0;
-      padding: 0;
+      margin: 0 auto;
+      padding: 0 0 0.5rem;
       list-style-type: none;
-      @extend .mx-auto;
-      @extend .pb-2;
 
       > li {
         float: left;
-        @extend .px-1;
+        padding: 0 0.25rem;
       }
     }
   }
 }
 
 //=========================
-// Styling
+// ARTICLE STYLING
 
 article {
   font-kerning: normal;
@@ -169,93 +172,56 @@ article {
   hyphens: auto;
   overflow-wrap: break-word;
 
-  h1,
-  h2 {
+  h1, h2 {
     display: inline-block;
-    @extend .mb-1;
+    margin-bottom: 0.25rem;
   }
-  h2 {
-    @extend .mt-3;
-  }
+  h2 { margin-top: 1rem; }
 
-  p.meta {
-    @extend .mb-2;
-  }
+  p.meta { margin-bottom: 0.5rem; }
 
-  a {
-    text-decoration: underline;
-  }
-  a:hover {
-    text-decoration: underline;
-    color: $body-color;
-  }
+  a { text-decoration: underline; }
+  a:hover { text-decoration: underline; color: $body-color; }
 
-  p {
-    margin: 0 auto;
-  }
-  p + p {
-    text-indent: 1em;
-  }
+  p { margin: 0 auto; }
+  p + p { text-indent: 1em; }
 
-  img {
-    max-width: 100%;
-  }
+  img { max-width: 100%; }
 
-  // Publist: list of publications/working papers
+  // Publication list
   section.publist {
     text-align: left;
 
-    ul,
-    h3 {
-      @extend .m-0;
-      @extend .p-0;
-    }
+    ul, h3 { margin: 0; padding: 0; }
 
-    p,
-    a {
-      font-size: $font-size-sm;
-    }
-    p + p {
-      text-indent: 0;
-    }
+    p, a { font-size: $font-size-sm; }
+    p + p { text-indent: 0; }
 
-    h2 {
-      font-size: $h3-font-size;
-    }
-    h3 {
-      font-size: $h6-font-size;
-      font-weight: 600;
-    }
+    h2 { font-size: $h3-font-size; }
+    h3 { font-size: $h6-font-size; font-weight: 600; }
 
-    ul {
-      list-style-type: none;
-    }
-    li + li {
-      @extend .mt-3;
-    }
+    ul { list-style-type: none; }
+    li + li { margin-top: 1rem; }
 
-    ul.paperlinks {
-      li {
-        display: inline;
-        @extend .pe-2;
-      }
+    ul.paperlinks li {
+      display: inline;
+      padding-right: 0.5rem;
     }
 
     [data-bs-toggle="collapse"]:before {
       font-family: "Font Awesome 6 Free";
-      font-weight: 900; // "solid"
+      font-weight: 900;
       display: inline-block;
       font-style: normal;
       font-variant: normal;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
-      content: "\f0da"; // "caret-right"
+      content: "\f0da"; // caret-right
       transition: all linear 0.25s;
       transform: rotate(90deg);
       margin-right: 0.22rem;
     }
     [data-bs-toggle="collapse"].collapsed:before {
-      // Starts as collapsed
       transform: rotate(0deg);
     }
   }

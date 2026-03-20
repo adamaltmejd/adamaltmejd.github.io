@@ -1,36 +1,37 @@
-// SPECIFIC CV PAGE DESIGN
 .cv_page {
   text-align: left !important;
 
-  dl, dd, dt, p, h1, h2 {
-    @extend .m-0;
-    @extend .p-0;
-  }
+  dl, dd, dt, p, h1, h2 { margin: 0; padding: 0; }
+
   header {
     text-align: center;
     font-size: $h4-font-size;
   }
+
   h1, h2, h3 { background: none !important; }
+
   h1 {
-      color: $body-color;
-      margin-top: $spacer !important;
-      font-size: $h3-font-size;
-      font-weight: $font-weight-normal;
+    color: $body-color;
+    margin-top: $spacer !important;
+    font-size: $h3-font-size;
+    font-weight: $font-weight-normal;
   }
   h1:before {
-      content: "";
-      display: inline-block;
-      margin-right: 8px !important;
-      width: 85px;
-      height: 5px;
-      background-color: $body-color;
-      background-position: bottom left;
+    content: "";
+    display: inline-block;
+    margin-right: 8px !important;
+    width: 85px;
+    height: 5px;
+    background-color: $body-color;
   }
+
   h2 {
-    font-size: $h4-font-size;
+    color: $body-color;
+    font-size: $h5-font-size;
+    margin-top: $spacer * 0.5 !important;
   }
+
   dt {
-    // The years
     float: left;
     width: 85px;
     margin-right: 8px !important;
@@ -39,31 +40,16 @@
     font-size: $font-size-sm;
     font-family: $font-family-sans-serif;
   }
-  strong { font-weight: $font-weight-normal; }
-  dd {
-    // The content
-    width: auto;
-    font-weight: $font-weight-normal;
-  }
-  dd, h2, > p, section > p {
-      margin-left: 93px !important;
-  }
 
-  h2 {
-      color: $body-color;
-      font-size: $h5-font-size;
-      margin-top: $spacer * 0.5 !important;
-  }
-  a,a:hover {
-    text-decoration: none; background-image: none;
-  }
-  a {
-    color: $navbar-light-color;
-  }
-  a:hover {
-    color: $navbar-light-hover-color;
-  }
-  p + p {
-    text-indent: 0;
-  }
+  strong { font-weight: $font-weight-normal; }
+
+  dd { width: auto; font-weight: $font-weight-normal; }
+
+  dd, h2, > p, section > p { margin-left: 93px !important; }
+
+  a, a:hover { text-decoration: none; background-image: none; }
+  a { color: $nav-color; }
+  a:hover { color: $nav-hover-color; }
+
+  p + p { text-indent: 0; }
 }

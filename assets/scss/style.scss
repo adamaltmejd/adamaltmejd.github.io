@@ -1,9 +1,4 @@
-// Variables load before to overwrite !default in third party
 @import 'variables';
-
-// Bootstrap 5 (vendored)
-@import "vendor/bootstrap/bootstrap";
-
-// Custom styles
-@import "main";
+@import 'base';
+@import 'main';
 @import 'cv';

@@ -22,6 +22,10 @@ djlint themes/researcher/layouts/ layouts/ --lint               # lint templates
 djlint themes/researcher/layouts/ layouts/ --reformat           # format templates
 ```
 
+## Visual Testing
+
+Playwright MCP is configured (`.mcp.json`, Firefox). Use it to visually verify changes via `hugo server` (default `http://localhost:1313`).
+
 ## Architecture
 
 - **`themes/researcher/`** — reusable Hugo theme. Layouts, SCSS, collapse JS. No frameworks.

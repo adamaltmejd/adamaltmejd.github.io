@@ -103,15 +103,15 @@ nav[role="navigation"] {
     > li > a {
       display: block;
       padding: 0.5rem 1rem;
-      color: $nav-color;
+      color: $body-color;
       font-family: $font-family-sans-serif;
       font-weight: $font-weight-light;
 
-      &:hover { color: $nav-hover-color; }
+      &:hover { color: $primary; }
     }
 
     > li.active > a {
-      color: $nav-active-color;
+      color: $primary;
     }
 
     hr {
@@ -178,21 +178,11 @@ article {
   h1, h2 {
     display: inline-block;
     margin-bottom: 0.25rem;
-  }
-
-  h1, h2 {
     margin-top: 1.5rem;
   }
 
   h2::before {
-    content: "";
-    display: inline-block;
-    width: 85px;
-    height: 5px;
-    background-color: $body-color;
-    margin-right: 8px;
-    vertical-align: baseline;
-    position: relative;
+    @include heading-accent-bar;
   }
 
   p.meta { margin-bottom: 0.5rem; }

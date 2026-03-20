@@ -1,5 +1,5 @@
 .cv-page {
-  text-align: left !important;
+  text-align: left;
 
   p { text-align: left; }
 
@@ -15,32 +15,25 @@
 
   // CV uses h1 for section headings (pandoc output)
   h1 {
-    margin-top: $spacer !important;
+    margin-top: $spacer;
     font-size: $h3-font-size;
     font-weight: $font-weight-normal;
 
     &::before {
-      content: "";
-      display: inline-block;
-      width: 85px;
-      height: 5px;
-      background-color: $body-color;
-      margin-right: 8px;
-      vertical-align: baseline;
-      position: relative;
+      @include heading-accent-bar;
     }
   }
 
   h2 {
     font-size: $h5-font-size;
-    margin-top: $spacer * 0.5 !important;
+    margin-top: $spacer * 0.5;
     &::before { display: none; }
   }
 
   dt {
     float: left;
     width: 85px;
-    margin-right: 8px !important;
+    margin-right: 8px;
     text-align: right;
     font-weight: $font-weight-normal;
     font-size: $font-size-sm;
@@ -56,11 +49,11 @@
     font-weight: $font-weight-normal;
   }
 
-  dd, h2, > p, section > p { margin-left: 93px !important; }
+  dd, h2, > p, section > p { margin-left: 93px; }
 
   a, a:hover { text-decoration: none; }
-  a { color: $nav-color; }
-  a:hover { color: $nav-hover-color; }
+  a { color: $body-color; }
+  a:hover { color: $primary; }
 
   p + p { text-indent: 0; }
 }

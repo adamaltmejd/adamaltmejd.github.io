@@ -1,0 +1,14 @@
+{{/* Renders a comma-separated author list with "and" before the last.
+     Context: dict with "authors" (slice of {name, site}) and optional "linkClass" (string). */}}
+{{- $authors := .authors -}}
+{{- $cls := .linkClass | default "" -}}
+{{- $total := len $authors -}}
+{{- range $i, $a := $authors -}}
+  {{- if and (gt $i 0) (lt $i (sub $total 1)) -}},&nbsp;{{ end -}}
+  {{- if and (eq $i (sub $total 1)) (gt $total 1) -}}
+    {{- if gt $i 1 -}},{{ end -}}&nbsp;and&nbsp;
+  {{- end -}}
+  {{- if $a.site -}}<a{{ with $cls }} class="{{ . }}"{{ end }} href="{{ $a.site }}" target="_blank">{{ end -}}
+  {{- $a.name -}}
+  {{- if $a.site -}}</a>{{ end -}}
+{{- end -}}

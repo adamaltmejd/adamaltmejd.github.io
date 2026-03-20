@@ -5,16 +5,7 @@
   <div class="paper-meta">
     {{ with .Params.authors }}
     <p class="paper-authors">
-      {{- $total := len . -}}
-      {{- range $i, $a := . -}}
-        {{- if and (gt $i 0) (lt $i (sub $total 1)) -}},&nbsp;{{ end -}}
-        {{- if and (eq $i (sub $total 1)) (gt $total 1) -}}
-          {{- if gt $i 1 -}},{{ end -}}&nbsp;and&nbsp;
-        {{- end -}}
-        {{- if $a.site -}}<a href="{{ $a.site }}" target="_blank">{{ end -}}
-        {{- $a.name -}}
-        {{- if $a.site -}}</a>{{ end -}}
-      {{- end -}}
+      {{- partial "author-list.html" (dict "authors" .) -}}
     </p>
     {{ end }}
     {{ $year := .Params.year }}

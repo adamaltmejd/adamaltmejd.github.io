@@ -8,14 +8,9 @@ $text-muted: #6c757d;
 $link-color: $body-color;
 $link-hover-color: $primary;
 
-// Nav
-$nav-color: $body-color;
-$nav-hover-color: $primary;
-$nav-active-color: $primary;
 
 // Fonts (loaded via <link> in head.html)
 $font-family-sans-serif: "Lato", "Helvetica Neue", helvetica, arial, sans-serif;
-$font-family-monospace: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
 $font-family-base: "EB Garamond", georgia, "Times New Roman", times, serif;
 $headings-font-family: $font-family-sans-serif;
 $font-size-base: 1.1rem;
@@ -34,3 +29,15 @@ $spacer: 1rem;
 
 // Breakpoint
 $bp-sm: 576px;
+
+// Shared decorative bar before section headings
+@mixin heading-accent-bar {
+  content: "";
+  display: inline-block;
+  width: 85px;
+  height: 5px;
+  background-color: $body-color;
+  margin-right: 8px;
+  vertical-align: baseline;
+  position: relative;
+}

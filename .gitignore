@@ -3,8 +3,5 @@
 /resources/
 .hugo_build.lock
 
-# Dependencies
-node_modules/
-
 # OS
 .DS_Store

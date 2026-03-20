@@ -1,18 +1,18 @@
 <ul>
   {{ with .Site.Params.author.orcid }}
-    <li><a style="font-size: 2rem;" href="https://orcid.org/{{ . }}"><i class="ai ai-orcid"></i></a></li>
+    <li><a href="https://orcid.org/{{ . }}"><i class="ai ai-orcid"></i></a></li>
   {{ end }}
   {{ with .Site.Params.author.gscholarid }}
-    <li><a style="font-size: 2rem;" href="https://scholar.google.se/citations?user={{ . }}"><i class="ai ai-google-scholar-square"></i></a></li>
+    <li><a href="https://scholar.google.se/citations?user={{ . }}"><i class="ai ai-google-scholar-square"></i></a></li>
   {{ end }}
   {{ with .Site.Params.author.twitter }}
-    <li><a style="font-size: 2rem;" href="https://twitter.com/{{ . }}"><i class="fab fa-twitter-square"></i></a></li>
+    <li><a href="https://twitter.com/{{ . }}"><i class="fab fa-twitter-square"></i></a></li>
   {{ end }}
   {{ with .Site.Params.author.linkedin }}
-    <li><a style="font-size: 2rem;" href="https://linkedin.com/in/{{ . }}"><i class="fab fa-linkedin"></i></a></li>
+    <li><a href="https://linkedin.com/in/{{ . }}"><i class="fab fa-linkedin"></i></a></li>
   {{ end }}
   {{ with .Site.Params.author.github }}
-    <li><a style="font-size: 2rem;" href="https://github.com/{{ . }}"><i class="fab fa-github"></i></a></li>
+    <li><a href="https://github.com/{{ . }}"><i class="fab fa-github"></i></a></li>
   {{ end }}
 </ul>
-<p class="copyright text-muted">&copy;&nbsp;{{ now.Format "2006" }}&nbsp;{{ .Site.Params.author.name }}</p>
+<p class="text-muted">&copy;&nbsp;{{ now.Format "2006" }}&nbsp;{{ .Site.Params.author.name }}</p>

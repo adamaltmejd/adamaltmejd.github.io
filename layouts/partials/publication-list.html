@@ -24,9 +24,6 @@
   <h2>{{ $type }}</h2>
   <ul>
     {{- $papers := where $research "type" $type -}}
-    {{- if $project -}}
-      {{- $papers = where $papers "project" $project -}}
-    {{- end -}}
     {{- $papers = sort $papers "year" "desc" -}}
     {{ range $paper := $papers }}
     <li>
@@ -50,7 +47,7 @@
               {{- $ca.name -}}
               {{- if $ca.site -}}</a>{{ end -}}
             {{- end -}}
-            &nbsp;<a class="collapsed noline" data-bs-toggle="collapse" href="#etal{{ $paper.id }}" role="button" aria-expanded="false" aria-controls="etal{{ $paper.id }}">et al.</a></p>
+            &nbsp;<a class="collapsed noline" data-toggle="collapse" href="#etal{{ $paper.id }}" role="button" aria-expanded="false" aria-controls="etal{{ $paper.id }}">et al.</a></p>
           {{- else -}}
             <p>with&nbsp;
             {{- range $i, $ca := . -}}
@@ -65,11 +62,10 @@
           {{- end -}}
         {{- end }}
 
-        <p>
-          <ul class="paperlinks">
+        <ul class="paperlinks">
             {{ with $paper.abstract }}
             <li>
-              <a class="collapsed noline" data-bs-toggle="collapse" href="#abstract{{ $paper.id }}" role="button" aria-expanded="false" aria-controls="abstract{{ $paper.id }}">Abstract</a>
+              <a class="collapsed noline" data-toggle="collapse" href="#abstract{{ $paper.id }}" role="button" aria-expanded="false" aria-controls="abstract{{ $paper.id }}">Abstract</a>
             </li>
             {{ end }}
             {{ with $paper.doi }}
@@ -104,7 +100,7 @@
             {{ end }}
             {{ with $paper.coverage }}
             <li>
-              <a class="collapsed noline" data-bs-toggle="collapse" href="#coverage{{ $paper.id }}" role="button" aria-expanded="false" aria-controls="coverage{{ $paper.id }}">Media Coverage</a>
+              <a class="collapsed noline" data-toggle="collapse" href="#coverage{{ $paper.id }}" role="button" aria-expanded="false" aria-controls="coverage{{ $paper.id }}">Media Coverage</a>
             </li>
             {{ end }}
             {{ if and (not $project) $paper.project }}
@@ -112,8 +108,7 @@
               <a class="noline" href="/projects/{{ $paper.project | urlize }}/"><i class="fas fa-pencil-alt"></i>&nbsp;{{ $paper.project }}</a>
             </li>
             {{ end }}
-          </ul>
-        </p>
+        </ul>
 
         {{/* Full coauthor list (collapsed) */}}
         {{ with $paper.coauthors }}{{ if gt (len .) 3 }}

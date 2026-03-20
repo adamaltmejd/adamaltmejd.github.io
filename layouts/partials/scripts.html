@@ -1,36 +1,33 @@
 <script>
 document.addEventListener('click', function(e) {
-  var trigger = e.target.closest('[data-bs-toggle="collapse"]');
+  var trigger = e.target.closest('[data-toggle="collapse"]');
   if (!trigger) return;
   e.preventDefault();
   var target = document.querySelector(trigger.getAttribute('href'));
-  if (!target) return;
+  if (!target || target.classList.contains('collapsing')) return;
 
   if (target.classList.contains('show')) {
-    // Collapse: measure current height, animate to 0, then hide
     target.style.height = target.scrollHeight + 'px';
     target.classList.remove('show');
     target.classList.add('collapsing');
-    target.offsetHeight; // force reflow
+    target.offsetHeight;
     target.style.height = '0';
-    target.addEventListener('transitionend', function handler() {
-      target.classList.remove('collapsing');
-      target.style.height = '';
-      target.removeEventListener('transitionend', handler);
-    });
   } else {
-    // Expand: set height to 0, add collapsing class, animate to scrollHeight
     target.classList.add('collapsing');
     target.style.height = '0';
-    target.offsetHeight; // force reflow
+    target.offsetHeight;
     target.style.height = target.scrollHeight + 'px';
-    target.addEventListener('transitionend', function handler() {
-      target.classList.remove('collapsing');
-      target.classList.add('show');
-      target.style.height = '';
-      target.removeEventListener('transitionend', handler);
-    });
   }
   trigger.classList.toggle('collapsed');
+
+  function done() {
+    target.classList.remove('collapsing');
+    if (target.style.height !== '0px') target.classList.add('show');
+    target.style.height = '';
+    target.removeEventListener('transitionend', done);
+    clearTimeout(fallback);
+  }
+  target.addEventListener('transitionend', done);
+  var fallback = setTimeout(done, 350);
 });
 </script>

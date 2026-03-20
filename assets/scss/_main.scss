@@ -62,14 +62,11 @@ div.site_header {
       a.navbar-brand {
         font-size: $h1-font-size;
         font-family: $font-family-sans-serif;
-        color: $body-color;
         text-transform: uppercase;
         font-weight: 600;
-        text-decoration: none;
       }
       a.navbar-brand:hover {
         color: $body-color;
-        text-decoration: none;
       }
     }
 
@@ -103,7 +100,6 @@ nav[role="navigation"] {
       display: block;
       padding: 0.5rem 1rem;
       color: $nav-color;
-      text-decoration: none;
       font-family: $font-family-sans-serif;
       font-weight: $font-weight-light;
 
@@ -157,6 +153,7 @@ footer {
       > li {
         float: left;
         padding: 0 0.25rem;
+        a { font-size: 2rem; }
       }
     }
   }
@@ -208,7 +205,7 @@ article {
       padding-right: 0.5rem;
     }
 
-    [data-bs-toggle="collapse"]:before {
+    [data-toggle="collapse"]:before {
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
       display: inline-block;
@@ -221,7 +218,7 @@ article {
       transform: rotate(90deg);
       margin-right: 0.22rem;
     }
-    [data-bs-toggle="collapse"].collapsed:before {
+    [data-toggle="collapse"].collapsed:before {
       transform: rotate(0deg);
     }
   }

@@ -1,0 +1,24 @@
+<nav role="navigation">
+  <a href="/"><img src="/assets/img/Adam_Altmejd.jpg" itemprop="image" property="depiction" alt="Picture of Adam Altmejd"/></a>
+  <div>
+    <ul>
+      <li>
+        <a href="mailto:{{ .Site.Params.author.email }}" itemprop="email"><i class="fas fa-envelope"></i>&nbsp;{{ .Site.Params.author.email }}</a>
+      </li>
+      <li>
+        <a href="tel:{{ .Site.Params.author.phone }}" itemprop="telephone"><i class="fas fa-phone"></i>&nbsp;{{ .Site.Params.author.phone }}</a>
+      </li>
+      <hr>
+      <li{{ if eq .Section "cv" }} class="active"{{ end }}>
+        <a href="/cv/">
+          <i class="fas fa-file-alt"></i>&nbsp;&nbsp;Curriculum&nbsp;&nbsp;Vitae
+        </a>
+      </li>
+      <li{{ if eq .Section "projects" }} class="active"{{ end }}>
+        <a href="/projects/">
+          <i class="fas fa-pencil-alt"></i>&nbsp;Research&nbsp;Projects
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

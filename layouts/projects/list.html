@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ range .Pages.ByDate.Reverse }}
+<section>
+  <a class="noline colorhover" href="{{ .RelPermalink }}">
+    <h2>{{ .Title }}</h2>
+    <p>{{ .Summary | plainify }}</p>
+  </a>
+</section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,270 @@
+// ===========================
+// MAIN LAYOUT/SCAFFOLDING
+
+div.site_container {
+  @include make-container();
+  max-width: 800px;
+}
+
+main {
+  @include make-row();
+
+  justify-content: center;
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: row; // put nav in sidebar
+  }
+  @include media-breakpoint-only(xs) {
+    flex-direction: column-reverse; // on phones order nav before content
+  }
+
+  > article {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 100%;
+  }
+
+  > aside {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 220px;
+  }
+}
+
+// Avoid "jumping" scrollbar
+// https://aykevl.nl/2014/09/fix-jumping-scrollbar
+@include media-breakpoint-up(sm) {
+  html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
+}
+
+// ===========================
+// HEADERS
+
+.dropdown-menu.collapsing {
+  display: block;
+}
+
+div.site_header {
+  @include make-row();
+
+  > header {
+    @include make-col-ready();
+    @include make-col(12);
+
+    @extend .pt-sm-4;
+    @extend .pb-sm-4;
+
+    > div {
+      text-align: center;
+
+      a.navbar-brand {
+        font-size: $h1-font-size;
+        font-family: $font-family-sans-serif;
+        color: $body-color;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-right: 0;
+      }
+      a.navbar-brand:hover {
+        color: $body-color;
+      }
+    }
+    hr {
+      max-width: 200px;
+      @include media-breakpoint-only(xs) {
+        max-width: 100px;
+      }
+      margin: 0 auto 1rem;
+      border-top: solid 0.25rem $body-color;
+    }
+  }
+}
+
+//=========================
+// NAV
+nav[role="navigation"] {
+  @extend .navbar;
+  @extend .navbar-expand-sm;
+  @extend .flex-column;
+
+  > div {
+    > ul {
+      @extend .navbar-nav;
+      @extend .flex-column;
+      @extend .mb-3;
+
+      > li {
+        @extend .nav-item;
+        > a {
+          @extend .nav-link;
+          font-family: $font-family-sans-serif;
+          font-weight: $font-weight-light;
+        }
+      }
+
+      hr {
+        width: 100%;
+        margin: 0.5rem 0;
+        border-width: 2px;
+      }
+    }
+  }
+
+  a {
+    img {
+      border-radius: 2rem !important;
+      max-width: 200px;
+      @extend .img-fluid;
+      @extend .rounded;
+    }
+  }
+}
+
+// ===========================
+// FOOTER
+
+footer {
+  @extend .pt-4;
+  @include make-row();
+
+  > div {
+    @include make-col-ready();
+    @extend .mx-auto;
+    @extend .d-flex;
+    @extend .flex-column;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+    }
+
+    > ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      @extend .mx-auto;
+      @extend .pb-2;
+
+      > li {
+        float: left;
+        @extend .px-1;
+      }
+    }
+  }
+}
+
+//=========================
+// Styling
+
+article {
+  font-kerning: normal;
+  text-align: justify;
+  text-justify: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+
+  h1,
+  h2 {
+    display: inline-block;
+    @extend .mb-1;
+  }
+  h2 {
+    @extend .mt-3;
+  }
+
+  p.meta {
+    @extend .mb-2;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: $body-color;
+  }
+
+  p {
+    margin: 0 auto;
+  }
+  p + p {
+    text-indent: 1em;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  // Publist: list of publications/working papers
+  section.publist {
+    text-align: left;
+
+    ul,
+    h3 {
+      @extend .m-0;
+      @extend .p-0;
+    }
+
+    p,
+    a {
+      font-size: $font-size-sm;
+    }
+    p + p {
+      text-indent: 0;
+    }
+
+    h2 {
+      font-size: $h3-font-size;
+    }
+    h3 {
+      font-size: $h6-font-size;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+    li + li {
+      @extend .mt-3;
+    }
+
+    ul.paperlinks {
+      li {
+        display: inline;
+        @extend .pe-2;
+      }
+    }
+
+    [data-bs-toggle="collapse"]:before {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900; // "solid"
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      content: "\f0da"; // "caret-right"
+      transition: all linear 0.25s;
+      transform: rotate(90deg);
+      margin-right: 0.22rem;
+    }
+    [data-bs-toggle="collapse"].collapsed:before {
+      // Starts as collapsed
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.noline {
+  background: none !important;
+  text-decoration: none !important;
+}
+.colorhover:hover {
+  color: $link-hover-color !important;
+}

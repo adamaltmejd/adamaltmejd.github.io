@@ -1,11 +1,10 @@
-_site/
-.sass-cache/
-.DS_Store
+# Hugo
+/public/
+/resources/
+.hugo_build.lock
+
+# Dependencies
 node_modules/
-bower_components/
-npm-debug.log
-tmp/
-.sass-cache/
-Gemfile.lock
-.jekyll-metadata
-yarn-error.log
+
+# OS
+.DS_Store

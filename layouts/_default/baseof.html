@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+{{ partial "head.html" . }}
+
+<body>
+  <a class="sr-only" href="#content">Skip to main content</a>
+  <div class="site_container">
+    <div class="site_header">
+      <header>
+        <div itemscope itemtype="https://schema.org/Person">
+          <a class="navbar-brand" href="/">
+            <span itemprop="givenName">{{ .Site.Params.author.givenName }}</span>
+            <span itemprop="familyName">{{ .Site.Params.author.familyName }}</span>
+          </a>
+        </div>
+        <hr>
+      </header>
+    </div>
+
+    <main>
+      <article id="content">{{ block "main" . }}{{ end }}</article>
+      <aside>{{ partial "nav.html" . }}</aside>
+    </main>
+
+    <footer>
+      <div>{{ partial "footer.html" . }}</div>
+    </footer>
+  </div>
+
+  {{ partial "scripts.html" . }}
+</body>
+
+</html>

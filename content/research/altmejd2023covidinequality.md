@@ -4,7 +4,9 @@ date: 2023-01-01
 publication_type: "Publications"
 projects:
   - "COVID-19"
-coauthors:
+authors:
+  - name: "Adam Altmejd"
+    site: "https://adamaltmejd.se"
   - name: "Olof Östergren"
     site: "https://www.su.se/english/profiles/olos9870-1.187865"
   - name: "Evelina Björkegren"

@@ -1,34 +1,32 @@
 // Colors
-$primary:       #384e91;
-$body-bg:       #fff;
-$body-color:    #212529;
-$text-muted:    #6c757d;
+$primary: #384e91;
+$body-bg: #fff;
+$body-color: #212529;
+$text-muted: #6c757d;
 
 // Links
-$link-color:       $body-color;
+$link-color: $body-color;
 $link-hover-color: $primary;
 
 // Nav
-$nav-color:        $body-color;
-$nav-hover-color:  $primary;
+$nav-color: $body-color;
+$nav-hover-color: $primary;
 $nav-active-color: $primary;
 
 // Fonts (loaded via <link> in head.html)
-$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-base:       Lora, Georgia, "Times New Roman", Times, serif;
-$headings-font-family:   $font-family-sans-serif;
-
-$font-size-base: 0.95rem;
-$font-size-sm:   $font-size-base * 0.875;
-
-$h1-font-size: $font-size-base * 2.2;
-$h2-font-size: $font-size-base * 1.75;
+$font-family-sans-serif: "Lato", "Helvetica Neue", helvetica, arial, sans-serif;
+$font-family-monospace: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-family-base: "EB Garamond", georgia, "Times New Roman", times, serif;
+$headings-font-family: $font-family-sans-serif;
+$font-size-base: 1.1rem;
+$font-size-sm: $font-size-base * 0.875;
+$h1-font-size: $font-size-base * 2.0;
+$h2-font-size: $font-size-base * 1.7;
 $h3-font-size: $font-size-base * 1.5;
 $h4-font-size: $font-size-base * 1.25;
 $h5-font-size: $font-size-base * 1.2;
 $h6-font-size: $font-size-base;
-
-$font-weight-light:  300;
+$font-weight-light: 300;
 $font-weight-normal: 400;
 
 // Spacing

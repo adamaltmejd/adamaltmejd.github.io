@@ -1,5 +1,6 @@
 ---
 title: "College Choice"
+weight: 1
 ---
 
 Good students tend to pick good schools. This selection mechanism makes it incredibly hard to estimate what effect education actually has. That graduates from some programs earn more could be because their skills improved more in school (a causal effect of education), but it could also be because they were more talented to start with (selection). In this research program I use statistical techniques to properly estimate the component that is causal.

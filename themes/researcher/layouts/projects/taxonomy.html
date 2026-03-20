@@ -1,10 +1,10 @@
 {{ define "main" }}
 <h1>Research Projects</h1>
-{{ range .Pages }}
+{{ range .Pages.ByWeight }}
 <section>
   <a class="noline colorhover" href="{{ .RelPermalink }}">
     <h2>{{ .Title }}</h2>
-    {{ with .Content }}<p>{{ . | plainify | truncate 200 }}</p>{{ end }}
+    <p>{{ .Summary | plainify }}</p>
   </a>
 </section>
 {{ end }}

@@ -4,7 +4,7 @@ date: 2018-01-01
 publication_type: "Publications"
 projects:
   - "Reproducibility"
-coauthors:
+authors:
   - name: "Colin F. Camerer"
     site: "http://www.its.caltech.edu/~camerer/camerer.html"
   - name: "Anna Dreber"
@@ -18,6 +18,8 @@ coauthors:
     site: "https://marketing.wharton.upenn.edu/profile/gnave/"
   - name: "Brian A. Nosek"
   - name: "Thomas Pfeiffer"
+  - name: "Adam Altmejd"
+    site: "https://adamaltmejd.se"
   - name: "Nick Buttrick"
   - name: "Taizan Chan"
   - name: "Yiling Chen"

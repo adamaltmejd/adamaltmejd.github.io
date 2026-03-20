@@ -37,6 +37,12 @@ menu:
       params:
         icon: "fas fa-pencil-alt"
 
+frontmatter:
+  lastmod:
+    - :git
+    - lastmod
+    - :fileModTime
+
 markup:
   goldmark:
     renderer:

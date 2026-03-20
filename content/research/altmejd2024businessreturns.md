@@ -4,7 +4,9 @@ date: 2024-01-01
 publication_type: "Work in Progress"
 projects:
   - "College Choice"
-coauthors:
+authors:
+  - name: "Adam Altmejd"
+    site: "https://adamaltmejd.se"
   - name: "Thomas Jansson"
     site: "https://www.riksbank.se/sv/om-riksbanken/riksbankens-uppdrag/forskning/ekonomer-forskningsenheten/ekonomer-pa-forskningsenheten/thomas-jansson/"
   - name: "Yigitcan Karabulut"

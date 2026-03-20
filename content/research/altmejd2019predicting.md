@@ -4,7 +4,9 @@ date: 2019-01-01
 publication_type: "Publications"
 projects:
   - "Reproducibility"
-coauthors:
+authors:
+  - name: "Adam Altmejd"
+    site: "https://adamaltmejd.se"
   - name: "Anna Dreber"
     site: "https://sites.google.com/site/annadreber/"
   - name: "Eskil Forsell"

@@ -1,0 +1,12 @@
+extends: stylelint-config-standard-scss
+rules:
+  no-descending-specificity: null
+  color-hex-length: short
+  # Hugo's Dart Sass doesn't support modern color syntax (rgb() / % alpha)
+  color-function-alias-notation: null
+  color-function-notation: null
+  alpha-value-notation: null
+  # stylelint-scss operator rules crash on calc-like expressions in media queries
+  scss/operator-no-unspaced: null
+  scss/operator-no-newline-after: null
+  scss/operator-no-newline-before: null

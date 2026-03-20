@@ -4,7 +4,7 @@ date: 2016-01-01
 publication_type: "Publications"
 projects:
   - "Reproducibility"
-coauthors:
+authors:
   - name: "Colin F. Camerer"
     site: "http://www.its.caltech.edu/~camerer/camerer.html"
   - name: "Anna Dreber"
@@ -18,6 +18,7 @@ coauthors:
     site: "https://www.uibk.ac.at/ibf/team/kirchler.html.en"
   - name: "Johan Almenberg"
   - name: "Adam Altmejd"
+    site: "https://adamaltmejd.se"
   - name: "Taizan Chan"
   - name: "Emma Heikensten"
   - name: "Felix Holzmeister"

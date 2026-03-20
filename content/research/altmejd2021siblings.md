@@ -4,7 +4,9 @@ date: 2021-01-01
 publication_type: "Publications"
 projects:
   - "College Choice"
-coauthors:
+authors:
+  - name: "Adam Altmejd"
+    site: "https://adamaltmejd.se"
   - name: "Andres Barrios-Fernandez"
     site: "https://andresbarriosf.github.io"
   - name: "Marin Drlje"

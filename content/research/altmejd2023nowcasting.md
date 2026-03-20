@@ -4,7 +4,9 @@ date: 2023-01-01
 publication_type: "Publications"
 projects:
   - "COVID-19"
-coauthors:
+authors:
+  - name: "Adam Altmejd"
+    site: "https://adamaltmejd.se"
   - name: "Joacim Rocklöv"
     site: "https://www.umu.se/en/staff/joacim-rocklov/"
   - name: "Jonas Wallin"

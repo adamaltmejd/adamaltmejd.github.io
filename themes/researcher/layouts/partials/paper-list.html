@@ -27,13 +27,21 @@
           {{ with .Params.status }}<p><em>{{ . }}</em></p>{{ end }}
         {{ end }}
 
-        {{- with .Params.coauthors -}}
-          {{- $total := len . -}}
+        {{- with .Params.authors -}}
+          {{/* Filter out site author */}}
+          {{- $me := site.Params.author.name -}}
+          {{- $coauthors := slice -}}
+          {{- range . -}}
+            {{- if ne .name $me -}}
+              {{- $coauthors = $coauthors | append . -}}
+            {{- end -}}
+          {{- end -}}
+          {{- $total := len $coauthors -}}
+          {{- if gt $total 0 -}}
           {{- if gt $total 3 -}}
             <p>with&nbsp;
-            {{- range $i, $ca := first 3 . -}}
-              {{- if eq $i 1 -}},&nbsp;{{ end -}}
-              {{- if eq $i 2 -}},&nbsp;and&nbsp;{{ end -}}
+            {{- range $i, $ca := first 3 $coauthors -}}
+              {{- if gt $i 0 -}},&nbsp;{{ end -}}
               {{- if $ca.site -}}<a class="noline" href="{{ $ca.site }}" target="_blank">{{ end -}}
               {{- $ca.name -}}
               {{- if $ca.site -}}</a>{{ end -}}
@@ -41,7 +49,7 @@
             &nbsp;<a class="collapsed noline" data-toggle="collapse" href="#etal{{ $id }}" role="button" aria-expanded="false" aria-controls="etal{{ $id }}">et al.</a></p>
           {{- else -}}
             <p>with&nbsp;
-            {{- range $i, $ca := . -}}
+            {{- range $i, $ca := $coauthors -}}
               {{- if and (gt $i 0) (lt $i (sub $total 1)) -}},&nbsp;{{ end -}}
               {{- if and (eq $i (sub $total 1)) (gt $total 1) -}}
                 {{- if gt $i 1 -}},{{ end -}}&nbsp;and&nbsp;
@@ -51,7 +59,31 @@
               {{- if $ca.site -}}</a>{{ end -}}
             {{- end -}}</p>
           {{- end -}}
+          {{- end -}}
         {{- end }}
+
+        {{/* Full coauthor list (collapsed) — placed directly after author line */}}
+        {{ with .Params.authors }}
+          {{- $me := site.Params.author.name -}}
+          {{- $coauthors := slice -}}
+          {{- range . -}}{{- if ne .name $me -}}{{- $coauthors = $coauthors | append . -}}{{- end -}}{{- end -}}
+          {{ if gt (len $coauthors) 3 }}
+        <div class="collapse" id="etal{{ $id }}">
+          <div class="card card-body">
+            <p>with&nbsp;
+            {{- $total := len $coauthors -}}
+            {{- range $i, $ca := $coauthors -}}
+              {{- if and (gt $i 0) (lt $i (sub $total 1)) -}},&nbsp;{{ end -}}
+              {{- if and (eq $i (sub $total 1)) (gt $total 1) -}}
+                {{- if gt $i 1 -}},{{ end -}}&nbsp;and&nbsp;
+              {{- end -}}
+              {{- if $ca.site -}}<a class="noline" href="{{ $ca.site }}" target="_blank">{{ end -}}
+              {{- $ca.name -}}
+              {{- if $ca.site -}}</a>{{ end -}}
+            {{- end -}}</p>
+          </div>
+        </div>
+        {{ end }}{{ end }}
 
         <ul class="paperlinks">
             {{ with .Params.abstract }}
@@ -89,31 +121,7 @@
               <a class="collapsed noline" data-toggle="collapse" href="#coverage{{ $id }}" role="button" aria-expanded="false" aria-controls="coverage{{ $id }}">Media Coverage</a>
             </li>
             {{ end }}
-            {{ with .Params.projects }}
-            <li>
-              {{ range $i, $p := . }}{{ if $i }}, {{ end }}<a class="noline" href="/projects/{{ $p | urlize }}/"><i class="fas fa-pencil-alt"></i>&nbsp;{{ $p }}</a>{{ end }}
-            </li>
-            {{ end }}
         </ul>
-
-        {{/* Full coauthor list (collapsed) */}}
-        {{ with .Params.coauthors }}{{ if gt (len .) 3 }}
-        <div class="collapse" id="etal{{ $id }}">
-          <div class="card card-body">
-            <p>with&nbsp;
-            {{- $total := len . -}}
-            {{- range $i, $ca := . -}}
-              {{- if and (gt $i 0) (lt $i (sub $total 1)) -}},&nbsp;{{ end -}}
-              {{- if and (eq $i (sub $total 1)) (gt $total 1) -}}
-                {{- if gt $i 1 -}},{{ end -}}&nbsp;and&nbsp;
-              {{- end -}}
-              {{- if $ca.site -}}<a class="noline" href="{{ $ca.site }}" target="_blank">{{ end -}}
-              {{- $ca.name -}}
-              {{- if $ca.site -}}</a>{{ end -}}
-            {{- end -}}</p>
-          </div>
-        </div>
-        {{ end }}{{ end }}
 
         {{ with .Params.abstract }}
         <div class="collapse" id="abstract{{ $id }}">

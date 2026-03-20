@@ -4,11 +4,12 @@ date: 2015-01-01
 publication_type: "Publications"
 projects:
   - "Reproducibility"
-coauthors:
+authors:
   - name: "Marcus Munafo"
     site: "http://www.bristol.ac.uk/expsych/people/marcus-r-munafo/index.html"
   - name: "Thomas Pfeiffer"
   - name: "Adam Altmejd"
+    site: "https://adamaltmejd.se"
   - name: "Emma Heikensten"
   - name: "Johan Almenberg"
   - name: "Alexander Bird"

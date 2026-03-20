@@ -15,4 +15,4 @@
     <li><a href="https://github.com/{{ . }}"><i class="fab fa-github"></i></a></li>
   {{ end }}
 </ul>
-<p class="text-muted">&copy;&nbsp;{{ now.Format "2006" }}&nbsp;{{ .Site.Params.author.name }}</p>
+<p class="text-muted">© {{ now.Format "2006" }} {{ .Site.Params.author.name }}</p>

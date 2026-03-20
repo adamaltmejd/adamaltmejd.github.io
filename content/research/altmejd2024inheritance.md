@@ -4,6 +4,9 @@ date: 2024-01-01
 publication_type: "Work in Progress"
 projects:
   - "College Choice"
+authors:
+  - name: "Adam Altmejd"
+    site: "https://adamaltmejd.se"
 year: 2024
 status: "Submitted. Winner of the Distinguished CESifo Affiliate Award 2023."
 wp: "https://cesifo.org/DocDL/cesifo1_wp11113.pdf"

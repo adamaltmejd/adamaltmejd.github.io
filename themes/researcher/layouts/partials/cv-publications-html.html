@@ -1,0 +1,30 @@
+{{- $research := where site.RegularPages "Section" "research" -}}
+{{- $publications := where $research "Params.publication_type" "Publications" -}}
+{{- $workingPapers := where $research "Params.publication_type" "Work in Progress" -}}
+{{- $workingPapers = where $workingPapers "Params.citation" "ne" nil -}}
+
+<h1 id="publications">Publications</h1>
+<dl>
+{{- $prevYear := 0 -}}
+{{- range $publications.ByDate.Reverse -}}
+  {{- $year := .Date.Year -}}
+  {{- if ne $year $prevYear }}
+  <dt>{{ $year }}</dt>
+  {{- $prevYear = $year -}}
+  {{- end }}
+  <dd>{{ .Params.citation | markdownify }}</dd>
+{{- end }}
+</dl>
+
+<h1 id="working-papers">Working Papers</h1>
+<dl>
+{{- $prevYear = 0 -}}
+{{- range $workingPapers.ByDate.Reverse -}}
+  {{- $year := .Date.Year -}}
+  {{- if ne $year $prevYear }}
+  <dt>{{ $year }}</dt>
+  {{- $prevYear = $year -}}
+  {{- end }}
+  <dd>{{ .Params.citation | markdownify }}</dd>
+{{- end }}
+</dl>

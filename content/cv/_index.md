@@ -1,5 +1,161 @@
 ---
 title: Curriculum Vitae
-
-description: 'The Curriculum Vitae of Adam Altmejd, PhD. Student in Economics.'
+description: "The Curriculum Vitae of Adam Altmejd, Ph.D. in Economics."
+outputs: [HTML, CVMD]
+cv:
+  mobile: "+46 (0) 734 20 01 20"
+  homepage: adamaltmejd.se
+  address:
+    affiliation: Institute for Evaluation of Labor Market and Education Policy (IFAU)
+    online: "https://ifau.se"
+    main: IFAU
+    city: "751 20 Uppsala"
 ---
+
+# Academic Positions
+
+2026--
+:   **Researcher**, [Institute for Evaluation of Labor Market and Education Policy (IFAU)](https://ifau.se), Uppsala
+
+2018--2025
+:   **Researcher**, [Swedish Institute for Social Research (SOFI)](https://www.sofi.su.se), Stockholm University
+
+2019--2023
+:   **Wallander Postdoctoral Fellow**, [Department of Finance](https://www.hhs.se/en/research/departments/df/), Stockholm School of Economics
+
+
+# Affiliations and Visiting Positions
+
+2023--
+:   Distinguished **[CESifo](https://www.cesifo.org/en/network-member/altmejd-adam)** Affiliate, Munich, Germany
+
+2023--
+:   Research Affiliate, **[IZA](https://www.iza.org/people/affiliates/32832/adam-altmejd)**, Bonn, Germany
+
+2016--2017
+:   Associate of the Department of Economics, **[Harvard University](http://economics.harvard.edu/)**
+
+# Research Breaks
+
+2025
+:   Parental leave
+
+2021-2022
+:   Investigator, The Swedish COVID-19 Commission
+
+
+# Education
+
+2013--2018
+:   **Ph.D. in Economics**, [Stockholm School of Economics](https://www.hhs.se/en/Education/PhD/economics/)
+
+    Thesis title: "Education & Replication". 105 ECTS coursework.
+
+    Supervisor: Prof. Tore Ellingsen. Faculty Opponent: Prof. Katrine V. Løken.
+
+    Research Intern, [Sveriges Riksbank](http://www.riksbank.se/en/) (2017)
+
+    Visiting Ph.D. Student, [Stanford University](https://www.stanford.edu/) (2015)
+
+2012--2016
+:   **M.Sc. in Economics**, [Stockholm School of Economics](https://www.hhs.se/en/Education/MSc/MECON/), M.Sc.--Ph.D. parallel enrollment
+
+2008--2012
+:   **B.Sc. in Business & Economics**, [Stockholm School of Economics](https://www.hhs.se/en/Education/BSc/BE/)
+
+<!-- PUBLICATIONS -->
+
+# Work In Progress
+
+*Estimating The Heterogeneity of Long-Run Returns to Swedish Higher Education*
+
+*University education, political participation, and prosocial behavior* with Luis Cornago Bonal and José Montalban
+
+*University education and health* with Gregory Veramendi, Juanna S. Joensen, and John Eric Humphries
+
+*Do gender-sterotypical beliefs make women shy away from STEM?* with Andrew Funck, Mona Mensmann, Ali Mohammadi, Karl Wennberg, and Thomas Åstebro
+
+*Heterogeneity in COVID-19 morbidity and mortality* with Evelina Björkegren, Arizo Karimi, Torsten Persson, and Olof Östergren
+
+*Real-world efficacy of Covid-19 vaccines* with Torsten Persson, Dominik Dietler, and Anton Nilsson
+
+*Determinants and consequences of longcovid* with Torsten Persson, Anna Mia Ekström, Oskar Nordström Skans, Maxim Kan, and Olof Östergren
+
+*Differential learning loss between immigrants and natives during the pandemic* with Carina Mood, Jan O. Jonsson, and Andreas Ljungström
+
+# References
+
+## Professor [Torsten Persson](https://www.su.se/profiles/tpers-1.182602)
+
+PI • <torsten.persson@iies.su.se> • +46 8 16 30 66
+
+## Professor [Carina Mood](https://www.su.se/profiles/carinam-1.185222)
+
+PI • <carina.mood@sofi.su.se> • +46 8 16 25 86
+
+## Professor [Tore Ellingsen](https://sites.google.com/site/tellingsensse/)
+
+Primary Supervisor • <tore.ellingsen@hhs.se> • +46 8 736 92 60
+
+## Professor [Christopher A. Neilson](https://christopherneilson.github.io)
+
+Co-author • <christopher.neilson@yale.edu>
+
+# Awards and Grants
+
+2024
+:   The Kamprad Family Foundation. *STEM role-models and gender-stereotypical beliefs*. Co-applicant, 3.2MSEK.
+:   Riksbankens Jubileumsfond. *Optimism trap or optimism springboard? Aspirations, educational trajectories, and early careers of youth with foreign-born parents*. Co-applicant, 6.2MSEK (P24-0170).
+:   Forte. *Faces of Inequality: An Empirical Study Using Passport Photos and AI to Assess Appearance-Based Discrimination in Sweden*. Principal Investigator, 5MSEK (2024-00440).
+
+2023
+:   The Royal Swedish Academy of Sciences, the Lennart "Aktiestinsen" Israelssons foundation. *STEM role-models and gender-stereotypical beliefs*. Co-applicant, 1.8MSEK.
+
+2022
+:   Riksbankens Jubileumsfond. *A research program about COVID-19*. Infrastructure grant. Co-applicant, 12.5MSEK.
+
+2020
+:   IFAU Project Grant. *The Impact of University Education: Causal Evidence from Four Decades of Applications*. Principal Investigator, 1.5MSEK (152/2020).
+
+2019
+:   Jan Wallander 3-year Postdoctoral Fellowship. (W18-0005) 1.7MSEK.
+:   The Jan Wallander and Tom Hedelius Foundation Program Grant "Bystander-Initiated CPR: Health Outcomes, Social Spillovers, and Efficient Coordination of Volunteers". Principal Investigator (P19-0168), 1MSEK.
+
+2018
+:   Skandiabanken Thule Foundation. Postdoctoral Scholarshi, 0.5MSEK.
+:   Royal Academy Research Grant. Principal Investigator (SO2018-0065), 0.3MSEK.
+
+2014
+:   Tom Hedelius Scholarship for research visit to Harvard University, 0.5MSEK.
+
+# Teaching Experience
+
+2025, 2026
+:   Econometrics 3 - Data science for economic analysis. MSc, Stockholm University. Course director.
+
+2020, 2021
+:   BSc and MSc thesis supervisor in Finance. Average score 7/7.
+
+2014, 2015
+:   Math Ph.D Summer Camp. Stockholm School of Economics. Teacher. Average score 4.5/5.
+
+2014, 2015
+:   Teaching Assistant: Mathematics I, Ph.D. Average score 4.5/5.
+
+2012
+:   Teaching Assistant: Microeconomics, B.Sc. Not evaluated.
+
+# Referee Service (#)
+
+American Economic Journal: Applied Economics (1), American Economic Review (2), B.E. Journal of Economic Analysis and Policy (1), Economic Inquiry (1), Economic Journal (1), IFAU (1), International Journal for Re-Views in Empirical Economics (1), Journal of Behavioral and Experimental Finance (1), Journal of Economic Growth (2), Journal of Economic Inequality (2), Journal of Health Economics (1), Journal of Human Resources (2), Journal of Politics (2), Journal of Public Economics (2), Journal of Political Economy Microeconomics (5), PLOS One (2), Quarterly Journal of Economics (1), Social Forces (1), Review of Economic Studies (1), Scandinavian Journal of Educational Research (1), Scandinavian Journal of Economics (2).
+
+# Non-academic Qualifications
+
+2016--
+:   **Co-founder and Treasurer**, [Musethica Sweden](https://sweden.musethica.org/)
+
+    Musethica is an international nonprofit organization that promotes a new approach to teaching classical music, integrating concerts into the education program of young excellent artists. The students perform in kindergartens, prisons and immigrant housing. Musethica Sweden is funded by grants from Postkodlotteriet (2016, 500kSEK), Signatur (2023-2025, 350kSEK per year), and the EU Creative Europe Culture Programme (2025-2028, €100k).
+
+## Spoken Languages
+
+Swedish (native), English (fluent), French (limited), Polish (limited)

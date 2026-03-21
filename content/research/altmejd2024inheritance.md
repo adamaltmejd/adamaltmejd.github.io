@@ -1,6 +1,6 @@
 ---
 title: "Inheritance of fields of study"
-date: 2024-01-01
+date: 2024-05-01
 publication_type: "Work in Progress"
 projects:
   - "College Choice"
@@ -9,6 +9,7 @@ authors:
     site: "https://adamaltmejd.se"
 year: 2024
 status: "Submitted. Winner of the Distinguished CESifo Affiliate Award 2023."
+citation: 'Altmejd, Adam. "Inheritance of Fields of Study." Working Paper 11113. CESifo. Winner of the Distinguished CESifo Affiliate Award 2023.'
 wp: "https://cesifo.org/DocDL/cesifo1_wp11113.pdf"
 updated: "2024-05-03"
 abstract: >

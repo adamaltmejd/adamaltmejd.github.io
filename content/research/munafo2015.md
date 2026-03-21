@@ -20,6 +20,7 @@ authors:
 journal: "Royal Society Open Science"
 year: 2015
 doi: "10.1098/rsos.150287"
+citation: 'Munafo, Marcus R. et al. "Using Prediction Markets to Forecast Research Evaluations." *Royal Society Open Science* 2 (10): 150287.'
 abstract: >
   The 2014 Research Excellence Framework (REF2014) was conducted to assess the quality of research carried out at higher education institutions in the UK over a 6 year period. However, the process was criticized for being expensive and bureaucratic, and it was argued that similar information could be obtained more simply from various existing metrics. We were interested in whether a prediction market on the outcome of REF2014 for 33 chemistry departments in the UK would provide information similar to that obtained during the REF2014 process. Prediction markets have become increasingly popular as a means of capturing what is colloquially known as the 'wisdom of crowds', and enable individuals to trade 'bets' on whether a specific outcome will occur or not. These have been shown to be successful at predicting various outcomes in a number of domains (e.g. sport, entertainment and politics), but have rarely been tested against outcomes based on expert judgements such as those that formed the basis of REF2014.
 ---

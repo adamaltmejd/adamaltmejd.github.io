@@ -36,8 +36,6 @@
     margin-right: 8px;
     text-align: right;
     font-weight: $font-weight-normal;
-    font-size: $font-size-sm;
-    font-family: $font-family-sans-serif;
   }
 
   strong {
@@ -47,6 +45,7 @@
   dd {
     width: auto;
     font-weight: $font-weight-normal;
+    margin-bottom: 0.25em;
   }
 
   dd, h2, > p, section > p { margin-left: 93px; }

@@ -1,5 +1,9 @@
+{{/* Requires markup.goldmark.renderer.unsafe: true to preserve the HTML comment marker in .Content */}}
 {{ define "main" }}
 <div class="cv-page">
-{{ readFile "cv/cv.html" | safeHTML }}
+  {{- $parts := split .Content "<!-- PUBLICATIONS -->" -}}
+  {{ index $parts 0 | safeHTML }}
+  {{ partial "cv-publications-html.html" . }}
+  {{ index $parts 1 | safeHTML }}
 </div>
 {{ end }}

@@ -43,6 +43,17 @@ frontmatter:
     - lastmod
     - :fileModTime
 
+mediaTypes:
+  text/markdown:
+    suffixes: ["md"]
+
+outputFormats:
+  CVMD:
+    mediaType: text/markdown
+    baseName: cv
+    isPlainText: true
+    notAlternative: true
+
 markup:
   goldmark:
     renderer:

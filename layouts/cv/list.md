@@ -9,7 +9,7 @@ mobile: '{{ .mobile }}'
 address:
     affiliation: '{{ .address.affiliation }}'
     online: '{{ .address.online }}'
-    main: '{{ .address.main }}'
+    street: '{{ .address.street }}'
     city: '{{ .address.city }}'
 {{ end -}}
 ---

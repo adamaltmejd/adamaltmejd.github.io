@@ -99,7 +99,7 @@ $endif$
   ],
   align(right + bottom, text(font: sans, size: 9pt)[
     #link("$address.online$")[$address.affiliation$]\
-    $address.main$\
+    $address.street$\
     $address.city$
   ]),
   align(right + bottom, text(font: sans, size: 9pt)[

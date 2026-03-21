@@ -83,24 +83,6 @@ cv:
 
 *Differential learning loss between immigrants and natives during the pandemic* with Carina Mood, Jan O. Jonsson, and Andreas Ljungström
 
-# References
-
-## Professor [Torsten Persson](https://www.su.se/profiles/tpers-1.182602)
-
-PI • <torsten.persson@iies.su.se> • +46 8 16 30 66
-
-## Professor [Carina Mood](https://www.su.se/profiles/carinam-1.185222)
-
-PI • <carina.mood@sofi.su.se> • +46 8 16 25 86
-
-## Professor [Tore Ellingsen](https://sites.google.com/site/tellingsensse/)
-
-Primary Supervisor • <tore.ellingsen@hhs.se> • +46 8 736 92 60
-
-## Professor [Christopher A. Neilson](https://christopherneilson.github.io)
-
-Co-author • <christopher.neilson@yale.edu>
-
 # Awards and Grants
 
 2024

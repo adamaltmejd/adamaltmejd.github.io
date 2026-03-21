@@ -6,6 +6,9 @@ on:
     paths:
       - publications.bib
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   bib2json:
     runs-on: ubuntu-latest
@@ -13,6 +16,8 @@ jobs:
       - uses: actions/checkout@v6
 
       - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: false
 
       - name: Generate publications.json
         run: uv run --with 'bibtexparser>=2.0.0b7' scripts/bib2json.py

@@ -1,6 +1,7 @@
 {{/* Requires markup.goldmark.renderer.unsafe: true to preserve the HTML comment marker in .Content */}}
 {{ define "main" }}
 <div class="cv-page">
+  <p class="cv-pdf-link"><a href="/cv/cv.pdf"><i class="fas fa-file-pdf"></i> Download PDF</a></p>
   {{- $parts := split .Content "<!-- PUBLICATIONS -->" -}}
   {{ index $parts 0 | safeHTML }}
   {{ partial "cv-publications-html.html" . }}

@@ -2,6 +2,7 @@
 /public/
 /resources/
 .hugo_build.lock
+.playwright-mcp
 
 # OS
 .DS_Store

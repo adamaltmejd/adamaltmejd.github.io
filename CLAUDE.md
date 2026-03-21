@@ -11,6 +11,7 @@ Personal academic website for Adam Altmejd (adamaltmejd.se). Hugo static site wi
 ```bash
 hugo server             # dev server with live reload
 hugo                    # production build → public/
+./build.sh              # full build: hugo + pandoc → typst → CV PDF
 ```
 
 ## Lint & Format (always run before committing)
@@ -32,6 +33,7 @@ Playwright MCP is configured (`.mcp.json`, Firefox). Use it to visually verify c
 - **`content/research/`** — one markdown file per publication. Front matter has `authors`, `publication_type`, `projects` (taxonomy), `abstract`, `doi`, etc.
 - **`content/projects/`** — taxonomy term pages. Auto-populated from `projects` field in research pages. Each `_index.md` adds descriptive content.
 - **`themes/researcher/assets/scss/`** — `style.scss` imports `_variables`, `_base`, `_main`, `_cv`. All custom CSS.
-- **`cv/`** — git submodule (`adamaltmejd/cv`). The CV page layout reads `cv/cv.html` via `readFile`.
+- **`content/cv/_index.md`** — CV body in markdown. `<!-- PUBLICATIONS -->` marker splits static content from dynamically generated Publications/Working Papers sections. Outputs both HTML and `CVMD` (pandoc-compatible markdown at `/cv/cv.md`).
+- **`cv/`** — typst template and fonts for PDF generation via `build.sh`.
 - **`static/`** — images at `static/assets/img/`, papers at `static/assets/papers/`.
-- **`layouts/cv/list.html`** — only site-level layout override (reads CV from submodule).
+- **`layouts/cv/`** — `list.html` (HTML output, splits on marker + injects partial), `list.md` (pandoc markdown output with YAML front matter).

@@ -38,6 +38,5 @@ address:
 {{ $prevYear = $year -}}
 {{ end -}}
 :   {{ .Params.citation }}
-{{ end -}}
-
+{{ end }}
 {{ strings.TrimLeft "\n" (index $parts 1) }}

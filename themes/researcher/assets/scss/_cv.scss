@@ -50,6 +50,12 @@
 
   dd, h2, > p, section > p { margin-left: 93px; }
 
+  .cv-pdf-link {
+    margin-bottom: $spacer;
+    margin-left: 0;
+    a { color: $primary; }
+  }
+
   a, a:hover { text-decoration: none; }
   a { color: $body-color; }
   a:hover { color: $primary; }

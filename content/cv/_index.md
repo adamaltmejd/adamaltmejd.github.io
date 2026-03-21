@@ -8,8 +8,8 @@ cv:
   address:
     affiliation: Institute for Evaluation of Labor Market and Education Policy (IFAU)
     online: "https://ifau.se"
-    main: IFAU
-    city: "751 20 Uppsala"
+    main: "Kyrkogårdsgatan 6"
+    city: "753 12 Uppsala"
 ---
 
 # Academic Positions

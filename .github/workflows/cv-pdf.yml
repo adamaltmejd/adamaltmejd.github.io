@@ -1,0 +1,55 @@
+name: Build CV PDF
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - content/cv/_index.md
+      - content/research/*.md
+      - cv/**
+      - layouts/cv/**
+      - themes/researcher/layouts/partials/cv-publications-*.html
+      - hugo.yaml
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Install pandoc
+        run: |
+          curl -sSL "https://github.com/jgm/pandoc/releases/download/3.9.0.2/pandoc-3.9.0.2-linux-amd64.tar.gz" \
+            | sudo tar xz --strip-components=1 -C /usr/local
+
+      - name: Install typst
+        run: |
+          curl -sSL "https://github.com/typst/typst/releases/download/v0.14.2/typst-x86_64-unknown-linux-musl.tar.xz" \
+            | sudo tar xJ --strip-components=1 -C /usr/local/bin
+
+      - name: Build site and PDF
+        run: |
+          hugo
+          pandoc \
+            --from markdown+smart+yaml_metadata_block+definition_lists \
+            --to typst \
+            --template=cv/cv.template.typ \
+            --standalone \
+            --variable=git-date:"$(git log -1 --format=%cs HEAD)" \
+            --output public/cv/cv.typ \
+            public/cv/cv.md
+          typst compile --font-path cv/fonts public/cv/cv.typ public/cv/cv.pdf
+
+      - name: Commit PDF
+        run: |
+          cp public/cv/cv.pdf static/cv/cv.pdf
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add static/cv/cv.pdf
+          git diff --staged --quiet && echo "No changes to PDF" || git commit -m "Rebuild CV PDF" && git push

@@ -11,8 +11,9 @@ Personal academic website for Adam Altmejd (adamaltmejd.se). Hugo static site wi
 ```bash
 hugo server             # dev server with live reload
 hugo                    # production build → public/
-./build.sh              # full build: hugo + pandoc → typst → CV PDF
 ```
+
+CV PDF is built by GitHub Actions (`.github/workflows/cv-pdf.yml`) on push when CV or research files change, and committed to `static/cv/cv.pdf`. Cloudflare Pages just runs `hugo`.
 
 ## Lint & Format (always run before committing)
 

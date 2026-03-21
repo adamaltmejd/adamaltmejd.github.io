@@ -92,30 +92,12 @@
               <a class="noline" href="/assets/papers/{{ . }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Appendix</a>
             </li>
             {{ end }}
-            {{ with .Params.coverage }}
-            <li>
-              <a class="collapsed noline" data-toggle="collapse" href="#coverage{{ $id }}" role="button" aria-expanded="false" aria-controls="coverage{{ $id }}">Media Coverage</a>
-            </li>
-            {{ end }}
         </ul>
 
         {{ with .Params.abstract }}
         <div class="collapse" id="abstract{{ $id }}">
           <div class="card card-body">
             <p>{{ . | safeHTML }}</p>
-          </div>
-        </div>
-        {{ end }}
-
-        {{ with .Params.coverage }}
-        <div class="collapse" id="coverage{{ $id }}">
-          <div class="card card-body">
-            <p>
-              {{ range $i, $media := . }}
-                {{- if $i }}, {{ end -}}
-                <a class="noline colorhover" href="{{ $media.url }}" target="_blank">{{ $media.outlet }}</a>
-              {{- end }}
-            </p>
           </div>
         </div>
         {{ end }}

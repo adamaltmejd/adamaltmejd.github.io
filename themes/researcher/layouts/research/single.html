@@ -29,6 +29,10 @@
       {{ with .Params.appendix }}
       <a href="/assets/papers/{{ . }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Appendix</a>
       {{ end }}
+      {{- $cite := index site.Data.citations .File.ContentBaseName -}}
+      {{ with $cite }}{{ if gt .citationCount 0 }}
+      <a class="noline" href="https://www.semanticscholar.org/paper/{{ .paperId }}#citing-papers" target="_blank"><i class="fas fa-quote-right"></i>&nbsp;Cited by {{ .citationCount }}</a>
+      {{ end }}{{ end }}
       {{- $id := .File.ContentBaseName -}}
       {{ if and $bib $bib.raw }}
       <a class="collapsed noline" data-toggle="collapse" href="#bibtex{{ $id }}" role="button" aria-expanded="false" aria-controls="bibtex{{ $id }}"><i class="fas fa-quote-left"></i>&nbsp;BibTeX</a>

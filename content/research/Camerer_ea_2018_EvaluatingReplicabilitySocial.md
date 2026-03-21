@@ -33,10 +33,6 @@ authors:
   - name: "Julia Rose"
   - name: "Eric-Jan Wagenmakers"
   - name: "Hang Wu"
-journal: "Nature Human Behavior"
-year: 2018
-doi: "10.1038/s41562-018-0399-z"
-citation: 'Camerer, Colin F. et al. "Evaluating the Replicability of Social Science Experiments in Nature and Science Between 2010 and 2015." *Nature Human Behaviour* 2 (9): 637–44.'
 ungated: "https://rdcu.be/6VWt"
 abstract: >
   Being able to replicate scientific findings is crucial for scientific progress. We replicate 21 systematically selected experimental studies in the social sciences published in Nature and Science between 2010 and 2015. The replications follow analysis plans reviewed by the original authors and pre-registered prior to the replications. The replications are high powered, with sample sizes on average about five times higher than in the original studies. We find a significant effect in the same direction as the original study for 13 (62%) studies, and the effect size of the replications is on average about 50% of the original effect size. Replicability varies between 12 (57%) and 14 (67%) studies for complementary replicability indicators. Consistent with these results, the estimated true-positive rate is 67% in a Bayesian analysis. The relative effect size of true positives is estimated to be 71%, suggesting that both false positives and inflated effect sizes of true positives contribute to imperfect reproducibility. Furthermore, we find that peer beliefs of replicability are strongly related to replicability, suggesting that the research community could predict which results would replicate and that failures to replicate were not the result of chance alone.

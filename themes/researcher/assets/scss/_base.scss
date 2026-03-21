@@ -40,6 +40,17 @@ a {
   &:hover { color: $link-hover-color; }
 }
 
+code, pre, kbd, samp {
+  font-family: $font-family-monospace;
+  font-size: 0.85em;
+}
+
+pre {
+  margin: 0;
+  overflow-x: auto;
+  white-space: pre;
+}
+
 img { vertical-align: middle; }
 
 hr {

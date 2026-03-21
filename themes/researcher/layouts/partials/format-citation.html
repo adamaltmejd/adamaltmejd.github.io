@@ -1,0 +1,42 @@
+{{- $page := . -}}
+{{- $md := false -}}
+{{- if reflect.IsMap . -}}
+  {{- $page = .page -}}
+  {{- $md = .md | default false -}}
+{{- end -}}
+{{- $bib := index site.Data.publications $page.File.ContentBaseName -}}
+{{- with $bib -}}
+  {{- $authors := .authors -}}
+  {{- $total := len $authors -}}
+  {{- $etAl := gt $total 3 -}}
+  {{- if le $total 3 -}}
+    {{- range $i, $a := $authors -}}
+      {{- if eq $i 0 -}}
+        {{ $a.family }}, {{ $a.given }}
+      {{- else -}}
+        {{- if eq $i (sub $total 1) }} and {{ else }}, {{ end -}}
+        {{ $a.given }} {{ $a.family }}
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $first := index $authors 0 -}}
+    {{ $first.family }}, {{ $first.given }} et al.
+  {{- end -}}
+  {{- if eq .type "article" -}}
+    {{- if not $etAl }}.{{ end }} "{{ .title }}." {{ if $md }}*{{ .journal }}*{{ else }}<em>{{ .journal }}</em>{{ end }}
+    {{- with .volume }} {{ . }}{{ end -}}
+    {{- with .number }} ({{ . }}){{ end -}}
+    {{- with .pages }}: {{ replace . "--" "–" }}{{ end -}}
+    .
+  {{- else if eq .type "online" -}}
+    {{- if not $etAl }}.{{ end }} "{{ .title }}."
+    {{- with .publisher }} {{ . }}{{ end -}}
+    {{- with .series }} {{ . }}{{ end -}}
+    {{- with .number }} No. {{ . }}{{ end -}}
+    .
+  {{- else -}}
+    {{- if not $etAl }}.{{ end }} "{{ .title }}."
+    {{- with .institution }} {{ . }}{{ end -}}
+    .
+  {{- end -}}
+{{- end -}}

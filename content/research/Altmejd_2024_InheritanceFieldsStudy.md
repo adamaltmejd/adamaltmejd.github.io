@@ -7,9 +7,7 @@ projects:
 authors:
   - name: "Adam Altmejd"
     site: "https://adamaltmejd.se"
-year: 2024
 status: "Submitted. Winner of the Distinguished CESifo Affiliate Award 2023."
-citation: 'Altmejd, Adam. "Inheritance of Fields of Study." Working Paper 11113. CESifo. Winner of the Distinguished CESifo Affiliate Award 2023.'
 wp: "https://cesifo.org/DocDL/cesifo1_wp11113.pdf"
 updated: "2024-05-03"
 abstract: >

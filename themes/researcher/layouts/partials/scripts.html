@@ -1,33 +1,45 @@
 <script>
 document.addEventListener('click', function(e) {
   var trigger = e.target.closest('[data-toggle="collapse"]');
-  if (!trigger) return;
-  e.preventDefault();
-  var target = document.querySelector(trigger.getAttribute('href'));
-  if (!target || target.classList.contains('collapsing')) return;
+  if (trigger) {
+    e.preventDefault();
+    var target = document.querySelector(trigger.getAttribute('href'));
+    if (!target || target.classList.contains('collapsing')) return;
 
-  if (target.classList.contains('show')) {
-    target.style.height = target.scrollHeight + 'px';
-    target.classList.remove('show');
-    target.classList.add('collapsing');
-    target.offsetHeight;
-    target.style.height = '0';
-  } else {
-    target.classList.add('collapsing');
-    target.style.height = '0';
-    target.offsetHeight;
-    target.style.height = target.scrollHeight + 'px';
-  }
-  trigger.classList.toggle('collapsed');
+    if (target.classList.contains('show')) {
+      target.style.height = target.scrollHeight + 'px';
+      target.classList.remove('show');
+      target.classList.add('collapsing');
+      target.offsetHeight;
+      target.style.height = '0';
+    } else {
+      target.classList.add('collapsing');
+      target.style.height = '0';
+      target.offsetHeight;
+      target.style.height = target.scrollHeight + 'px';
+    }
+    trigger.classList.toggle('collapsed');
 
-  function done() {
-    target.classList.remove('collapsing');
-    if (target.style.height !== '0px') target.classList.add('show');
-    target.style.height = '';
-    target.removeEventListener('transitionend', done);
-    clearTimeout(fallback);
+    function done() {
+      target.classList.remove('collapsing');
+      if (target.style.height !== '0px') target.classList.add('show');
+      target.style.height = '';
+      target.removeEventListener('transitionend', done);
+      clearTimeout(fallback);
+    }
+    target.addEventListener('transitionend', done);
+    var fallback = setTimeout(done, 350);
+    return;
   }
-  target.addEventListener('transitionend', done);
-  var fallback = setTimeout(done, 350);
+
+  var btn = e.target.closest('.btn-copy-bibtex');
+  if (btn) {
+    var text = btn.closest('.card-body').querySelector('pre code').textContent;
+    navigator.clipboard.writeText(text).then(function() {
+      var orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = orig; }, 2000);
+    });
+  }
 });
 </script>

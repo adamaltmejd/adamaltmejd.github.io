@@ -14,15 +14,18 @@
   <h2>{{ if eq $type "Publications" }}Publications{{ else }}Work in Progress{{ end }}</h2>
   <ul>
     {{- $papers := where $pages "Params.publication_type" $type -}}
-    {{- $papers = sort $papers "Params.year" "desc" -}}
+    {{- $papers = $papers.ByDate.Reverse -}}
     {{ range $papers }}
     {{- $id := .File.ContentBaseName -}}
+    {{- $bib := index site.Data.publications $id -}}
     <li>
       <h3 class="noline"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
       <div>
         {{ if eq $type "Publications" }}
-          {{ $year := .Params.year }}
-          {{ with .Params.journal }}<p><em>{{ . }}{{ with $year }}, {{ . }}{{ end }}</em></p>{{ end }}
+          {{ with $bib }}
+            {{ $year := substr .date 0 4 }}
+            {{ with .journal }}<p><em>{{ . }}{{ with $year }}, {{ . }}{{ end }}</em></p>{{ end }}
+          {{ end }}
         {{ else }}
           {{ with .Params.status }}<p><em>{{ . }}</em></p>{{ end }}
         {{ end }}
@@ -64,11 +67,11 @@
               <a class="collapsed noline" data-toggle="collapse" href="#abstract{{ $id }}" role="button" aria-expanded="false" aria-controls="abstract{{ $id }}">Abstract</a>
             </li>
             {{ end }}
-            {{ with .Params.doi }}
+            {{ with $bib }}{{ with .doi }}
             <li>
-              <a class="noline" href="https://doi.org/{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;{{ if eq $type "Publications" }}Published Paper{{ else }}Working Paper{{ end }}</a>
+              <a class="noline" href="https://doi.org/{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;{{ if eq $type "Publications" }}Published Paper{{ else }}DOI{{ end }}</a>
             </li>
-            {{ end }}
+            {{ end }}{{ end }}
             {{ with .Params.wp }}
             <li>
               <a class="noline" href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Working Paper</a>

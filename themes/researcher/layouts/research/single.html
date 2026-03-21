@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{- $bib := index site.Data.publications .File.ContentBaseName -}}
 <div class="paper-detail">
   <h1>{{ .Title }}</h1>
 
@@ -8,14 +9,14 @@
       {{- partial "author-list.html" (dict "authors" .) -}}
     </p>
     {{ end }}
-    {{ with .Params.journal }}<p>Published in: <em>{{ . }}</em></p>{{ end }}
+    {{ with $bib }}{{ with .journal }}<p>Published in: <em>{{ . }}</em></p>{{ end }}{{ end }}
     {{ with .Params.status }}<p>{{ . }}</p>{{ end }}
     <nav class="paper-links">
-      {{ with .Params.doi }}
+      {{ with $bib }}{{ with .doi }}
       <a href="https://doi.org/{{ . }}" target="_blank">
         <i class="fas fa-external-link-alt"></i>&nbsp;{{ if eq $.Params.publication_type "Publications" }}Published Paper{{ else }}DOI{{ end }}
       </a>
-      {{ end }}
+      {{ end }}{{ end }}
       {{ with .Params.wp }}
       <a href="{{ . }}" target="_blank"><i class="fas fa-file-alt"></i>&nbsp;Working Paper</a>
       {{ end }}
@@ -28,8 +29,21 @@
       {{ with .Params.appendix }}
       <a href="/assets/papers/{{ . }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Appendix</a>
       {{ end }}
+      {{- $id := .File.ContentBaseName -}}
+      {{ if and $bib $bib.raw }}
+      <a class="collapsed noline" data-toggle="collapse" href="#bibtex{{ $id }}" role="button" aria-expanded="false" aria-controls="bibtex{{ $id }}"><i class="fas fa-quote-left"></i>&nbsp;BibTeX</a>
+      {{ end }}
     </nav>
   </div>
+
+  {{ with $bib }}{{ with .raw }}
+  <div class="collapse" id="bibtex{{ $id }}">
+    <div class="card card-body">
+      <pre><code>{{ . }}</code></pre>
+      <button class="btn-copy-bibtex">Copy</button>
+    </div>
+  </div>
+  {{ end }}{{ end }}
 
   {{ with .Params.abstract }}
   <section>

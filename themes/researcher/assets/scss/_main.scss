@@ -324,6 +324,33 @@ article {
       }
     }
 
+    div[id^="bibtex"] .card-body {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.03);
+
+      pre {
+        margin: 0;
+      }
+
+      .btn-copy-bibtex {
+        position: absolute;
+        top: 0.4rem;
+        right: 0.4rem;
+        padding: 0.15rem 0.5rem;
+        font-size: $font-size-sm;
+        font-family: $font-family-sans-serif;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        background: $body-bg;
+        cursor: pointer;
+
+        &:hover {
+          border-color: $primary;
+          color: $primary;
+        }
+      }
+    }
+
     section { margin-bottom: 1.5rem; }
 
     .paper-coverage ul {

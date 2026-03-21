@@ -1,4 +1,4 @@
-"""Fetch citation counts from Semantic Scholar and write data/citations.json."""
+"""Fetch citation counts from OpenAlex and write data/citations.json."""
 
 import json
 import sys
@@ -11,13 +11,13 @@ ROOT = Path(__file__).resolve().parent.parent
 PUBLICATIONS_PATH = ROOT / "data" / "publications.json"
 OUT_PATH = ROOT / "data" / "citations.json"
 
-S2_API = "https://api.semanticscholar.org/graph/v1/paper/DOI:{doi}?fields=paperId,citationCount"
-REQUEST_DELAY = 1.0  # seconds between requests to respect rate limits
+OA_API = "https://api.openalex.org/works/doi:{doi}?select=id,cited_by_count"
+REQUEST_DELAY = 0.2  # OpenAlex is generous with rate limits
 
 
 def fetch_citation(doi: str) -> dict | None:
-    url = S2_API.format(doi=doi)
-    req = Request(url, headers={"User-Agent": "adamaltmejd.se citation fetcher"})
+    url = OA_API.format(doi=doi)
+    req = Request(url, headers={"User-Agent": "mailto:adam@altmejd.se"})
     try:
         with urlopen(req, timeout=10) as resp:
             return json.loads(resp.read())
@@ -31,7 +31,6 @@ def fetch_citation(doi: str) -> dict | None:
 def main():
     publications = json.loads(PUBLICATIONS_PATH.read_text(encoding="utf-8"))
 
-    # Load existing citations to preserve data for entries that fail to fetch
     existing = {}
     if OUT_PATH.exists():
         existing = json.loads(OUT_PATH.read_text(encoding="utf-8"))
@@ -45,10 +44,11 @@ def main():
             time.sleep(REQUEST_DELAY)
         print(f"  [{i+1}/{len(dois)}] {key}")
         data = fetch_citation(doi)
-        if data and data.get("paperId"):
+        if data and data.get("id"):
+            work_id = data["id"].replace("https://openalex.org/", "")
             citations[key] = {
-                "paperId": data["paperId"],
-                "citationCount": data.get("citationCount", 0),
+                "workId": work_id,
+                "citationCount": data.get("cited_by_count", 0),
             }
         elif key in existing:
             print(f"    Using cached data for {key}")

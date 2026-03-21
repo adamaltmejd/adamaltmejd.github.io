@@ -4,7 +4,6 @@ title: Curriculum Vitae
 author: {{ site.Params.author.name }}
 email: '{{ site.Params.author.email }}'
 homepage: {{ .homepage }}
-twitter: '{{ site.Params.author.twitter }}'
 mobile: '{{ .mobile }}'
 address:
     affiliation: '{{ .address.affiliation }}'

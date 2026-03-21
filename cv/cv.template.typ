@@ -105,8 +105,7 @@ $endif$
   align(right + bottom, text(font: sans, size: 9pt)[
     $mobile$ #h(2pt) #fa-phone\
     #link("mailto:$email$")[$email$] #h(2pt) #fa-envelope\
-    #link("https://$homepage$")[$homepage$] #h(2pt) #fa-globe\
-    #link("https://twitter.com/$twitter$")[\@$twitter$] #h(2pt) #fa-twitter
+    #link("https://$homepage$")[$homepage$] #h(2pt) #fa-globe
   ]),
 )
 

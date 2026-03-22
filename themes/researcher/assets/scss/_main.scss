@@ -360,6 +360,7 @@ article {
     .paper-figure {
       margin: 1.5rem 0;
       text-align: center;
+      cursor: zoom-in;
 
       img {
         max-width: 100%;
@@ -368,6 +369,7 @@ article {
         @media (min-width: $bp-sm) {
           max-width: 80%;
         }
+
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 0.375rem;
       }
@@ -379,6 +381,7 @@ article {
         @media (min-width: $bp-sm) {
           max-width: 80%;
         }
+
         font-size: $font-size-sm;
         color: $text-muted;
         text-align: justify;
@@ -406,6 +409,52 @@ article {
       a:hover { color: $link-hover-color; }
     }
 
+  }
+}
+
+.lightbox {
+  border: none;
+  background: none;
+  max-width: none;
+  max-height: none;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  cursor: zoom-out;
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+  }
+
+  figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: calc(100vh - 10rem);
+    object-fit: contain;
+    border-radius: 0.375rem;
+  }
+
+  figcaption {
+    max-width: 80ch;
+    margin-top: 1rem;
+    font-size: $font-size-sm;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: justify;
   }
 }
 

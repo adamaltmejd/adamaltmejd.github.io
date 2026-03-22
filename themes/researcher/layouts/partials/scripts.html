@@ -32,6 +32,31 @@ document.addEventListener('click', function(e) {
     return;
   }
 
+  var fig = e.target.closest('.paper-figure');
+  if (fig) {
+    var origImg = fig.querySelector('img');
+    if (!origImg) return;
+    var dialog = document.createElement('dialog');
+    dialog.className = 'lightbox';
+    var figure = document.createElement('figure');
+    var img = document.createElement('img');
+    img.src = origImg.src;
+    img.alt = origImg.alt;
+    figure.appendChild(img);
+    var cap = fig.querySelector('figcaption');
+    if (cap) {
+      var figcaption = document.createElement('figcaption');
+      figcaption.textContent = cap.textContent;
+      figure.appendChild(figcaption);
+    }
+    dialog.appendChild(figure);
+    dialog.addEventListener('click', function() { dialog.close(); });
+    dialog.addEventListener('close', function() { dialog.remove(); });
+    document.body.appendChild(dialog);
+    dialog.showModal();
+    return;
+  }
+
   var btn = e.target.closest('.btn-copy-bibtex');
   if (btn) {
     var text = btn.closest('.card-body').querySelector('pre code').textContent;

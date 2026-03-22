@@ -16,7 +16,7 @@
     {{- $papers := where $pages "Params.publication_type" $type -}}
     {{- $papers = $papers.ByDate.Reverse -}}
     {{ range $papers }}
-    {{- $id := .File.ContentBaseName -}}
+    {{- $id := partial "citekey.html" . -}}
     {{- $bib := index site.Data.publications $id -}}
     <li>
       <h3 class="noline"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>

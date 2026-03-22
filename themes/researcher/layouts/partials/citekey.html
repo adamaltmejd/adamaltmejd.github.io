@@ -1,0 +1,5 @@
+{{- if eq .BundleType "leaf" -}}
+  {{- return (path.Base .File.Dir) -}}
+{{- else -}}
+  {{- return .File.ContentBaseName -}}
+{{- end -}}

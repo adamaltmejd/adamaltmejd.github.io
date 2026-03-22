@@ -23,7 +23,7 @@ CV PDF is built by GitHub Actions (`.github/workflows/cv-pdf.yml`) on push when 
 uv run --with 'bibtexparser>=2.0.0b7' scripts/bib2json.py
 ```
 
-Content files in `content/research/` are named by bib citekey (e.g., `Altmejd_ea_2021_BrotherWhereStart.md`). Templates look up bib data via `index site.Data.publications .File.ContentBaseName`. Pages without a bib entry (WIP) render fine — bib fields are guarded with `{{ with }}`.
+Content files in `content/research/` are page bundles named by bib citekey (e.g., `Altmejd_ea_2021_BrotherWhereStart/index.md`). Templates look up bib data via `partial "citekey.html" .` which resolves the bundle directory name. Pages without a bib entry (WIP) render fine — bib fields are guarded with `{{ with }}`. To add a figure to a paper page, place a `figure.*` image file in the page bundle directory.
 
 ## Lint & Format (always run before committing)
 
@@ -41,7 +41,7 @@ Playwright MCP is configured (`.mcp.json`, Firefox). Use it to visually verify c
 ## Architecture
 
 - **`themes/researcher/`** — reusable Hugo theme. Layouts, SCSS, collapse JS. No frameworks.
-- **`content/research/`** — one markdown file per publication, named by bib citekey. Front matter has `authors`, `publication_type`, `projects` (taxonomy), `abstract`, `status`, etc. Citation metadata (journal, doi, volume, etc.) comes from `data/publications.json`, not front matter.
+- **`content/research/`** — page bundles per publication, directory named by bib citekey. Each contains `index.md` and optionally a `figure.*` image. Front matter has `authors`, `publication_type`, `projects` (taxonomy), `abstract`, `status`, `figure_caption`, etc. Citation metadata (journal, doi, volume, etc.) comes from `data/publications.json`, not front matter.
 - **`data/publications.json`** — structured citation data keyed by citekey, generated from `publications.bib`.
 - **`content/projects/`** — taxonomy term pages. Auto-populated from `projects` field in research pages. Each `_index.md` adds descriptive content.
 - **`themes/researcher/assets/scss/`** — `style.scss` imports `_variables`, `_base`, `_main`, `_cv`. All custom CSS.

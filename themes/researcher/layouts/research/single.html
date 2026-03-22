@@ -50,18 +50,18 @@
   </div>
   {{ end }}{{ end }}
 
-  {{ with .Params.abstract }}
-  <section>
-    <h2>Abstract</h2>
-    <p>{{ . | safeHTML }}</p>
-  </section>
-  {{ end }}
-
   {{ with .Resources.GetMatch "figure.*" }}
   <figure class="paper-figure">
     <img src="{{ .RelPermalink }}" alt="{{ $.Title }}">
     {{ with $.Params.figure_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
   </figure>
+  {{ end }}
+
+  {{ with .Params.abstract }}
+  <section>
+    <h2>Abstract</h2>
+    <p>{{ . | safeHTML }}</p>
+  </section>
   {{ end }}
 
   {{ with .Params.coverage }}

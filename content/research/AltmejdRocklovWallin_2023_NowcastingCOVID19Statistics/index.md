@@ -11,6 +11,7 @@ authors:
     site: "https://www.umu.se/en/staff/joacim-rocklov/"
   - name: "Jonas Wallin"
     site: "https://jonaswallin.github.io/"
+figure_caption: "Reported Swedish and UK COVID-19 deaths as of 6 May 2021 with model predictions. Bars show reported and predicted deaths (with uncertainty intervals); the dashed line plots the 7-day centered moving average. For the most recent dates, the model predicts considerably more deaths than have been reported. A version of this plot without predictions was used in the Swedish Public Health Agency's daily press briefings during the first wave, where reporting delays risked giving viewers the false impression of a declining trend."
 abstract: >
   The COVID-19 pandemic has demonstrated the importance of unbiased, real-time statistics of trends in disease events in order to achieve an effective response. Because of reporting delays, real-time statistics frequently underestimate the total number of infections, hospitalizations and deaths. When studied by event date, such delays also risk creating an illusion of a downward trend. Here, we describe a statistical methodology for predicting true daily quantities and their uncertainty, estimated using historical reporting delays. The methodology takes into account the observed distribution pattern of the lag. It is derived from the "removal method"—a well-established estimation framework in the field of ecology.
 ---

@@ -3,7 +3,7 @@ title: "Nowcasting COVID-19 Statistics Reported with Delay: A Case-Study of Swed
 date: 2023-02-01
 publication_type: "Publications"
 projects:
-  - "COVID-19"
+  - "SWECOV"
 authors:
   - name: "Adam Altmejd"
     site: "https://adamaltmejd.se"

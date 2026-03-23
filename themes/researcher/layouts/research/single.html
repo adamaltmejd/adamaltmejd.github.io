@@ -15,11 +15,11 @@
     <nav class="paper-links">
       {{ with $bib }}{{ with .doi }}
       <a href="https://doi.org/{{ . }}" target="_blank">
-        <i class="fas fa-external-link-alt"></i>&nbsp;{{ if eq $.Params.publication_type "Publications" }}Published Paper{{ else }}DOI{{ end }}
+        <i class="fas fa-file-lines"></i>&nbsp;{{ if eq $.Params.publication_type "Publications" }}Read published paper{{ else }}Read paper{{ end }}
       </a>
       {{ end }}{{ end }}
       {{ with .Params.wp }}
-      <a href="{{ . }}" target="_blank"><i class="fas fa-file-alt"></i>&nbsp;Working Paper</a>
+      <a href="{{ . }}" target="_blank"><i class="fas fa-file-lines"></i>&nbsp;Read working paper</a>
       {{ end }}
       {{ with .Params.ungated }}
       <a href="{{ . }}" target="_blank"><i class="fas fa-lock-open"></i>&nbsp;Ungated</a>

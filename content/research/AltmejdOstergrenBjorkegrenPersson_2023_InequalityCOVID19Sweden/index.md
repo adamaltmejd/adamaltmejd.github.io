@@ -3,7 +3,7 @@ title: "Inequality and COVID-19 in Sweden: Relative risks of nine bad life event
 date: 2023-11-01
 publication_type: "Publications"
 projects:
-  - "COVID-19"
+  - "SWECOV"
 authors:
   - name: "Adam Altmejd"
     site: "https://adamaltmejd.se"

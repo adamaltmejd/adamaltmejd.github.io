@@ -24,10 +24,10 @@
         {{ if eq $type "Publications" }}
           {{ with $bib }}
             {{ $year := substr .date 0 4 }}
-            {{ with .journal }}<p><em>{{ . }}{{ with $year }}, {{ . }}{{ end }}</em></p>{{ end }}
+            {{ with .journal }}<div><em>{{ . }}{{ with $year }}, {{ . }}{{ end }}</em></div>{{ end }}
           {{ end }}
         {{ else }}
-          {{ with .Params.status }}<p><em>{{ . }}</em></p>{{ end }}
+          {{ with .Params.status }}<div><em>{{ . }}</em></div>{{ end }}
         {{ end }}
 
         {{- with .Params.authors -}}
@@ -42,21 +42,21 @@
           {{- $total := len $coauthors -}}
           {{- if gt $total 0 -}}
           {{- if gt $total 3 -}}
-            <p>with&nbsp;
+            <div>with&nbsp;
             {{- range $i, $ca := first 3 $coauthors -}}
               {{- if gt $i 0 -}},&nbsp;{{ end -}}
               {{- if $ca.site -}}<a class="noline" href="{{ $ca.site }}" target="_blank">{{ end -}}
               {{- $ca.name -}}
               {{- if $ca.site -}}</a>{{ end -}}
             {{- end -}}
-            &nbsp;<a class="collapsed noline" data-toggle="collapse" href="#etal{{ $id }}" role="button" aria-expanded="false" aria-controls="etal{{ $id }}">et al.</a></p>
+            &nbsp;<a class="collapsed noline" data-toggle="collapse" href="#etal{{ $id }}" role="button" aria-expanded="false" aria-controls="etal{{ $id }}">et al.</a></div>
         <div class="collapse" id="etal{{ $id }}">
           <div class="card card-body">
-            <p>with&nbsp;{{- partial "author-list.html" (dict "authors" $coauthors "linkClass" "noline") -}}</p>
+            <div>with&nbsp;{{- partial "author-list.html" (dict "authors" $coauthors "linkClass" "noline") -}}</div>
           </div>
         </div>
           {{- else -}}
-            <p>with&nbsp;{{- partial "author-list.html" (dict "authors" $coauthors "linkClass" "noline") -}}</p>
+            <div>with&nbsp;{{- partial "author-list.html" (dict "authors" $coauthors "linkClass" "noline") -}}</div>
           {{- end -}}
           {{- end -}}
         {{- end }}
@@ -69,17 +69,17 @@
             {{ end }}
             {{ with $bib }}{{ with .doi }}
             <li>
-              <a class="noline" href="https://doi.org/{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;{{ if eq $type "Publications" }}Published Paper{{ else }}DOI{{ end }}</a>
+              <a class="noline" href="https://doi.org/{{ . }}" target="_blank"><i class="fas fa-file-lines"></i>&nbsp;Read paper</a>
             </li>
             {{ end }}{{ end }}
             {{ with .Params.wp }}
             <li>
-              <a class="noline" href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Working Paper</a>
+              <a class="noline" href="{{ . }}" target="_blank"><i class="fas fa-file-lines"></i>&nbsp;Read paper</a>
             </li>
             {{ end }}
             {{ with .Params.ungated }}
             <li>
-              <a class="noline" href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i>&nbsp;Ungated</a>
+              <a class="noline" href="{{ . }}" target="_blank"><i class="fas fa-file-lines"></i>&nbsp;Ungated</a>
             </li>
             {{ end }}
             {{ with .Params.pdf }}

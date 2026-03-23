@@ -1,6 +1,6 @@
 <nav role="navigation">
   {{ with .Site.Params.author.photo }}
-  <a href="/"><img src="{{ . }}" itemprop="image" property="depiction" alt="Photo"/></a>
+  <a href="/"><img src="{{ . }}" itemprop="image" property="depiction" alt="{{ $.Site.Params.author.name }}"/></a>
   {{ end }}
   <div>
     <ul>

@@ -200,8 +200,8 @@ article {
     color: $body-color;
   }
 
-  p { margin: 0 auto; }
-  p + p { text-indent: 1em; }
+  p { margin: 0 auto 0.75rem; }
+  p:last-child { margin-bottom: 0; }
 
   img { max-width: 100%; }
 
@@ -218,6 +218,10 @@ article {
       font-size: $font-size-sm;
     }
 
+    ul.paperlinks a i {
+      color: $text-muted;
+    }
+
     ul, h3 {
       margin: 0;
       padding: 0;
@@ -226,8 +230,6 @@ article {
     p {
       text-align: left;
     }
-
-    p + p { text-indent: 0; }
 
     h2 {
       font-size: $h2-font-size;
@@ -251,23 +253,28 @@ article {
       padding-right: 0.5rem;
     }
 
+    ul.paperlinks a:hover,
+    a.noline:hover,
+    [data-toggle="collapse"]:hover {
+      color: $primary;
+    }
+
     [data-toggle="collapse"]::before {
-      /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
+      content: "";
       display: inline-block;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      content: "\f0da";
-      transition: all linear 0.25s;
-      transform: rotate(90deg);
-      margin-right: 0.22rem;
+      width: 0.3em;
+      height: 0.3em;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      margin-right: 0.3rem;
+      vertical-align: 0.15em;
+      transition: transform 0.25s linear;
+      transform: rotate(45deg);
     }
 
     [data-toggle="collapse"].collapsed::before {
-      transform: rotate(0deg);
+      transform: rotate(-45deg);
+      vertical-align: 0.1em;
     }
 
     div[id^="abstract"] .card-body,

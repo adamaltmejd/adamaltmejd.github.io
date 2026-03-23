@@ -31,11 +31,21 @@ menu:
       weight: 10
       params:
         icon: "fas fa-file-alt"
-    - name: "Research\u00A0Projects"
+    - name: "Research"
       url: /projects/
       weight: 20
       params:
         icon: "fas fa-pencil-alt"
+    - name: "Teaching"
+      url: /teaching/
+      weight: 30
+      params:
+        icon: "fas fa-chalkboard-user"
+    - name: "Tools"
+      url: /tools/
+      weight: 40
+      params:
+        icon: "fas fa-wrench"
 
 frontmatter:
   lastmod:

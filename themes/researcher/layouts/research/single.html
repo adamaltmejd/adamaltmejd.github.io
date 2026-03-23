@@ -10,7 +10,7 @@
       {{- partial "author-list.html" (dict "authors" .) -}}
     </p>
     {{ end }}
-    {{ with $bib }}{{ with .journal }}<p>Published in: <em>{{ . }}</em></p>{{ end }}{{ end }}
+    {{ with $bib }}{{ with .journal }}<p>Published in: <em>{{ . }}</em>{{ with $bib.date }} ({{ substr . 0 4 }}){{ end }}</p>{{ end }}{{ end }}
     {{ with .Params.status }}<p>{{ . }}</p>{{ end }}
     <nav class="paper-links">
       {{ with $bib }}{{ with .doi }}
@@ -18,9 +18,9 @@
         <i class="fas fa-file-lines"></i>&nbsp;{{ if eq $.Params.publication_type "Publications" }}Read published paper{{ else }}Read paper{{ end }}
       </a>
       {{ end }}{{ end }}
-      {{ with .Params.wp }}
-      <a href="{{ . }}" target="_blank"><i class="fas fa-file-lines"></i>&nbsp;Read working paper</a>
-      {{ end }}
+      {{ with $bib }}{{ if and .url (not .doi) }}
+      <a href="{{ .url }}" target="_blank"><i class="fas fa-file-lines"></i>&nbsp;Read working paper</a>
+      {{ end }}{{ end }}
       {{ with .Params.ungated }}
       <a href="{{ . }}" target="_blank"><i class="fas fa-lock-open"></i>&nbsp;Ungated</a>
       {{ end }}

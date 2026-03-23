@@ -8,7 +8,6 @@ authors:
   - name: "Adam Altmejd"
     site: "https://adamaltmejd.se"
 status: "Submitted. Winner of the Distinguished CESifo Affiliate Award 2023."
-wp: "https://cesifo.org/DocDL/cesifo1_wp11113.pdf"
 updated: "2024-05-03"
 figure_caption: "Each cell shows the causal effect of parental enrollment in one field (rows) on child degree completion. The diagonal captures own-field inheritance; off-diagonal cells reveal cross-field spillovers. Medicine stands out as a strong attractor across many parental fields, while technology tends to be negatively affected. Stars indicate statistical significance."
 abstract: >

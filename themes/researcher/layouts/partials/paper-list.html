@@ -72,11 +72,11 @@
               <a class="noline" href="https://doi.org/{{ . }}" target="_blank"><i class="fas fa-file-lines"></i>&nbsp;Read paper</a>
             </li>
             {{ end }}{{ end }}
-            {{ with .Params.wp }}
+            {{ with $bib }}{{ if and .url (not .doi) }}
             <li>
-              <a class="noline" href="{{ . }}" target="_blank"><i class="fas fa-file-lines"></i>&nbsp;Read paper</a>
+              <a class="noline" href="{{ .url }}" target="_blank"><i class="fas fa-file-lines"></i>&nbsp;Read paper</a>
             </li>
-            {{ end }}
+            {{ end }}{{ end }}
             {{ with .Params.ungated }}
             <li>
               <a class="noline" href="{{ . }}" target="_blank"><i class="fas fa-file-lines"></i>&nbsp;Ungated</a>

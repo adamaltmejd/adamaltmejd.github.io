@@ -79,7 +79,7 @@ def main():
         jt = field_val("journaltitle")
         if jt:
             rec["journal"] = jt
-        for k in ("volume", "number", "pages", "doi"):
+        for k in ("volume", "number", "pages", "doi", "url"):
             v = field_val(k)
             if v:
                 rec[k] = v

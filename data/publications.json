@@ -23,6 +23,7 @@
     ],
     "date": "2024-05-03",
     "number": "11113",
+    "url": "https://www.ifo.de/DocDL/cesifo1_wp11113.pdf",
     "series": "Working Papers",
     "publisher": "CESifo",
     "raw": "@online{Altmejd_2024_InheritanceFieldsStudy,\n  title = {Inheritance of Fields of Study},\n  author = {Altmejd, Adam},\n  date = {2024-05-03},\n  series = {Working {{Papers}}},\n  number = {11113},\n  eprinttype = {CESifo},\n  url = {https://www.ifo.de/DocDL/cesifo1_wp11113.pdf},\n  pubstate = {prepublished}\n}"
@@ -144,9 +145,10 @@
     ],
     "date": "2024-05",
     "number": "16976",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4280536",
     "series": "Discussion Paper Series",
     "publisher": "IZA",
-    "raw": "@online{AltmejdJanssonKarabulut_2024_BusinessEducationPortfolio,\n  title = {Business Education and Portfolio Returns},\n  author = {Altmejd, Adam and Jansson, Thomas and Karabulut, Yigitcan},\n  date = {2024-05},\n  series = {Discussion {{Paper Series}}},\n  number = {16976},\n  eprinttype = {IZA},\n  url = {https://docs.iza.org/dp16976.pdf},\n  pubstate = {prepublished}\n}"
+    "raw": "@online{AltmejdJanssonKarabulut_2024_BusinessEducationPortfolio,\n  title = {Business Education and Portfolio Returns},\n  author = {Altmejd, Adam and Jansson, Thomas and Karabulut, Yigitcan},\n  date = {2024-05},\n  series = {Discussion {{Paper Series}}},\n  number = {16976},\n  eprinttype = {IZA},\n  url = {https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4280536},\n  pubstate = {prepublished}\n}"
   },
   "AltmejdOstergrenBjorkegrenPersson_2023_InequalityCOVID19Sweden": {
     "type": "article",

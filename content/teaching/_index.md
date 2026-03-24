@@ -2,7 +2,7 @@
 title: "Teaching"
 ---
 
-## Data Science for Economists
+## Econometrics 3: Data science for economic analysis
 
 **EC7422** — Stockholm University
 

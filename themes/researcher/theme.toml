@@ -1,6 +1,6 @@
 name = "Researcher"
 license = "MIT"
-licenselink = "https://github.com/adamaltmejd/adamaltmejd.github.io/blob/master/LICENSE"
+licenselink = "https://github.com/adamaltmejd/adamaltmejd.se/blob/master/LICENSE"
 description = "A clean, minimal Hugo theme for academic personal websites"
 min_version = "0.136.0"
 

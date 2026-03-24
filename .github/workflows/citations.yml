@@ -19,7 +19,7 @@ jobs:
           enable-cache: false
 
       - name: Fetch citation counts
-        run: uv run scripts/fetch_citations.py
+        run: uv run .github/scripts/fetch_citations.py
 
       - name: Commit if changed
         run: |

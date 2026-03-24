@@ -4,6 +4,9 @@
 .hugo_build.lock
 .playwright-mcp
 
+# Build artifacts
+static/cv/cv.pdf
+
 # OS
 .DS_Store
 node_modules/

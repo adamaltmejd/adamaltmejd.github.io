@@ -20,7 +20,7 @@ jobs:
           enable-cache: false
 
       - name: Generate publications.json
-        run: uv run --with 'bibtexparser>=2.0.0b7' scripts/bib2json.py
+        run: uv run --with 'bibtexparser>=2.0.0b7' .github/scripts/bib2json.py
 
       - name: Commit if changed
         run: |

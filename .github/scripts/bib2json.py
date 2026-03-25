@@ -11,7 +11,7 @@ from bibtexparser.middlewares import (
     SplitNameParts,
 )
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 BIB_PATH = ROOT / "publications.bib"
 OUT_PATH = ROOT / "data" / "publications.json"
 

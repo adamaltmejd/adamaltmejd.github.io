@@ -3,7 +3,7 @@ title: Curriculum Vitae
 description: "The Curriculum Vitae of Adam Altmejd, Ph.D. in Economics."
 outputs: [HTML, CVMD]
 cv:
-  mobile: "+46 (0) 734 20 01 20"
+  mobile: "+46 (0) 72 999 99 68"
   homepage: adamaltmejd.se
   address:
     affiliation: Institute for Evaluation of Labor Market and Education Policy (IFAU)

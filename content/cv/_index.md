@@ -33,7 +33,7 @@ cv:
 :   Research Affiliate, **[IZA](https://www.iza.org/people/affiliates/32832/adam-altmejd)**, Bonn, Germany
 
 2016--2017
-:   Associate of the Department of Economics, **[Harvard University](http://economics.harvard.edu/)**
+:   Department of Economics, **[Harvard University](http://economics.harvard.edu/)**
 
 # Research Breaks
 
@@ -41,7 +41,7 @@ cv:
 :   Parental leave
 
 2021-2022
-:   Investigator, The Swedish COVID-19 Commission
+:   Analyst, Secretariat of the Swedish COVID-19 Commission
 
 
 # Education

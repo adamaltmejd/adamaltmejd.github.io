@@ -16,6 +16,5 @@ agents.
 
 ## adamaltmejd.se
 
-This website. A Hugo static site with a custom theme, automated CI/CD, and a publication pipeline that generates citation data from BibTeX and renders a CV to PDF via pandoc and typst. Built to be maintainable by AI coding agents.
-
+This website. A Hugo static site with a custom theme, automated CI/CD, and a publication pipeline that generates citation data from BibTeX and renders a CV to PDF via pandoc and typst.
 [View on GitHub](https://github.com/adamaltmejd/adamaltmejd.se)

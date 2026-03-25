@@ -35,6 +35,13 @@ jobs:
           curl -sSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" \
             | sudo tar xJ --strip-components=1 -C /usr/local/bin
 
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: false
+
+      - name: Generate publications.json
+        run: uv run --with 'bibtexparser>=2.0.0b7' .github/scripts/bib2json.py
+
       - name: Build site
         run: hugo
 

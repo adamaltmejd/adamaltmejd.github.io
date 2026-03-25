@@ -6,6 +6,7 @@
 
 # Build artifacts
 static/cv/cv.pdf
+data/publications.json
 
 # OS
 .DS_Store

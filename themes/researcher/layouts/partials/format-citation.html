@@ -4,7 +4,7 @@
   {{- $page = .page -}}
   {{- $md = .md | default false -}}
 {{- end -}}
-{{- $bib := index site.Data.publications (partial "citekey.html" $page) -}}
+{{- $bib := index hugo.Data.publications (partial "citekey.html" $page) -}}
 {{- with $bib -}}
   {{- $authors := .authors -}}
   {{- $total := len $authors -}}

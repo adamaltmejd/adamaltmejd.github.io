@@ -21,7 +21,7 @@ address:
 {{ $prevYear := 0 -}}
 {{ range $publications.ByDate.Reverse -}}
 {{ $page := . -}}
-{{ $bib := index site.Data.publications (partial "citekey.html" .) -}}
+{{ $bib := index hugo.Data.publications (partial "citekey.html" .) -}}
 {{ with $bib -}}
 {{ $year := $page.Date.Year -}}
 {{ if ne $year $prevYear }}
@@ -35,7 +35,7 @@ address:
 {{ $prevYear = 0 -}}
 {{ range $workingPapers.ByDate.Reverse -}}
 {{ $page := . -}}
-{{ $bib := index site.Data.publications (partial "citekey.html" .) -}}
+{{ $bib := index hugo.Data.publications (partial "citekey.html" .) -}}
 {{ with $bib -}}
 {{ $year := $page.Date.Year -}}
 {{ if ne $year $prevYear }}

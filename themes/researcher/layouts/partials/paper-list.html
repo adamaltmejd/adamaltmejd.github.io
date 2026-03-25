@@ -17,7 +17,7 @@
     {{- $papers = $papers.ByDate.Reverse -}}
     {{ range $papers }}
     {{- $id := partial "citekey.html" . -}}
-    {{- $bib := index site.Data.publications $id -}}
+    {{- $bib := index hugo.Data.publications $id -}}
     <li>
       <h3 class="noline"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
       <div>
@@ -84,12 +84,12 @@
             {{ end }}
             {{ with .Params.pdf }}
             <li>
-              <a class="noline" href="/assets/papers/{{ . }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;PDF{{ with $.Params.updated }} ({{ . }}){{ end }}</a>
+              <a class="noline" href="{{ with $.Resources.GetMatch . }}{{ .RelPermalink }}{{ end }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;PDF{{ with $.Params.updated }} ({{ . }}){{ end }}</a>
             </li>
             {{ end }}
             {{ with .Params.appendix }}
             <li>
-              <a class="noline" href="/assets/papers/{{ . }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Appendix</a>
+              <a class="noline" href="{{ with $.Resources.GetMatch . }}{{ .RelPermalink }}{{ end }}" target="_blank"><i class="fas fa-file-pdf"></i>&nbsp;Appendix</a>
             </li>
             {{ end }}
         </ul>

@@ -7,7 +7,7 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 PUBLICATIONS_PATH = ROOT / "data" / "publications.json"
 OUT_PATH = ROOT / "data" / "citations.json"
 

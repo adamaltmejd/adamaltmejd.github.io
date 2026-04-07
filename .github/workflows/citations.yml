@@ -18,6 +18,9 @@ jobs:
         with:
           enable-cache: false
 
+      - name: Generate publications.json
+        run: uv run --with 'bibtexparser>=2.0.0b7' .github/scripts/bib2json.py
+
       - name: Fetch citation counts
         run: uv run .github/scripts/fetch_citations.py
 
